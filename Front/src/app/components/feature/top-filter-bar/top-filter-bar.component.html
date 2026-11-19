@@ -1,0 +1,199 @@
+<div class="mb-5" dir="rtl">
+  <!-- Mobile filter toggle (declutter) -->
+  <div class="flex items-center gap-2 md:hidden mb-3">
+    <button (click)="filtersExpanded = !filtersExpanded"
+      class="flex-1 flex items-center justify-between gap-2 px-4 py-2.5 bg-white border border-[#E7ECF2] rounded-xl text-sm text-[#0F172A] cursor-pointer hover:border-[#00848D]/30 transition-all">
+      <span class="flex items-center gap-2 font-medium">
+        <i class="ri-equalizer-line text-[#00848D] text-base"></i>
+        الفلاتر
+        <span *ngIf="activeFilterCount() > 0"
+          class="min-w-[20px] h-5 px-1.5 flex items-center justify-center rounded-full bg-[#00848D] text-white text-[11px] font-bold">{{ activeFilterCount() }}</span>
+      </span>
+      <i [class]="'ri-arrow-down-s-line text-[#4B5563] transition-transform duration-200 ' + (filtersExpanded ? 'rotate-180' : '')"></i>
+    </button>
+    <button (click)="fs.reset()" aria-label="إعادة تعيين"
+      class="w-11 h-11 shrink-0 flex items-center justify-center bg-white border border-[#E7ECF2] rounded-xl text-[#4B5563] hover:text-[#0F172A] hover:border-[#00848D]/30 transition-all cursor-pointer">
+      <i class="ri-refresh-line"></i>
+    </button>
+  </div>
+
+  <!-- Filters -->
+  <div [class.hidden]="!filtersExpanded"
+    class="grid grid-cols-1 gap-2 rounded-2xl border border-[#E7ECF2] bg-white p-3 shadow-sm md:!flex md:flex-wrap md:items-center md:gap-2.5 md:rounded-none md:border-0 md:bg-transparent md:p-0 md:shadow-none max-md:[&>div>button]:w-full max-md:[&>div>div]:w-full">
+
+  <!-- Transaction Type -->
+  <div class="relative">
+    <button (click)="toggleDropdown('txType')"
+      class="appearance-none bg-white border border-[#E7ECF2] rounded-xl px-4 py-2.5 pr-9 text-sm text-[#0F172A] cursor-pointer focus:outline-none focus:border-[#00848D] focus:ring-1 focus:ring-[#00848D]/20 hover:border-[#00848D]/30 transition-all duration-200 whitespace-nowrap">
+      {{ fs.transactionType || 'عرض الكل' }}
+    </button>
+    <span class="absolute right-3 top-1/2 -translate-y-1/2 w-4 h-4 flex items-center justify-center pointer-events-none">
+      <i class="ri-arrow-down-s-line text-[#4B5563] text-sm"></i>
+    </span>
+    <div *ngIf="openDropdown === 'txType'"
+      class="absolute top-full right-0 mt-1 w-48 bg-white border border-[#E7ECF2] rounded-xl shadow-lg z-50 max-h-52 overflow-y-auto">
+      <button (click)="selectTransactionType(null)"
+        [class]="'w-full text-right px-3 py-2 text-sm hover:bg-[#F7F9FB] transition-colors cursor-pointer ' + (!fs.transactionType ? 'bg-[#00848D]/5 text-[#00848D] font-medium' : 'text-[#0F172A]')">
+        عرض الكل
+      </button>
+      <button *ngFor="let t of fs.options.transactionTypes" (click)="selectTransactionType(t)"
+        [class]="'w-full text-right px-3 py-2 text-sm hover:bg-[#F7F9FB] transition-colors cursor-pointer ' + (fs.transactionType === t ? 'bg-[#00848D]/5 text-[#00848D] font-medium' : 'text-[#0F172A]')">
+        {{ t }}
+      </button>
+    </div>
+  </div>
+
+  <!-- Owner Type -->
+  <div class="relative" *ngIf="fs.options.ownerTypes.length">
+    <button (click)="toggleDropdown('ownerType')"
+      class="appearance-none bg-white border border-[#E7ECF2] rounded-xl px-4 py-2.5 pr-9 text-sm text-[#0F172A] cursor-pointer focus:outline-none focus:border-[#00848D] focus:ring-1 focus:ring-[#00848D]/20 hover:border-[#00848D]/30 transition-all duration-200 whitespace-nowrap">
+      {{ fs.ownerType || 'جميع الملاك' }}
+    </button>
+    <span class="absolute right-3 top-1/2 -translate-y-1/2 w-4 h-4 flex items-center justify-center pointer-events-none">
+      <i class="ri-arrow-down-s-line text-[#4B5563] text-sm"></i>
+    </span>
+    <div *ngIf="openDropdown === 'ownerType'"
+      class="absolute top-full right-0 mt-1 w-48 bg-white border border-[#E7ECF2] rounded-xl shadow-lg z-50 max-h-52 overflow-y-auto">
+      <button (click)="selectOwnerType(null)"
+        [class]="'w-full text-right px-3 py-2 text-sm hover:bg-[#F7F9FB] transition-colors cursor-pointer ' + (!fs.ownerType ? 'bg-[#00848D]/5 text-[#00848D] font-medium' : 'text-[#0F172A]')">
+        عرض الكل
+      </button>
+      <button *ngFor="let t of fs.options.ownerTypes" (click)="selectOwnerType(t)"
+        [class]="'w-full text-right px-3 py-2 text-sm hover:bg-[#F7F9FB] transition-colors cursor-pointer ' + (fs.ownerType === t ? 'bg-[#00848D]/5 text-[#00848D] font-medium' : 'text-[#0F172A]')">
+        {{ t }}
+      </button>
+    </div>
+  </div>
+
+  <!-- Region -->
+  <div class="relative">
+    <button (click)="toggleDropdown('region')"
+      class="appearance-none bg-white border border-[#E7ECF2] rounded-xl px-4 py-2.5 pr-9 text-sm text-[#0F172A] cursor-pointer focus:outline-none focus:border-[#00848D] focus:ring-1 focus:ring-[#00848D]/20 hover:border-[#00848D]/30 transition-all duration-200 whitespace-nowrap">
+      {{ fs.region || 'جميع المناطق' }}
+    </button>
+    <span class="absolute right-3 top-1/2 -translate-y-1/2 w-4 h-4 flex items-center justify-center pointer-events-none">
+      <i class="ri-arrow-down-s-line text-[#4B5563] text-sm"></i>
+    </span>
+    <div *ngIf="openDropdown === 'region'"
+      class="absolute top-full right-0 mt-1 w-56 bg-white border border-[#E7ECF2] rounded-xl shadow-lg z-50 max-h-52 overflow-y-auto">
+      <button (click)="selectRegion(null)"
+        [class]="'w-full text-right px-3 py-2 text-sm hover:bg-[#F7F9FB] transition-colors cursor-pointer ' + (!fs.region ? 'bg-[#00848D]/5 text-[#00848D] font-medium' : 'text-[#0F172A]')">
+        جميع المناطق
+      </button>
+      <button *ngFor="let r of fs.options.geography" (click)="selectRegion(r.name)"
+        [class]="'w-full text-right px-3 py-2 text-sm hover:bg-[#F7F9FB] transition-colors cursor-pointer ' + (fs.region === r.name ? 'bg-[#00848D]/5 text-[#00848D] font-medium' : 'text-[#0F172A]')">
+        {{ r.name }}
+      </button>
+    </div>
+  </div>
+
+  <!-- City (cascading) -->
+  <div class="relative">
+    <button (click)="toggleDropdown('city')"
+      class="appearance-none bg-white border border-[#E7ECF2] rounded-xl px-4 py-2.5 pr-9 text-sm text-[#0F172A] cursor-pointer focus:outline-none focus:border-[#00848D] focus:ring-1 focus:ring-[#00848D]/20 hover:border-[#00848D]/30 transition-all duration-200 whitespace-nowrap"
+      [class.opacity-50]="!fs.region">
+      {{ fs.city || (fs.region ? 'جميع المدن' : 'اختر المنطقة أولاً') }}
+    </button>
+    <span class="absolute right-3 top-1/2 -translate-y-1/2 w-4 h-4 flex items-center justify-center pointer-events-none">
+      <i class="ri-arrow-down-s-line text-[#4B5563] text-sm"></i>
+    </span>
+    <div *ngIf="openDropdown === 'city' && fs.region"
+      class="absolute top-full right-0 mt-1 w-48 bg-white border border-[#E7ECF2] rounded-xl shadow-lg z-50 max-h-52 overflow-y-auto">
+      <button (click)="selectCity(null)"
+        [class]="'w-full text-right px-3 py-2 text-sm hover:bg-[#F7F9FB] transition-colors cursor-pointer ' + (!fs.city ? 'bg-[#00848D]/5 text-[#00848D] font-medium' : 'text-[#0F172A]')">
+        جميع المدن
+      </button>
+      <button *ngFor="let c of fs.getCities()" (click)="selectCity(c.name)"
+        [class]="'w-full text-right px-3 py-2 text-sm hover:bg-[#F7F9FB] transition-colors cursor-pointer ' + (fs.city === c.name ? 'bg-[#00848D]/5 text-[#00848D] font-medium' : 'text-[#0F172A]')">
+        {{ c.name }}
+      </button>
+    </div>
+  </div>
+
+  <!-- District (cascading) -->
+  <div class="relative">
+    <button (click)="toggleDropdown('district')"
+      class="appearance-none bg-white border border-[#E7ECF2] rounded-xl px-4 py-2.5 pr-9 text-sm text-[#0F172A] cursor-pointer focus:outline-none focus:border-[#00848D] focus:ring-1 focus:ring-[#00848D]/20 hover:border-[#00848D]/30 transition-all duration-200 whitespace-nowrap"
+      [class.opacity-50]="!fs.city">
+      {{ fs.district || (fs.city ? 'جميع الأحياء' : 'اختر المدينة أولاً') }}
+    </button>
+    <span class="absolute right-3 top-1/2 -translate-y-1/2 w-4 h-4 flex items-center justify-center pointer-events-none">
+      <i class="ri-arrow-down-s-line text-[#4B5563] text-sm"></i>
+    </span>
+    <div *ngIf="openDropdown === 'district' && fs.city"
+      class="absolute top-full right-0 mt-1 w-48 bg-white border border-[#E7ECF2] rounded-xl shadow-lg z-50 max-h-52 overflow-y-auto">
+      <button (click)="selectDistrict(null)"
+        [class]="'w-full text-right px-3 py-2 text-sm hover:bg-[#F7F9FB] transition-colors cursor-pointer ' + (!fs.district ? 'bg-[#00848D]/5 text-[#00848D] font-medium' : 'text-[#0F172A]')">
+        جميع الأحياء
+      </button>
+      <button *ngFor="let d of fs.getDistricts()" (click)="selectDistrict(d.name)"
+        [class]="'w-full text-right px-3 py-2 text-sm hover:bg-[#F7F9FB] transition-colors cursor-pointer ' + (fs.district === d.name ? 'bg-[#00848D]/5 text-[#00848D] font-medium' : 'text-[#0F172A]')">
+        {{ d.name }}
+      </button>
+    </div>
+  </div>
+
+  <!-- Nationality (multi-select) -->
+  <div class="relative">
+    <button (click)="toggleDropdown('nationality')"
+      class="appearance-none bg-white border border-[#E7ECF2] rounded-xl px-4 py-2.5 pr-9 text-sm text-[#0F172A] cursor-pointer focus:outline-none focus:border-[#00848D] focus:ring-1 focus:ring-[#00848D]/20 hover:border-[#00848D]/30 transition-all duration-200 whitespace-nowrap">
+      {{ fs.nationalities.length === 0 ? 'جميع الجنسيات' : fs.nationalities.length === 1 ? fs.nationalities[0] : fs.nationalities.length + ' جنسيات' }}
+    </button>
+    <span class="absolute right-3 top-1/2 -translate-y-1/2 w-4 h-4 flex items-center justify-center pointer-events-none">
+      <i class="ri-arrow-down-s-line text-[#4B5563] text-sm"></i>
+    </span>
+    <div *ngIf="openDropdown === 'nationality'"
+      class="absolute top-full right-0 mt-1 w-56 bg-white border border-[#E7ECF2] rounded-xl shadow-lg z-50 max-h-64 overflow-y-auto">
+      <div class="px-3 py-1.5 border-b border-[#E7ECF2]">
+        <input type="text" [(ngModel)]="nationalitySearch" placeholder="بحث..."
+          class="w-full text-xs px-2 py-1 border border-[#E7ECF2] rounded text-right" />
+      </div>
+      <button (click)="clearNationalities()"
+        [class]="'w-full text-right px-3 py-2 text-sm hover:bg-[#F7F9FB] transition-colors cursor-pointer ' + (fs.nationalities.length === 0 ? 'bg-[#00848D]/5 text-[#00848D] font-medium' : 'text-[#0F172A]')">
+        جميع الجنسيات
+      </button>
+      <label *ngFor="let n of filteredNationalities()"
+        class="flex items-center gap-2 px-3 py-1.5 text-sm text-[#0F172A] hover:bg-[#F7F9FB] cursor-pointer">
+        <input type="checkbox" [checked]="fs.nationalities.includes(n)" (change)="toggleNationality(n)"
+          class="rounded border-[#E7ECF2]" />
+        <span>{{ n }}</span>
+      </label>
+    </div>
+  </div>
+
+  <!-- Period -->
+  <div class="relative">
+    <button (click)="toggleDropdown('period')"
+      class="appearance-none bg-white border border-[#E7ECF2] rounded-xl px-4 py-2.5 pr-9 text-sm text-[#0F172A] cursor-pointer focus:outline-none focus:border-[#00848D] focus:ring-1 focus:ring-[#00848D]/20 hover:border-[#00848D]/30 transition-all duration-200 whitespace-nowrap">
+      {{ periodLabel() }}
+    </button>
+    <span class="absolute right-3 top-1/2 -translate-y-1/2 w-4 h-4 flex items-center justify-center pointer-events-none">
+      <i class="ri-arrow-down-s-line text-[#4B5563] text-sm"></i>
+    </span>
+    <div *ngIf="openDropdown === 'period'"
+      class="absolute top-full right-0 mt-1 w-36 bg-white border border-[#E7ECF2] rounded-xl shadow-lg z-50">
+      <button *ngFor="let p of periods" (click)="selectPeriod(p.value)"
+        [class]="'w-full text-right px-3 py-2 text-sm hover:bg-[#F7F9FB] transition-colors cursor-pointer ' + (fs.period === p.value ? 'bg-[#00848D]/5 text-[#00848D] font-medium' : 'text-[#0F172A]')">
+        {{ p.label }}
+      </button>
+    </div>
+  </div>
+
+  <!-- Period info -->
+  <div class="flex items-center gap-1.5 max-md:pt-0.5">
+    <span class="text-[11px] text-[#94A3B8] whitespace-nowrap">{{ periodInfoLabel() }}</span>
+  </div>
+
+  <div class="h-5 w-px bg-[#E7ECF2] mx-1 hidden md:block"></div>
+
+  <!-- Reset (desktop) -->
+  <button (click)="fs.reset()"
+    class="hidden md:flex items-center gap-1.5 px-3.5 py-2.5 text-sm text-[#4B5563] hover:text-[#0F172A] bg-white border border-[#E7ECF2] rounded-xl hover:border-[#00848D]/30 transition-all duration-200 whitespace-nowrap cursor-pointer">
+    <span class="w-4 h-4 flex items-center justify-center">
+      <i class="ri-refresh-line"></i>
+    </span>
+    <span class="font-medium">إعادة تعيين</span>
+  </button>
+
+  </div>
+</div>

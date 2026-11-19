@@ -1,0 +1,150 @@
+<app-layout [showGlobalFilter]="false" [showPageHeader]="false">
+  <div class="p-6 space-y-6" dir="rtl">
+    <div>
+      <h1 class="text-2xl font-bold text-gray-900">التقارير</h1>
+      <p class="text-gray-500 mt-1">إنشاء وتحميل تقارير مخصصة بناءً على بيانات الضوابط الإيجارية.</p>
+    </div>
+
+    <div class="bg-white rounded-xl border border-gray-200 p-6 space-y-6">
+      <div>
+        <label class="block text-sm font-semibold text-gray-700 mb-2">نوع التقرير</label>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <button type="button" (click)="reportType.set('national')"
+            [style.borderColor]="reportType() === 'national' ? '#00848D' : ''"
+            [style.backgroundColor]="reportType() === 'national' ? '#E8F6F3' : ''"
+            class="text-right border rounded-lg p-4 hover:border-[#00848D] transition-colors">
+            <div class="font-semibold text-gray-900">التقرير الوطني</div>
+            <div class="text-sm text-gray-500">تقرير شامل لجميع العواصم الإدارية</div>
+          </button>
+          <button type="button" (click)="reportType.set('city')"
+            [style.borderColor]="reportType() === 'city' ? '#00848D' : ''"
+            [style.backgroundColor]="reportType() === 'city' ? '#E8F6F3' : ''"
+            class="text-right border rounded-lg p-4 hover:border-[#00848D] transition-colors">
+            <div class="font-semibold text-gray-900">تقرير مدينة</div>
+            <div class="text-sm text-gray-500">تقرير تفصيلي لمدينة محددة</div>
+          </button>
+        </div>
+      </div>
+
+      <div *ngIf="reportType() === 'city'">
+        <label class="block text-sm font-semibold text-gray-700 mb-2">المدينة</label>
+        <select [value]="selectedCityId()" (change)="onCityChange($event)"
+          class="w-full md:w-1/2 border rounded-lg px-3 py-2 bg-white text-gray-900">
+          <option *ngFor="let c of cities()" [value]="c.cityId">{{ c.cityName }}</option>
+        </select>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div>
+          <label class="block text-sm font-semibold text-gray-700 mb-2">نوع الفترة</label>
+          <div class="flex gap-2">
+            <button *ngFor="let p of periodTypes"
+              type="button" (click)="setPeriodType(p.id)"
+              [disabled]="!isPeriodTypeAvailable(p.id)"
+              [style.backgroundColor]="periodType() === p.id ? '#00848D' : ''" [style.color]="periodType() === p.id ? '#fff' : ''"
+              [class.opacity-60]="!isPeriodTypeAvailable(p.id)" [class.cursor-not-allowed]="!isPeriodTypeAvailable(p.id)"
+              class="px-3 py-2 rounded-lg border text-sm">{{ p.label }}</button>
+          </div>
+        </div>
+        <div>
+          <label class="block text-sm font-semibold text-gray-700 mb-2">الفترة</label>
+          <select [value]="selectedPeriodId()" (change)="onPeriodChange($event)" [disabled]="periodOptions().length === 0"
+            class="w-full border rounded-lg px-3 py-2 bg-white text-gray-900 disabled:bg-gray-50 disabled:text-gray-600">
+            <option *ngFor="let p of periodOptions()" [value]="p.id" [selected]="p.id === selectedPeriodId()">{{ p.label }}</option>
+          </select>
+        </div>
+      </div>
+
+      <div>
+        <label class="block text-sm font-semibold text-gray-700 mb-2">تنسيق التقرير</label>
+        <div class="flex gap-2">
+          <button type="button" (click)="setFormat('pdf')"
+            [style.backgroundColor]="format() === 'pdf' ? '#00848D' : ''" [style.color]="format() === 'pdf' ? '#fff' : ''"
+            class="px-4 py-2 rounded-lg border text-sm">PDF</button>
+          <button type="button" (click)="setFormat('word')"
+            [style.backgroundColor]="format() === 'word' ? '#00848D' : ''" [style.color]="format() === 'word' ? '#fff' : ''"
+            class="px-4 py-2 rounded-lg border text-sm">Word</button>
+        </div>
+      </div>
+
+      <button type="button" (click)="generate()" [disabled]="!canGenerate()"
+        class="px-6 py-3 rounded-lg bg-[#00848D] text-white font-semibold hover:bg-[#006E75] disabled:opacity-60">
+        {{ generating() ? 'جارٍ الإنشاء...' : 'إنشاء التقرير' }}
+      </button>
+    </div>
+
+    <div class="bg-white rounded-xl border border-gray-200 p-6">
+      <h2 class="text-lg font-bold text-gray-900 mb-1">سجل التقارير</h2>
+      <p class="text-sm text-gray-500 mb-4">سجل جميع التقارير التي تم إنشاؤها</p>
+
+      <div *ngIf="history().length === 0" class="text-center text-gray-400 py-10">
+        لا توجد تقارير بعد. اضغط «إنشاء التقرير» لإنشاء أول تقرير.
+      </div>
+
+      <div *ngIf="history().length > 0" class="overflow-x-auto">
+      <table class="w-full min-w-[600px] text-sm text-right">
+        <thead class="text-gray-500 border-b">
+          <tr>
+            <th class="py-2 font-medium">اسم التقرير</th>
+            <th class="py-2 font-medium">نوع التقرير</th>
+            <th class="py-2 font-medium">المدينة</th>
+            <th class="py-2 font-medium">الفترة</th>
+            <th class="py-2 font-medium">التنسيق</th>
+            <th class="py-2 font-medium">التاريخ</th>
+            <th class="py-2 font-medium">الحالة</th>
+            <th class="py-2 font-medium">تنزيل</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let r of pagedHistory()" class="border-b last:border-0">
+            <td class="py-2">{{ r.name }}</td>
+            <td class="py-2">{{ r.type }}</td>
+            <td class="py-2">{{ r.scope }}</td>
+            <td class="py-2">{{ r.period }}</td>
+            <td class="py-2 uppercase">{{ r.format }}</td>
+            <td class="py-2">{{ r.date }}</td>
+            <td class="py-2"><span class="px-2 py-1 rounded-full text-xs bg-[#E8F6F3] text-[#00848D]">جاهز</span></td>
+            <td class="py-2">
+              <button type="button" (click)="redownload(r)" class="text-[#00848D] hover:text-[#006E75]">
+                <i class="ri-download-line"></i>
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      </div>
+
+      <div *ngIf="history().length > pageSizes[0]" class="flex flex-wrap items-center justify-between gap-3 pt-4 text-sm text-gray-600">
+        <div class="flex items-center gap-2">
+          <span>عرض</span>
+          <select [value]="historyPageSize()" (change)="onHistoryPageSizeChange($event)" aria-label="عدد التقارير في الصفحة"
+            class="border border-gray-300 rounded-md px-2 py-1 bg-white">
+            <option *ngFor="let size of pageSizes" [value]="size" [selected]="size === historyPageSize()">{{ size }}</option>
+          </select>
+          <span>{{ historySlice().start + 1 }}–{{ historySlice().end }} من {{ history().length }}</span>
+        </div>
+
+        <nav *ngIf="historySlice().totalPages > 1" class="flex items-center gap-1" aria-label="صفحات سجل التقارير">
+          <button type="button" (click)="goToHistoryPage(historySlice().page - 1)" [disabled]="historySlice().page === 1"
+            class="px-2 py-1 rounded-md hover:bg-gray-100 disabled:opacity-40 disabled:hover:bg-transparent" aria-label="الصفحة السابقة">
+            <i class="ri-arrow-right-s-line"></i>
+          </button>
+          <ng-container *ngFor="let p of historyPages()">
+            <span *ngIf="p === 'gap'" class="px-1 text-gray-400">…</span>
+            <button *ngIf="p !== 'gap'" type="button" (click)="goToHistoryPage(+p)"
+              [attr.aria-current]="p === historySlice().page ? 'page' : null"
+              [class]="p === historySlice().page
+                ? 'min-w-8 px-2 py-1 rounded-md bg-[#00848D] text-white font-semibold'
+                : 'min-w-8 px-2 py-1 rounded-md hover:bg-gray-100'">
+              {{ p }}
+            </button>
+          </ng-container>
+          <button type="button" (click)="goToHistoryPage(historySlice().page + 1)" [disabled]="historySlice().page === historySlice().totalPages"
+            class="px-2 py-1 rounded-md hover:bg-gray-100 disabled:opacity-40 disabled:hover:bg-transparent" aria-label="الصفحة التالية">
+            <i class="ri-arrow-left-s-line"></i>
+          </button>
+        </nav>
+      </div>
+    </div>
+  </div>
+</app-layout>

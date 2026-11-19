@@ -1,0 +1,67 @@
+<div class="flex flex-wrap items-center gap-2.5" dir="rtl">
+  <!-- Year / Quarter / Month (the portal period, shared with the indicators and city-analysis pages) -->
+  <app-period-filter />
+
+  <!-- Status Filter -->
+  <div class="relative">
+    <select
+      [value]="selectedStatus"
+      (change)="statusChange.emit($any($event.target).value)"
+      [class]="selectBaseClass"
+    >
+      <option value="الكل">الحالة التشغيلية: الكل</option>
+      @for (s of filterOut(statuses, 'الكل'); track s) {
+        <option [value]="s">{{ s }}</option>
+      }
+    </select>
+    <span class="absolute right-3 top-1/2 -translate-y-1/2 w-4 h-4 flex items-center justify-center pointer-events-none">
+      <i class="ri-arrow-down-s-line text-[#4B5563] text-sm"></i>
+    </span>
+  </div>
+
+  <!-- Classification Filter -->
+  <div class="relative">
+    <select
+      [value]="selectedClassification"
+      (change)="classificationChange.emit($any($event.target).value)"
+      [class]="selectBaseClass"
+    >
+      <option value="الكل">تصنيف النمو: الكل</option>
+      @for (c of filterOut(classifications, 'الكل'); track c) {
+        <option [value]="c">{{ c }}</option>
+      }
+    </select>
+    <span class="absolute right-3 top-1/2 -translate-y-1/2 w-4 h-4 flex items-center justify-center pointer-events-none">
+      <i class="ri-arrow-down-s-line text-[#4B5563] text-sm"></i>
+    </span>
+  </div>
+
+  <!-- City Filter -->
+  <div class="relative">
+    <select
+      [value]="selectedCity"
+      (change)="cityChange.emit($any($event.target).value)"
+      [class]="selectBaseClass"
+    >
+      <option value="الكل">المدينة: الكل</option>
+      @for (c of cities; track c.id) {
+        <option [value]="c.name">{{ c.name }}</option>
+      }
+    </select>
+    <span class="absolute right-3 top-1/2 -translate-y-1/2 w-4 h-4 flex items-center justify-center pointer-events-none">
+      <i class="ri-arrow-down-s-line text-[#4B5563] text-sm"></i>
+    </span>
+  </div>
+
+  @if (hasFilters) {
+    <button
+      (click)="reset.emit()"
+      class="flex items-center gap-1.5 px-3.5 py-2.5 text-sm text-[#4B5563] hover:text-[#0F172A] bg-white border border-[#E7ECF2] rounded-xl hover:border-[#00848D]/30 transition-all duration-200 whitespace-nowrap cursor-pointer"
+    >
+      <span class="w-4 h-4 flex items-center justify-center">
+        <i class="ri-refresh-line"></i>
+      </span>
+      <span class="font-medium">إعادة ضبط</span>
+    </button>
+  }
+</div>

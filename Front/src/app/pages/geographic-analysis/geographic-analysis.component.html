@@ -1,0 +1,66 @@
+<app-layout title="التحليل الجغرافي" subtitle="أين يتركز رأس المال الأجنبي — منطقة، مدينة، حي" [breadcrumbs]="[{ label: 'تملك الأجانب' }, { label: 'التحليل الجغرافي' }]">
+  <!-- Toggle -->
+  <div class="flex items-center gap-1 mb-5 bg-background-100 rounded-full p-1 w-fit">
+    <button (click)="mode = 'count'"
+      [class]="'px-4 py-1.5 rounded-full text-sm font-medium transition-colors whitespace-nowrap cursor-pointer ' + (mode === 'count' ? 'bg-[#002F56] text-white' : 'text-foreground-600 hover:text-foreground-800')">
+      عدد العمليات
+    </button>
+    <button (click)="mode = 'value'"
+      [class]="'px-4 py-1.5 rounded-full text-sm font-medium transition-colors whitespace-nowrap cursor-pointer ' + (mode === 'value' ? 'bg-[#002F56] text-white' : 'text-foreground-600 hover:text-foreground-800')">
+      قيمة العمليات
+    </button>
+  </div>
+
+  <div class="grid grid-cols-1 lg:grid-cols-5 gap-5 mb-5">
+    <!-- Heatmap -->
+    <div class="lg:col-span-3">
+      <app-chart-card [title]="'خريطة الكثافة الإقليمية'" [subtitle]="mode === 'count' ? 'حسب عدد العمليات' : 'حسب قيمة العمليات'">
+        @if (hasData) {
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
+          <div *ngFor="let region of regions"
+            [class]="getHeatColor(region) + ' rounded-lg p-4 flex flex-col items-center justify-center text-center min-h-[110px] transition-all hover:scale-105 cursor-default'">
+            <span [class]="'text-xs font-medium mb-1 ' + (getHeatRatio(region) > 0.4 ? 'text-white/80' : 'text-foreground-600')">{{ region.name }}</span>
+            <span [class]="'text-xl font-heading font-bold ' + (getHeatRatio(region) > 0.4 ? 'text-white' : 'text-foreground-900')">{{ getDisplayVal(region) }}</span>
+          </div>
+        </div>
+        <div class="flex items-center justify-end gap-2 mt-4">
+          <span class="text-[10px] text-foreground-400">أقل</span>
+          <div class="flex gap-0.5">
+            <div class="w-5 h-3 rounded-sm bg-[#DCEAF5]"></div>
+            <div class="w-5 h-3 rounded-sm bg-[#A9CBE6]"></div>
+            <div class="w-5 h-3 rounded-sm bg-[#4F86BE]"></div>
+            <div class="w-5 h-3 rounded-sm bg-[#1E5488]"></div>
+            <div class="w-5 h-3 rounded-sm bg-[#002F56]"></div>
+          </div>
+          <span class="text-[10px] text-foreground-400">أكثر</span>
+        </div>
+        } @else { <app-chart-empty-state height="280px" /> }
+      </app-chart-card>
+    </div>
+
+    <!-- Ranked -->
+    <div class="lg:col-span-2">
+      <app-chart-card [title]="'المناطق الأعلى'" [subtitle]="mode === 'count' ? 'مرتبة حسب عدد العمليات' : 'مرتبة حسب القيمة'">
+        @if (hasData) {
+        <div class="space-y-2">
+          <div *ngFor="let region of sortedRegions; let idx = index" class="flex items-center gap-3">
+            <span class="text-xs font-bold text-foreground-400 w-5 text-left">{{ idx + 1 }}</span>
+            <span class="text-xs text-foreground-700 w-28 truncate">{{ region.name }}</span>
+            <div class="flex-1 h-5 bg-background-100 rounded-full overflow-hidden">
+              <div class="h-full bg-[#1E5488] rounded-full transition-all duration-500" [style.width.%]="getBarWidth(region)"></div>
+            </div>
+            <span class="text-xs font-bold text-foreground-900 w-20 text-left whitespace-nowrap">{{ getDisplayVal(region) }}</span>
+          </div>
+        </div>
+        } @else { <app-chart-empty-state height="280px" /> }
+      </app-chart-card>
+    </div>
+  </div>
+
+  <!-- Regional Details -->
+  <app-chart-card title="تفاصيل المناطق" subtitle="نسبة كل نوع عملية حسب المنطقة">
+    @if (hasData && !typeFilterActive) { <div echarts [options]="regionalDetailsOptions" class="w-full h-[320px]"></div> }
+    @else if (typeFilterActive) { <app-chart-empty-state height="320px" message="أزل مرشح نوع العملية لعرض توزيع الأنواع حسب المنطقة" /> }
+    @else { <app-chart-empty-state height="320px" /> }
+  </app-chart-card>
+</app-layout>

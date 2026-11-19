@@ -1,0 +1,57 @@
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4" dir="rtl">
+  @for (path of growthPaths; track path) {
+    <div
+      class="bg-white rounded-lg border border-background-200 p-4 relative"
+      (mouseenter)="hoveredGrowthPath.set(path)"
+      (mouseleave)="hoveredGrowthPath.set(null)"
+    >
+      <p class="text-sm text-foreground-500 mb-1">المدن في نطاق {{ path }}</p>
+      <div class="flex items-end gap-2">
+        <span class="text-3xl font-extrabold" [style.color]="styleFor(path).text">{{ countFor(path) }}</span>
+        <span class="text-sm text-foreground-500 mb-0.5">مدينة</span>
+      </div>
+      <p class="text-sm text-foreground-400 mt-1">{{ styleFor(path).desc }}</p>
+
+      @if (hoveredGrowthPath() === path && citiesFor(path).length > 0) {
+        <div
+          class="absolute top-full right-0 mt-1 z-30 rounded-xl px-3 py-2 text-sm leading-relaxed pointer-events-none min-w-[140px]"
+          style="background-color: #002F56; color: #FFFFFF; box-shadow: 0 4px 16px rgba(0,47,86,0.2)"
+        >
+          @for (cityName of citiesFor(path); track $index) {
+            <p class="whitespace-nowrap">{{ cityName }}</p>
+          }
+        </div>
+      }
+      @if (hoveredGrowthPath() === path && citiesFor(path).length === 0) {
+        <div
+          class="absolute top-full right-0 mt-1 z-30 rounded-xl px-3 py-2 text-sm leading-relaxed pointer-events-none min-w-[100px]"
+          style="background-color: #002F56; color: #FFFFFF; box-shadow: 0 4px 16px rgba(0,47,86,0.2)"
+        >
+          <p class="whitespace-nowrap text-white/60">لا توجد مدن حالياً</p>
+        </div>
+      }
+    </div>
+  }
+
+  <div class="bg-white rounded-lg border border-background-200 p-4">
+    <p class="text-sm text-foreground-500 mb-1">ملخص الحالة التشغيلية</p>
+    <div class="space-y-1.5 mt-1">
+      <div class="flex items-center justify-between text-sm">
+        <span class="text-foreground-600">الضوابط مفعلة</span>
+        <span class="font-bold text-foreground-900">{{ data.regulationActivated }}</span>
+      </div>
+      <div class="flex items-center justify-between text-sm">
+        <span class="text-foreground-600">يتطلب دراسة تفصيلية</span>
+        <span class="font-bold text-foreground-900">{{ data.detailedStudy }}</span>
+      </div>
+      <div class="flex items-center justify-between text-sm">
+        <span class="text-foreground-600">يتطلب دراسة استباقية</span>
+        <span class="font-bold text-foreground-900">{{ data.proactiveMonitoring }}</span>
+      </div>
+      <div class="flex items-center justify-between text-sm">
+        <span class="text-foreground-600">لا إجراء</span>
+        <span class="font-bold text-foreground-900">{{ data.routineMonitoring }}</span>
+      </div>
+    </div>
+  </div>
+</div>

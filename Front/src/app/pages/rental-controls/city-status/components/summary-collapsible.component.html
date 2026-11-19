@@ -1,0 +1,123 @@
+<div class="bg-white rounded-[20px] border border-[#E7ECF2]"
+  style="box-shadow: 0 1px 3px rgba(0,47,86,0.04), 0 8px 24px rgba(0,47,86,0.04)"
+  dir="rtl"
+>
+  <button
+    (click)="expanded.set(!expanded())"
+    class="w-full flex items-center justify-between px-6 py-4 hover:bg-[#F7F9FB]/50 transition-colors duration-200 cursor-pointer rounded-[20px]"
+  >
+    <div class="flex items-center gap-3">
+      <span class="w-8 h-8 rounded-xl flex items-center justify-center"
+        style="background: linear-gradient(135deg, #00848D10 0%, #00A48810 100%)"
+      >
+        <i class="ri-pie-chart-2-line text-[#00848D] text-sm"></i>
+      </span>
+      <span class="text-sm font-extrabold text-[#0F172A]">ملخص تصنيف المدن</span>
+    </div>
+    <div class="flex items-center gap-3">
+      <span class="text-sm text-[#4B5563] font-medium">
+        {{ totalCities }} مدينة
+      </span>
+      <span [class]="'w-5 h-5 flex items-center justify-center text-[#4B5563] transition-transform duration-300 ' + (expanded() ? 'rotate-180' : '')">
+        <i class="ri-arrow-down-s-line"></i>
+      </span>
+    </div>
+  </button>
+
+  @if (expanded()) {
+    <div class="px-6 pb-5 space-y-5 border-t border-[#E7ECF2] pt-5">
+      <!-- Growth Path Distribution -->
+      <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-3">
+        @for (path of growthPaths; track path) {
+          <div
+            class="rounded-xl px-5 py-5 relative transition-all duration-200"
+            [style.background]="styleFor(path).bg"
+            [style.border]="'1px solid ' + styleFor(path).border"
+            (mouseenter)="onEnter(path)"
+            (mouseleave)="onLeave()"
+          >
+            <div class="flex items-center justify-between">
+              <span class="text-base font-bold" [style.color]="styleFor(path).text">{{ path }}</span>
+              <div class="flex items-center gap-1.5">
+                <span class="text-2xl font-extrabold" [style.color]="styleFor(path).text">{{ countFor(path) }}</span>
+                <span class="text-base text-[#4B5563]">مدينة</span>
+              </div>
+            </div>
+
+            <!-- Hover city list -->
+            @if (hoveredGrowthPath() === path && citiesForPath(path).length > 0) {
+              <div
+                #tooltip
+                class="absolute right-0 mt-1 z-[9999] rounded-xl px-3 py-2 text-sm leading-relaxed pointer-events-none min-w-[140px]"
+                [ngStyle]="tooltipStyle()"
+              >
+                @for (cityName of citiesForPath(path); track $index) {
+                  <p class="whitespace-nowrap">{{ cityName }}</p>
+                }
+              </div>
+            }
+            @if (hoveredGrowthPath() === path && citiesForPath(path).length === 0) {
+              <div
+                #tooltip
+                class="absolute right-0 mt-1 z-[9999] rounded-xl px-3 py-2 text-sm leading-relaxed pointer-events-none min-w-[100px]"
+                [ngStyle]="tooltipStyle()"
+              >
+                <p class="whitespace-nowrap text-white/60">لا توجد مدن حالياً</p>
+              </div>
+            }
+          </div>
+        }
+
+        <!-- Operational Status Summary -->
+        <div class="rounded-xl px-5 py-5"
+          style="background: #F8FAFC; border: 1px solid #E7ECF2"
+        >
+          <span class="text-base font-bold text-[#4B5563] block mb-3">الحالة التشغيلية</span>
+          <div class="grid grid-cols-2 gap-x-3 gap-y-2">
+            <div class="flex items-center justify-between text-base">
+              <span class="text-[#4B5563]">مفعلة</span>
+              <span class="font-bold text-[#0F172A]">{{ opsCount('الضوابط مفعلة') }}</span>
+            </div>
+            <div class="flex items-center justify-between text-base">
+              <span class="text-[#4B5563]">تفصيلية</span>
+              <span class="font-bold text-[#0F172A]">{{ opsCount('يتطلب دراسة تفصيلية') }}</span>
+            </div>
+            <div class="flex items-center justify-between text-base">
+              <span class="text-[#4B5563]">استباقية</span>
+              <span class="font-bold text-[#0F172A]">{{ opsCount('يتطلب دراسة استباقية') }}</span>
+            </div>
+            <div class="flex items-center justify-between text-base">
+              <span class="text-[#4B5563]">لا إجراء</span>
+              <span class="font-bold text-[#0F172A]">{{ opsCount('لا إجراء') }}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Classification Legend -->
+      <div class="flex flex-wrap items-center justify-between gap-4 rounded-xl px-5 py-4"
+        style="background: #F8FAFC; border: 1px solid #E7ECF2"
+      >
+        <div class="flex flex-wrap items-center gap-5">
+          <span class="text-base font-extrabold text-[#0F172A]">دليل تصنيف النمو الإيجاري</span>
+          @for (item of classificationLegend; track item.key) {
+            <div class="flex items-center gap-2">
+              <div [class]="'w-4 h-4 rounded ' + item.colorClass + ' border border-[#E7ECF2]'"></div>
+              <span class="text-base font-medium text-[#4B5563]">{{ item.label }}</span>
+              <span class="text-base text-[#4B5563]">{{ item.range }}</span>
+            </div>
+          }
+        </div>
+        <a
+          routerLink="/rental-indicators/methodology"
+          class="text-base text-[#00848D] hover:text-[#005257] flex items-center gap-1 whitespace-nowrap cursor-pointer font-semibold transition-colors duration-200"
+        >
+          <span>تعرف على منهجية التصنيف</span>
+          <span class="w-4 h-4 flex items-center justify-center">
+            <i class="ri-arrow-left-line text-sm"></i>
+          </span>
+        </a>
+      </div>
+    </div>
+  }
+</div>

@@ -1,0 +1,421 @@
+{
+  "cities": [
+    {
+      "id": "riyadh",
+      "name": "الرياض",
+      "operationalStatus": "الضوابط مفعلة",
+      "classification": "نمو مرتفع",
+      "classificationLabel": "elevated",
+      "cagr": "8.9%",
+      "housingBurden": "35%",
+      "investmentReturn": "5.1%",
+      "actualRentalGrowth": "-1%",
+      "vacancyRate": "7%",
+      "rentToIncome": "15%",
+      "impactData": {
+        "available": true,
+        "beforeValue": "—",
+        "afterValue": "—",
+        "change": "—",
+        "description": "المعدل السنوي المركب 8.9% (نمو مرتفع) بتراجع 0.8 نقطة والعبء السكني للدخل المحدود 35% يتجاوز الحد"
+      },
+      "recommendation": "المعدل السنوي المركب 8.9% (نمو مرتفع) بتراجع 0.8 نقطة والعبء السكني للدخل المحدود 35% يتجاوز الحد",
+      "priority": 1
+    },
+    {
+      "id": "najran",
+      "name": "نجران",
+      "operationalStatus": "يتطلب دراسة تفصيلية",
+      "classification": "نمو مرتفع",
+      "classificationLabel": "elevated",
+      "cagr": "6.8%",
+      "housingBurden": "50%",
+      "investmentReturn": "7.7%",
+      "actualRentalGrowth": "+2%",
+      "vacancyRate": "7%",
+      "rentToIncome": "16%",
+      "impactData": {
+        "available": false,
+        "beforeValue": "—",
+        "afterValue": "—",
+        "change": "—",
+        "description": "الزيادة الايجارية انخفضت إلى 2% ولكن يوجد عبء ذوي الدخل المحدود مرتفع"
+      },
+      "recommendation": "الزيادة الايجارية انخفضت إلى 2% ولكن يوجد عبء ذوي الدخل المحدود مرتفع",
+      "priority": 2
+    },
+    {
+      "id": "hail",
+      "name": "حائل",
+      "operationalStatus": "يتطلب دراسة استباقية",
+      "classification": "نمو مستدام",
+      "classificationLabel": "sustainable",
+      "cagr": "5.3%",
+      "housingBurden": "44%",
+      "investmentReturn": "6.4%",
+      "actualRentalGrowth": "+3%",
+      "vacancyRate": "8%",
+      "rentToIncome": "14%",
+      "impactData": {
+        "available": false,
+        "beforeValue": "—",
+        "afterValue": "—",
+        "change": "—",
+        "description": "مراقبة - العبء ذوي الدخل المحدود"
+      },
+      "recommendation": "مراقبة - العبء ذوي الدخل المحدود",
+      "priority": 3
+    },
+    {
+      "id": "buraidah",
+      "name": "بريدة",
+      "operationalStatus": "لا إجراء",
+      "classification": "نمو مستدام",
+      "classificationLabel": "sustainable",
+      "cagr": "5.2%",
+      "housingBurden": "29%",
+      "investmentReturn": "5.8%",
+      "actualRentalGrowth": "+2%",
+      "vacancyRate": "7%",
+      "rentToIncome": "11%",
+      "impactData": {
+        "available": false,
+        "beforeValue": "—",
+        "afterValue": "—",
+        "change": "—",
+        "description": ""
+      },
+      "recommendation": "",
+      "priority": 4
+    },
+    {
+      "id": "jeddah",
+      "name": "جدة",
+      "operationalStatus": "يتطلب دراسة استباقية",
+      "classification": "نمو مستدام",
+      "classificationLabel": "sustainable",
+      "cagr": "4.5%",
+      "housingBurden": "35%",
+      "investmentReturn": "5.3%",
+      "actualRentalGrowth": "+2%",
+      "vacancyRate": "8%",
+      "rentToIncome": "18%",
+      "impactData": {
+        "available": false,
+        "beforeValue": "—",
+        "afterValue": "—",
+        "change": "—",
+        "description": "مراقبة - العائد 5.3% دون الحد ولكن يوجد عبء ذوي الدخل المحدود"
+      },
+      "recommendation": "مراقبة - العائد 5.3% دون الحد ولكن يوجد عبء ذوي الدخل المحدود",
+      "priority": 5
+    },
+    {
+      "id": "madinah",
+      "name": "المدينة المنورة",
+      "operationalStatus": "يتطلب دراسة استباقية",
+      "classification": "نمو مستدام",
+      "classificationLabel": "sustainable",
+      "cagr": "4.1%",
+      "housingBurden": "32%",
+      "investmentReturn": "4.1%",
+      "actualRentalGrowth": "+6%",
+      "vacancyRate": "7%",
+      "rentToIncome": "15%",
+      "impactData": {
+        "available": false,
+        "beforeValue": "—",
+        "afterValue": "—",
+        "change": "—",
+        "description": "مراقبة - العائد 4.1% دون الحد ولكن يوجد عبء ذوي الدخل المحدود"
+      },
+      "recommendation": "مراقبة - العائد 4.1% دون الحد ولكن يوجد عبء ذوي الدخل المحدود",
+      "priority": 6
+    },
+    {
+      "id": "tabuk",
+      "name": "تبوك",
+      "operationalStatus": "يتطلب دراسة استباقية",
+      "classification": "نمو مستدام",
+      "classificationLabel": "sustainable",
+      "cagr": "3.9%",
+      "housingBurden": "39%",
+      "investmentReturn": "4.3%",
+      "actualRentalGrowth": "+3%",
+      "vacancyRate": "10%",
+      "rentToIncome": "11%",
+      "impactData": {
+        "available": false,
+        "beforeValue": "—",
+        "afterValue": "—",
+        "change": "—",
+        "description": "مراقبة - العائد 4.3% دون الحد ولكن يوجد عبء ذوي الدخل المحدود"
+      },
+      "recommendation": "مراقبة - العائد 4.3% دون الحد ولكن يوجد عبء ذوي الدخل المحدود",
+      "priority": 7
+    },
+    {
+      "id": "makkah",
+      "name": "مكة المكرمة",
+      "operationalStatus": "يتطلب دراسة استباقية",
+      "classification": "نمو مستدام",
+      "classificationLabel": "sustainable",
+      "cagr": "3.3%",
+      "housingBurden": "31%",
+      "investmentReturn": "4.2%",
+      "actualRentalGrowth": "+4%",
+      "vacancyRate": "8%",
+      "rentToIncome": "16%",
+      "impactData": {
+        "available": false,
+        "beforeValue": "—",
+        "afterValue": "—",
+        "change": "—",
+        "description": "مراقبة - العائد 4.2% دون الحد"
+      },
+      "recommendation": "مراقبة - العائد 4.2% دون الحد",
+      "priority": 8
+    },
+    {
+      "id": "sakaka",
+      "name": "سكاكا",
+      "operationalStatus": "يتطلب دراسة استباقية",
+      "classification": "نمو مستدام",
+      "classificationLabel": "sustainable",
+      "cagr": "2.3%",
+      "housingBurden": "38%",
+      "investmentReturn": "8.5%",
+      "actualRentalGrowth": "+3%",
+      "vacancyRate": "10%",
+      "rentToIncome": "10%",
+      "impactData": {
+        "available": false,
+        "beforeValue": "—",
+        "afterValue": "—",
+        "change": "—",
+        "description": "مراقبة - العبء ذوي الدخل المحدود"
+      },
+      "recommendation": "مراقبة - العبء ذوي الدخل المحدود",
+      "priority": 9
+    },
+    {
+      "id": "dammam",
+      "name": "الدمام",
+      "operationalStatus": "يتطلب دراسة استباقية",
+      "classification": "نمو مستدام",
+      "classificationLabel": "sustainable",
+      "cagr": "2.2%",
+      "housingBurden": "26%",
+      "investmentReturn": "5.4%",
+      "actualRentalGrowth": "+1%",
+      "vacancyRate": "7%",
+      "rentToIncome": "12%",
+      "impactData": {
+        "available": false,
+        "beforeValue": "—",
+        "afterValue": "—",
+        "change": "—",
+        "description": "مراقبة - العائد 5.4% دون الحد"
+      },
+      "recommendation": "مراقبة - العائد 5.4% دون الحد",
+      "priority": 10
+    },
+    {
+      "id": "bahah",
+      "name": "الباحة",
+      "operationalStatus": "يتطلب دراسة استباقية",
+      "classification": "نمو مستدام",
+      "classificationLabel": "sustainable",
+      "cagr": "1.9%",
+      "housingBurden": "37%",
+      "investmentReturn": "5.5%",
+      "actualRentalGrowth": "+2%",
+      "vacancyRate": "10%",
+      "rentToIncome": "11%",
+      "impactData": {
+        "available": false,
+        "beforeValue": "—",
+        "afterValue": "—",
+        "change": "—",
+        "description": "مراقبة - العبء ذوي الدخل المحدود"
+      },
+      "recommendation": "مراقبة - العبء ذوي الدخل المحدود",
+      "priority": 11
+    },
+    {
+      "id": "jazan",
+      "name": "جازان",
+      "operationalStatus": "يتطلب دراسة استباقية",
+      "classification": "نمو مستدام",
+      "classificationLabel": "sustainable",
+      "cagr": "0.9%",
+      "housingBurden": "39%",
+      "investmentReturn": "5.4%",
+      "actualRentalGrowth": "+2%",
+      "vacancyRate": "9%",
+      "rentToIncome": "14%",
+      "impactData": {
+        "available": false,
+        "beforeValue": "—",
+        "afterValue": "—",
+        "change": "—",
+        "description": "مراقبة - العائد 5.4% دون الحد ولكن يوجد عبء ذوي الدخل المحدود"
+      },
+      "recommendation": "مراقبة - العائد 5.4% دون الحد ولكن يوجد عبء ذوي الدخل المحدود",
+      "priority": 12
+    },
+    {
+      "id": "abha",
+      "name": "أبها",
+      "operationalStatus": "يتطلب دراسة استباقية",
+      "classification": "نمو مستدام",
+      "classificationLabel": "sustainable",
+      "cagr": "0.9%",
+      "housingBurden": "36%",
+      "investmentReturn": "4.5%",
+      "actualRentalGrowth": "+3%",
+      "vacancyRate": "8%",
+      "rentToIncome": "13%",
+      "impactData": {
+        "available": false,
+        "beforeValue": "—",
+        "afterValue": "—",
+        "change": "—",
+        "description": "مراقبة - العائد 4.5% دون الحد ولكن يوجد عبء ذوي الدخل المحدود"
+      },
+      "recommendation": "مراقبة - العائد 4.5% دون الحد ولكن يوجد عبء ذوي الدخل المحدود",
+      "priority": 13
+    },
+    {
+      "id": "arar",
+      "name": "عرعر",
+      "operationalStatus": "يتطلب دراسة استباقية",
+      "classification": "نمو مستدام",
+      "classificationLabel": "sustainable",
+      "cagr": "0.8%",
+      "housingBurden": "41%",
+      "investmentReturn": "12.1%",
+      "actualRentalGrowth": "+2%",
+      "vacancyRate": "8%",
+      "rentToIncome": "9%",
+      "impactData": {
+        "available": false,
+        "beforeValue": "—",
+        "afterValue": "—",
+        "change": "—",
+        "description": "مراقبة - العبء ذوي الدخل المحدود"
+      },
+      "recommendation": "مراقبة - العبء ذوي الدخل المحدود",
+      "priority": 14
+    }
+  ],
+  "nationalSummary": {
+    "acceleratedCities": 0,
+    "elevatedCities": 2,
+    "sustainableCities": 12,
+    "regulationActivated": 1,
+    "detailedStudy": 1,
+    "proactiveMonitoring": 11,
+    "routineMonitoring": 1
+  },
+  "operationalStages": [
+    {
+      "key": "noAction",
+      "label": "لا إجراء",
+      "count": 1
+    },
+    {
+      "key": "proactive",
+      "label": "يتطلب دراسة استباقية",
+      "count": 11
+    },
+    {
+      "key": "detailed",
+      "label": "يتطلب دراسة تفصيلية",
+      "count": 1
+    },
+    {
+      "key": "activated",
+      "label": "الضوابط مفعلة",
+      "count": 1
+    }
+  ],
+  "classificationLegend": [
+    {
+      "key": "sustainable",
+      "label": "نمو مستدام",
+      "range": "≤6%",
+      "colorClass": "bg-emerald-100/70"
+    },
+    {
+      "key": "elevated",
+      "label": "نمو مرتفع",
+      "range": "7%-9%",
+      "colorClass": "bg-amber-100/70"
+    },
+    {
+      "key": "accelerated",
+      "label": "نمو متسارع",
+      "range": "≥10%",
+      "colorClass": "bg-rose-100/70"
+    }
+  ],
+  "recommendations": [
+    {
+      "city": "الرياض",
+      "text": "المعدل السنوي المركب 8.9% (نمو مرتفع) بتراجع 0.8 نقطة والعبء السكني للدخل المحدود 35% يتجاوز الحد"
+    },
+    {
+      "city": "نجران",
+      "text": "الزيادة الايجارية انخفضت إلى 2% ولكن يوجد عبء ذوي الدخل المحدود مرتفع"
+    },
+    {
+      "city": "حائل",
+      "text": "مراقبة - العبء ذوي الدخل المحدود"
+    },
+    {
+      "city": "بريدة",
+      "text": ""
+    },
+    {
+      "city": "جدة",
+      "text": "مراقبة - العائد 5.3% دون الحد ولكن يوجد عبء ذوي الدخل المحدود"
+    },
+    {
+      "city": "المدينة المنورة",
+      "text": "مراقبة - العائد 4.1% دون الحد ولكن يوجد عبء ذوي الدخل المحدود"
+    },
+    {
+      "city": "تبوك",
+      "text": "مراقبة - العائد 4.3% دون الحد ولكن يوجد عبء ذوي الدخل المحدود"
+    },
+    {
+      "city": "مكة المكرمة",
+      "text": "مراقبة - العائد 4.2% دون الحد"
+    },
+    {
+      "city": "سكاكا",
+      "text": "مراقبة - العبء ذوي الدخل المحدود"
+    },
+    {
+      "city": "الدمام",
+      "text": "مراقبة - العائد 5.4% دون الحد"
+    },
+    {
+      "city": "الباحة",
+      "text": "مراقبة - العبء ذوي الدخل المحدود"
+    },
+    {
+      "city": "جازان",
+      "text": "مراقبة - العائد 5.4% دون الحد ولكن يوجد عبء ذوي الدخل المحدود"
+    },
+    {
+      "city": "أبها",
+      "text": "مراقبة - العائد 4.5% دون الحد ولكن يوجد عبء ذوي الدخل المحدود"
+    },
+    {
+      "city": "عرعر",
+      "text": "مراقبة - العبء ذوي الدخل المحدود"
+    }
+  ]
+}

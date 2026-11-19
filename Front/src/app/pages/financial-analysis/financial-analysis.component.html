@@ -1,0 +1,39 @@
+<app-layout title="التحليل المالي" subtitle="قصة المال — الإجماليات، الميل المركزي، والقيم القصوى" [breadcrumbs]="[{ label: 'تملك الأجانب' }, { label: 'التحليل المالي' }]">
+  <!-- KPI Cards -->
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-3 mb-5">
+    <app-kpi-card title="إجمالي قيمة الصفقات" [value]="getKpiValue(fm.totalValue)" icon="ri-money-dollar-circle-line" color="primary"></app-kpi-card>
+    <app-kpi-card title="متوسط قيمة الصفقة" [value]="getKpiValue(fm.avgValue)" icon="ri-bar-chart-line" color="accent"></app-kpi-card>
+    <app-kpi-card title="وسيط قيمة الصفقة" [value]="getKpiValue(fm.medianValue)" icon="ri-donut-chart-line"></app-kpi-card>
+    <app-kpi-card title="أعلى قيمة" [value]="getKpiValue(fm.maxValue)" icon="ri-arrow-up-line"></app-kpi-card>
+    <app-kpi-card title="أدنى قيمة" [value]="getKpiValue(fm.minValue)" icon="ri-arrow-down-line"></app-kpi-card>
+  </div>
+
+  <!-- Unit Toggle -->
+  <div class="flex items-center gap-1 mb-5 bg-background-100 rounded-full p-1 w-fit">
+    <button (click)="unit = 'full'"
+      [class]="'px-4 py-1.5 rounded-full text-sm font-medium transition-colors whitespace-nowrap cursor-pointer ' + (unit === 'full' ? 'bg-accent-900 text-white' : 'text-foreground-600 hover:text-foreground-800')">
+      كامل
+    </button>
+    <button (click)="unit = 'short'"
+      [class]="'px-4 py-1.5 rounded-full text-sm font-medium transition-colors whitespace-nowrap cursor-pointer ' + (unit === 'short' ? 'bg-accent-900 text-white' : 'text-foreground-600 hover:text-foreground-800')">
+      مختصر (ألف/مليون/مليار)
+    </button>
+  </div>
+
+  <div class="grid grid-cols-1 lg:grid-cols-2 gap-5 mb-5">
+    <app-chart-card title="اتجاه القيمة عبر الزمن" subtitle="إجمالي قيمة الصفقات الشهرية">
+      @if (hasData) { <div echarts [options]="valueTrendOptions" class="w-full h-[300px]"></div> }
+      @else { <app-chart-empty-state height="300px" /> }
+    </app-chart-card>
+    <app-chart-card title="نمو القيمة من فترة لأخرى" subtitle="نسبة التغير في قيمة الصفقات">
+      @if (hasData) { <div echarts [options]="growthBarOptions" class="w-full h-[300px]"></div> }
+      @else { <app-chart-empty-state height="300px" /> }
+    </app-chart-card>
+  </div>
+
+  <!-- Distribution -->
+  <app-chart-card title="توزيع قيم الصفقات" subtitle="عدد العمليات حسب شريحة القيمة">
+    @if (hasData) { <div echarts [options]="distributionOptions" class="w-full h-[320px]"></div> }
+    @else { <app-chart-empty-state height="320px" /> }
+  </app-chart-card>
+</app-layout>

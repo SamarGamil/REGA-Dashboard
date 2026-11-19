@@ -1,0 +1,98 @@
+<div dir="ltr">
+  @if (series.length > 1) {
+    <div class="flex items-center gap-4 mb-3" dir="rtl">
+      @for (s of series; track s.name) {
+        <span class="inline-flex items-center gap-1.5 text-xs font-bold text-[#4B5563]">
+          <span class="w-2 h-2 rounded-full" [style.background]="s.color"></span>
+          {{ s.name }}
+        </span>
+      }
+    </div>
+  }
+  <div class="relative w-full">
+    <svg width="100%" [attr.viewBox]="'0 0 ' + W + ' ' + H" class="block select-none">
+      <!-- light shade for after-activation region (left side in RTL) -->
+      <rect [attr.x]="0" [attr.y]="0" [attr.width]="actX" [attr.height]="H" fill="#00848D" [attr.opacity]="0.05" [attr.rx]="4" />
+      <!-- dashed activation line -->
+      <line [attr.x1]="actX" [attr.y1]="padT - 8" [attr.x2]="actX" [attr.y2]="H - padB" stroke="#005257" [attr.stroke-width]="1.5" stroke-dasharray="4 4" />
+      <!-- baseline -->
+      <line [attr.x1]="padT" [attr.y1]="H - padB" [attr.x2]="W - padT" [attr.y2]="H - padB" stroke="#E8EEF5" [attr.stroke-width]="1.2" />
+      <!-- lines -->
+      @for (s of series; track s.name) {
+        <path
+          [attr.d]="pathFor(s)"
+          fill="none"
+          [attr.stroke]="s.color"
+          [attr.stroke-width]="2.5"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+      }
+      <!-- points -->
+      @for (s of series; track s.name) {
+        @for (p of s.points; track $index; let i = $index) {
+          @if (p) {
+            <g
+              (mouseenter)="hoverIndex.set(i)"
+              (mouseleave)="hoverIndex.set(null)"
+              class="cursor-pointer"
+            >
+              <circle [attr.cx]="x(i)" [attr.cy]="y(p.value)" [attr.r]="hoverIndex() === i ? 6 : 4.5" fill="#FFFFFF" [attr.stroke]="s.color" [attr.stroke-width]="2.5" />
+              <circle [attr.cx]="x(i)" [attr.cy]="y(p.value)" [attr.r]="14" fill="transparent" />
+            </g>
+          }
+        }
+      }
+    </svg>
+
+    <!-- tooltip -->
+    @if (hoverIndex() !== null && hoverRows.length) {
+      <div
+        class="absolute z-10 pointer-events-none"
+        [style.top]="(tooltipY / H) * 100 + '%'"
+        [style.left]="(x(hoverIndex()!) / W) * 100 + '%'"
+        style="transform: translate(-50%, -115%)"
+      >
+        <div
+          class="px-3 py-1.5 rounded-lg text-center whitespace-nowrap"
+          style="background: #0F172A"
+          dir="rtl"
+        >
+          <span class="block text-[10px] font-medium text-white/75">{{ labels[hoverIndex()!] }}</span>
+          @for (row of hoverRows; track row.name) {
+            <span class="flex items-center justify-center gap-1.5 text-xs font-extrabold text-white">
+              @if (series.length > 1) {
+                <span class="w-1.5 h-1.5 rounded-full" [style.background]="row.color"></span>
+                <span class="font-medium text-white/75">{{ row.name }}:</span>
+              }
+              {{ row.display }}
+            </span>
+          }
+        </div>
+      </div>
+    }
+  </div>
+
+  <!-- x-axis labels -->
+  <div class="flex justify-between mt-1.5 px-2 text-[11px] font-medium text-[#64748B]" dir="rtl">
+    @for (label of labels; track $index; let i = $index) {
+      <span [class]="hoverIndex() === i ? 'text-[#00848D] font-bold' : ''">
+        {{ label }}
+      </span>
+    }
+  </div>
+
+  <!-- activation label; the direction arrow sits at the row's left end, under the latest period -->
+  <div class="relative h-6 mt-1" dir="rtl">
+    <app-chart-direction-arrow class="absolute left-2 top-1/2 -translate-y-1/2" />
+    <div class="absolute -translate-y-0" [style.left]="(actX / W) * 100 + '%'" style="transform: translateX(-50%)">
+      <span
+        class="inline-flex items-center gap-1.5 text-[11px] font-bold px-2.5 py-1 rounded-full whitespace-nowrap text-[#005257]"
+        style="background: #E8F6F3; border: 1px dashed #75CEC8"
+      >
+        <i class="ri-toggle-line text-xs"></i>
+        تفعيل الضوابط
+      </span>
+    </div>
+  </div>
+</div>

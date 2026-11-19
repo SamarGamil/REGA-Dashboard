@@ -1,0 +1,45 @@
+<app-layout title="تحليل المساحات" subtitle="كيف تشكل شرائح المساحة الطلب والتقييم" [breadcrumbs]="[{ label: 'تملك الأجانب' }, { label: 'تحليل المساحات' }]">
+  <div class="grid grid-cols-1 lg:grid-cols-2 gap-5 mb-5">
+    <app-chart-card title="عدد العمليات حسب شريحة المساحة" subtitle="توزيع العمليات حسب المساحة">
+      @if (hasData) { <div echarts [options]="txByAreaOptions" class="w-full h-[300px]"></div> }
+      @else { <app-chart-empty-state height="300px" /> }
+    </app-chart-card>
+    <app-chart-card title="متوسط قيمة الصفقة حسب شريحة المساحة" subtitle="مليون ر.س">
+      @if (hasData) { <div echarts [options]="avgByAreaOptions" class="w-full h-[300px]"></div> }
+      @else { <app-chart-empty-state height="300px" /> }
+    </app-chart-card>
+  </div>
+
+  <div class="grid grid-cols-1 lg:grid-cols-2 gap-5 mb-5">
+    <app-chart-card title="شريحة المساحة × الجنسية" subtitle="توزيع عدد العمليات">
+      @if (hasData) {
+      <div class="space-y-4">
+        <div *ngFor="let row of areaByNationality">
+          <span class="text-xs font-medium text-foreground-700 mb-1 block">{{ row.nationality }}</span>
+          <div class="flex h-6 rounded-full overflow-hidden">
+            <ng-container *ngFor="let key of areaKeys; let idx = index">
+              <div *ngIf="getVal(row, key) > 0"
+                class="flex items-center justify-center text-[9px] text-white font-medium cursor-default"
+                [style.width.%]="getPct(row, key)"
+                [style.backgroundColor]="areaColors[idx]"
+                [style.minWidth]="'40px'">
+                {{ getPct(row, key) > 8 ? formatCount(getVal(row, key)) : '' }}
+              </div>
+            </ng-container>
+          </div>
+        </div>
+        <div class="flex flex-wrap gap-3 mt-2">
+          <div *ngFor="let label of areaLabels; let idx = index" class="flex items-center gap-1.5">
+            <div class="w-2.5 h-2.5 rounded-sm" [style.backgroundColor]="areaColors[idx]"></div>
+            <span class="text-[10px] text-foreground-500">{{ label }}</span>
+          </div>
+        </div>
+      </div>
+      } @else { <app-chart-empty-state height="300px" /> }
+    </app-chart-card>
+    <app-chart-card title="شريحة المساحة × المنطقة" subtitle="توزيع عدد العمليات">
+      @if (hasData) { <div echarts [options]="areaByRegionOptions" class="w-full h-[380px]"></div> }
+      @else { <app-chart-empty-state height="380px" /> }
+    </app-chart-card>
+  </div>
+</app-layout>

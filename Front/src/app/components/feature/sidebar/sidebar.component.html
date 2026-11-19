@@ -1,0 +1,136 @@
+<aside
+  class="fixed right-0 top-0 h-full w-[264px] flex flex-col z-40 transform transition-transform duration-300 md:translate-x-0"
+  [class.translate-x-0]="sidebar.isOpen()"
+  [class.translate-x-full]="!sidebar.isOpen()"
+  style="background: linear-gradient(180deg, #002F56 0%, #003A5C 40%, #005257 100%)"
+>
+  <!-- Platform Branding -->
+  <div class="px-6 py-7 flex items-center justify-between">
+    <app-logo variant="white" imgClass="w-full h-auto" style="max-height: 38px"></app-logo>
+    <button (click)="sidebar.close()" class="md:hidden w-11 h-11 flex items-center justify-center rounded-md text-white/70 hover:text-white hover:bg-white/10 transition-colors cursor-pointer">
+      <i class="ri-close-line text-lg"></i>
+    </button>
+  </div>
+
+  <div class="mx-6 h-px bg-white/8"></div>
+
+  <!-- Product Switcher -->
+  <div class="px-4 pt-5 pb-1" data-switcher>
+    <div class="relative">
+      <button
+        (click)="toggleSwitcher()"
+        class="w-full flex items-center gap-2.5 px-3 py-2.5 rounded-xl text-right transition-all duration-200 cursor-pointer whitespace-nowrap bg-white/[0.06] hover:bg-white/[0.1] border border-white/[0.08]"
+        aria-haspopup="listbox"
+        [attr.aria-expanded]="switcherOpen()"
+      >
+        <span class="w-5 h-5 flex items-center justify-center flex-shrink-0 text-[#75CEC8]">
+          <i [class]="product.activeProduct().icon + ' text-base'"></i>
+        </span>
+        <span class="text-[15px] font-semibold text-white flex-1 truncate">{{ product.activeProduct().name }}</span>
+        <span class="w-4 h-4 flex items-center justify-center flex-shrink-0 text-white/50">
+          <i [class]="'ri-arrow-down-s-line text-sm transition-transform duration-200 ' + (switcherOpen() ? 'rotate-180' : '')"></i>
+        </span>
+      </button>
+
+      @if (switcherOpen()) {
+        <div
+          class="absolute top-full right-0 mt-1.5 w-full rounded-xl overflow-hidden z-50"
+          style="background: linear-gradient(135deg, #003558 0%, #003E5E 50%, #004F54 100%); border: 1px solid rgba(255,255,255,0.1); box-shadow: 0 8px 32px rgba(0,0,0,0.35)"
+          role="listbox"
+        >
+          @for (p of product.products; track p.id) {
+            <button
+              (click)="!p.disabled && selectProduct(p.id)"
+              [disabled]="p.disabled"
+              [class]="'w-full flex items-center gap-2.5 px-3 py-2.5 text-right whitespace-nowrap ' + (p.disabled ? 'opacity-50 cursor-not-allowed' : 'cursor-pointer hover:bg-white/[0.06]')"
+            >
+              <span class="w-5 h-5 flex items-center justify-center flex-shrink-0"><i [class]="p.icon + ' text-base'"></i></span>
+              <span class="text-[15px] font-medium flex-1 text-white/80">{{ p.name }}</span>
+              @if (p.comingSoon) { <span class="text-[10px] px-1.5 py-0.5 rounded-full bg-white/10 text-white/60">قريباً</span> }
+            </button>
+          }
+        </div>
+      }
+    </div>
+  </div>
+
+  <div class="mx-6 mt-3 h-px bg-white/8"></div>
+
+  <!-- Navigation -->
+  <nav class="flex-1 overflow-y-auto py-4 px-4 scrollbar-thin">
+    @if (product.isFlat()) {
+      <p class="text-sm font-semibold text-white/25 px-3 mb-3 tracking-widest uppercase">القائمة الرئيسية</p>
+      @for (item of product.navItems(); track item.path) {
+        <button
+          (click)="navigate(item.path)"
+          [class]="'w-full flex items-center gap-3 px-3.5 py-3 rounded-xl text-[14px] font-medium mb-1 transition-all duration-300 whitespace-nowrap cursor-pointer ' + (isActive(item.path) ? 'text-white' : 'text-white/50 hover:text-white/80')"
+          [style]="isActive(item.path) ? 'background: linear-gradient(135deg, rgba(0,132,141,0.22) 0%, rgba(0,164,136,0.1) 100%); box-shadow: inset 0 1px 0 rgba(255,255,255,0.06), 0 2px 8px rgba(0,132,141,0.15); border: 1px solid rgba(117,206,200,0.15)' : ''"
+        >
+          <span [class]="'w-5 h-5 flex items-center justify-center transition-colors duration-300 ' + (isActive(item.path) ? 'text-[#75CEC8]' : '')">
+            <i [class]="item.icon + ' text-lg'"></i>
+          </span>
+          <span class="tracking-wide">{{ item.label }}</span>
+          @if (isActive(item.path)) {
+            <span class="mr-auto w-[6px] h-[6px] rounded-full" style="background: #75CEC8; box-shadow: 0 0 8px rgba(117,206,200,0.5)"></span>
+          }
+        </button>
+      }
+    } @else {
+      @for (section of product.navSections(); track section.label; let sIdx = $index) {
+        <div [class]="sIdx > 0 ? 'mt-5' : ''">
+          <p class="text-sm font-semibold text-white/30 px-3 mb-2 tracking-wider">{{ section.label }}</p>
+          @for (item of section.pages; track item.path) {
+            <button
+              (click)="navigate(item.path)"
+              [class]="'w-full flex items-center gap-3 px-3.5 py-3 rounded-xl text-[14px] font-medium mb-1 transition-all duration-300 whitespace-nowrap cursor-pointer ' + (isActive(item.path) ? 'text-white' : 'text-white/50 hover:text-white/80')"
+              [style]="isActive(item.path) ? 'background: linear-gradient(135deg, rgba(0,132,141,0.22) 0%, rgba(0,164,136,0.1) 100%); box-shadow: inset 0 1px 0 rgba(255,255,255,0.06), 0 2px 8px rgba(0,132,141,0.15); border: 1px solid rgba(117,206,200,0.15)' : ''"
+            >
+              <span [class]="'w-5 h-5 flex items-center justify-center transition-colors duration-300 ' + (isActive(item.path) ? 'text-[#75CEC8]' : '')">
+                <i [class]="item.icon + ' text-lg'"></i>
+              </span>
+              <span class="tracking-wide">{{ item.label }}</span>
+              @if (isActive(item.path)) {
+                <span class="mr-auto w-[6px] h-[6px] rounded-full" style="background: #75CEC8; box-shadow: 0 0 8px rgba(117,206,200,0.5)"></span>
+              }
+            </button>
+          }
+        </div>
+      }
+    }
+  </nav>
+
+  <!-- AI Assistant Entry -->
+  @if (showDataAssistant) {
+  <div class="px-4 pb-4">
+    <button
+      (click)="toggleAssistant()"
+      class="w-full flex items-center gap-3 px-3.5 py-3 rounded-xl transition-all duration-300 cursor-pointer bg-white/[0.05] hover:bg-white/[0.08]"
+      aria-label="تحدث مع البيانات"
+    >
+      <div
+        class="w-9 h-9 rounded-full flex items-center justify-center flex-shrink-0"
+        style="background: linear-gradient(135deg, #00848D 0%, #00A488 100%); box-shadow: 0 2px 12px rgba(0,132,141,0.25)"
+      >
+        <i class="ri-sparkling-line text-base text-white"></i>
+      </div>
+      <span class="text-sm text-white/75 font-medium">تحدث مع البيانات</span>
+    </button>
+  </div>
+  }
+
+  <div class="mx-6 h-px bg-white/8"></div>
+
+  <!-- Logout -->
+  <div class="px-4 py-4">
+    <button
+      (click)="logout()"
+      class="w-full flex items-center gap-3 px-3.5 py-3 rounded-xl text-[14px] font-medium transition-all duration-300 whitespace-nowrap cursor-pointer text-white/60 hover:text-white hover:bg-red-500/15"
+      aria-label="تسجيل الخروج"
+    >
+      <span class="w-5 h-5 flex items-center justify-center">
+        <i class="ri-logout-box-r-line text-lg"></i>
+      </span>
+      <span class="tracking-wide">تسجيل الخروج</span>
+    </button>
+  </div>
+</aside>

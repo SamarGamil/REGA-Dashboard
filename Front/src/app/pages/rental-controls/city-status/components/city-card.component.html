@@ -1,0 +1,85 @@
+<div
+  role="button"
+  tabindex="0"
+  [attr.aria-label]="'بطاقة مدينة ' + city.name + ' - الحالة التشغيلية: ' + city.operationalStatus"
+  (click)="handleClick()"
+  (keydown)="handleKeyDown($event)"
+  class="rounded-2xl p-6 cursor-pointer group relative transition-all duration-300 hover:-translate-y-[3px] flex flex-col h-full"
+  [style.backgroundColor]="cardBg"
+  [style.border]="'1.5px solid ' + strokeColor"
+  [style.boxShadow]="cardShadow"
+  (mouseenter)="isHovered.set(true)"
+  (mouseleave)="isHovered.set(false)"
+>
+  <div class="flex items-center justify-between mb-5">
+    <h3 class="text-lg font-extrabold tracking-tight" [style.color]="cardText">{{ city.name }}</h3>
+    <span
+      class="text-sm px-3 py-[5px] rounded-full font-semibold whitespace-nowrap border"
+      [style.backgroundColor]="badgeBg"
+      [style.color]="badgeText"
+      [style.borderColor]="badgeBorder"
+    >
+      {{ city.operationalStatus }}
+    </span>
+  </div>
+
+  <div class="mb-5">
+    <p class="text-[2.5rem] font-extrabold leading-none mb-1.5 tracking-tight" [style.color]="cardText">{{ city.cagr }}</p>
+    <p class="text-sm font-medium" style="color: #4B5563">معدل النمو الايجاري المركب</p>
+    @if (periodLabel) {
+      <p class="text-xs font-medium mt-0.5" style="color: #6B7280">حتى {{ periodLabel }}</p>
+    }
+  </div>
+
+  <div class="mt-auto">
+    <div class="grid grid-cols-3 gap-3 pt-4" style="border-top: 1px solid #E2E8F0">
+      @for (item of kpiItems(); track item.label) {
+        <div>
+          <div
+            class="relative text-center"
+            (mouseenter)="hoveredKpi.set(item.state.tooltipLabel)"
+            (mouseleave)="hoveredKpi.set(null)"
+          >
+            <div class="flex items-center justify-center gap-1">
+              <p
+                dir="ltr"
+                class="text-[15px] font-extrabold leading-none"
+                [style.color]="valueColor(item.state)"
+              >
+                {{ item.value }}
+              </p>
+              @if (isAbnormal(item.state)) {
+                <span
+                  class="flex-shrink-0 text-sm font-extrabold leading-none"
+                  style="color: #DC2626"
+                >
+                  {{ item.state.arrowDirection === 'up' ? '↑' : '↓' }}
+                </span>
+              }
+            </div>
+            <p class="text-sm leading-tight mt-1.5 min-h-[34px]" style="color: #4B5563">{{ item.label }}</p>
+
+            @if (showTooltip(item.state)) {
+              <div
+                class="absolute bottom-full left-1/2 -translate-x-1/2 mb-1.5 px-2 py-1 rounded-md text-sm leading-relaxed z-20 pointer-events-none"
+                style="background-color: #0F172A; color: #FFFFFF; box-shadow: 0 2px 8px rgba(15,23,42,0.15); max-width: 220px"
+              >
+                <p class="font-bold text-sm mb-0.5">{{ item.label }}</p>
+                <p class="leading-snug text-sm">
+                  القيمة الحالية: <span dir="ltr" class="inline-block font-bold">{{ item.value }}</span>
+                </p>
+                <p class="leading-snug text-sm">
+                  الحد المرجعي: <span class="font-bold">{{ item.state.reference }}</span>
+                </p>
+                <div
+                  class="absolute top-full left-1/2 -translate-x-1/2 w-0 h-0 border-l-[4px] border-r-[4px] border-t-[4px] border-l-transparent border-r-transparent"
+                  style="border-top-color: #0F172A"
+                ></div>
+              </div>
+            }
+          </div>
+        </div>
+      }
+    </div>
+  </div>
+</div>

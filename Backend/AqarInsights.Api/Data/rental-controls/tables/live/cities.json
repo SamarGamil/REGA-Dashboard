@@ -1,0 +1,16 @@
+[
+{"releaseId":"live","cityId":"riyadh","seq":0,"name":"الرياض","hasDetail":true,"hasReport":true},
+{"releaseId":"live","cityId":"najran","seq":1,"name":"نجران","hasDetail":true,"hasReport":true},
+{"releaseId":"live","cityId":"hail","seq":2,"name":"حائل","hasDetail":true,"hasReport":true},
+{"releaseId":"live","cityId":"buraidah","seq":3,"name":"بريدة","hasDetail":true,"hasReport":true},
+{"releaseId":"live","cityId":"jeddah","seq":4,"name":"جدة","hasDetail":true,"hasReport":true},
+{"releaseId":"live","cityId":"madinah","seq":5,"name":"المدينة المنورة","hasDetail":true,"hasReport":true},
+{"releaseId":"live","cityId":"tabuk","seq":6,"name":"تبوك","hasDetail":true,"hasReport":true},
+{"releaseId":"live","cityId":"makkah","seq":7,"name":"مكة المكرمة","hasDetail":true,"hasReport":true},
+{"releaseId":"live","cityId":"sakaka","seq":8,"name":"سكاكا","hasDetail":true,"hasReport":true},
+{"releaseId":"live","cityId":"dammam","seq":9,"name":"الدمام","hasDetail":true,"hasReport":true},
+{"releaseId":"live","cityId":"bahah","seq":10,"name":"الباحة","hasDetail":true,"hasReport":true},
+{"releaseId":"live","cityId":"jazan","seq":11,"name":"جازان","hasDetail":true,"hasReport":true},
+{"releaseId":"live","cityId":"abha","seq":12,"name":"أبها","hasDetail":true,"hasReport":true},
+{"releaseId":"live","cityId":"arar","seq":13,"name":"عرعر","hasDetail":true,"hasReport":true}
+]

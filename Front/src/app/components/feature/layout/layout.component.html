@@ -1,0 +1,36 @@
+<div class="min-h-screen overflow-x-clip" style="background-color:#F7F9FB" dir="rtl">
+  <div *ngIf="sidebar.isOpen()" (click)="sidebar.close()" class="fixed inset-0 bg-black/50 z-40 md:hidden"></div>
+  <span class="hidden md:inline-block fixed top-2 left-2 z-30 text-[11px] font-bold text-[#B45309] px-2.5 py-1 rounded-full pointer-events-none select-none"
+    style="background: #FFFBEB; border: 1px solid #FDE68A; box-shadow: 0 1px 3px rgba(0,47,86,0.08)"
+  >إطلاق تجريبي</span>
+  <app-sidebar></app-sidebar>
+
+  <div class="md:mr-[264px] flex flex-col min-h-screen">
+    <div class="flex items-center gap-3 px-4 py-2 md:hidden bg-white border-b border-[#E7ECF2]">
+      <button (click)="sidebar.toggle()" class="w-11 h-11 flex items-center justify-center rounded-lg text-[#475569] hover:bg-[#F1F5F9] cursor-pointer">
+        <i class="ri-menu-line text-xl"></i>
+      </button>
+      <h1 *ngIf="title" class="text-sm font-bold text-[#0F172A] truncate flex-1">{{ title }}</h1>
+      <span class="mr-auto shrink-0 text-[10px] font-bold text-[#B45309] px-2 py-0.5 rounded-full whitespace-nowrap"
+        style="background: #FFFBEB; border: 1px solid #FDE68A"
+      >إطلاق تجريبي</span>
+      <button (click)="auth.logout()" aria-label="تسجيل الخروج"
+        class="w-11 h-11 flex items-center justify-center rounded-lg text-red-600 hover:bg-red-50 cursor-pointer shrink-0">
+        <i class="ri-logout-box-r-line text-xl"></i>
+      </button>
+    </div>
+
+    <main class="flex-1">
+      <div class="max-w-[1400px] mx-auto px-4 md:px-8 py-5">
+        <app-page-header *ngIf="showPageHeader" [title]="title" [subtitle]="subtitle" [reportingPeriod]="effectiveReportingPeriod" [lastUpdated]="effectiveLastUpdated" [breadcrumbs]="breadcrumbs" [portalPeriod]="portalPeriod"></app-page-header>
+        <app-top-filter-bar *ngIf="showGlobalFilter"></app-top-filter-bar>
+        <ng-content></ng-content>
+        <app-elm-footer></app-elm-footer>
+      </div>
+    </main>
+  </div>
+
+  @if (showDataAssistant) {
+  <app-data-assistant></app-data-assistant>
+  }
+</div>

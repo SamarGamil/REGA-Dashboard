@@ -1,0 +1,51 @@
+<app-layout
+  title="تحليل السوق الإيجاري"
+  subtitle="تحليل ومقارنة أداء السوق الإيجاري بين المدن والمؤشرات"
+  [breadcrumbs]="[{ label: 'مؤشرات الإيجار' }, { label: 'تحليل السوق الإيجاري' }]"
+  [showGlobalFilter]="false"
+  [showPageHeader]="true"
+>
+  @if (data(); as d) {
+    <!-- 1. الحصة السوقية -->
+    <div class="mb-7">
+      <div class="mb-3">
+        <h2 class="text-[15px] font-extrabold text-[#0F172A]">الحصة السوقية</h2>
+        <p class="text-sm text-[#4B5563] mt-0.5">استكشف مؤشرات السوق العقاري عبر جميع المدن</p>
+      </div>
+      <app-indicator-explorer [cities]="d.cities" [indicators]="d.indicators" />
+    </div>
+
+    <!-- 2. العلاقة بين المؤشرات -->
+    <div class="mb-7" #relationshipSection>
+      <div class="mb-3">
+        <h2 class="text-[15px] font-extrabold text-[#0F172A]">العلاقة بين المؤشرات</h2>
+        <p class="text-sm text-[#4B5563] mt-0.5">هل اجتماع مؤشرين يكشف ضغطاً أو فرصة في مدينة معينة؟</p>
+      </div>
+      <app-relationship-analysis [cities]="d.cities" [indicators]="d.indicators" />
+    </div>
+
+    <!-- 3. أبرز الفروقات -->
+    <div class="mb-7">
+      <div class="mb-3">
+        <h2 class="text-[15px] font-extrabold text-[#0F172A]">أبرز الفروقات</h2>
+        <p class="text-sm text-[#4B5563] mt-0.5">خلاصة تحليلية لأهم اختلافات الأداء بين المدن</p>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+        @for (ins of insights(); track $index) {
+          <div class="bg-white rounded-lg p-3.5" style="border: 1px solid #E5EBEF; box-shadow: 0 1px 2px rgba(0,47,86,0.02)">
+            <p class="text-sm text-[#475569] leading-[1.7]">{{ ins.text }}</p>
+          </div>
+        }
+      </div>
+    </div>
+
+    <!-- 4. التوصيات السوقية -->
+    <div class="mb-7">
+      <div class="mb-3">
+        <h2 class="text-[15px] font-extrabold text-[#0F172A]">التوصيات السوقية</h2>
+        <p class="text-sm text-[#4B5563] mt-0.5">إجراءات إرشادية مقترحة بناءً على تحليل السوق</p>
+      </div>
+      <app-executive-recommendations [recommendations]="d.recommendations" (compareRequested)="scrollToRelationship()" />
+    </div>
+  }
+</app-layout>

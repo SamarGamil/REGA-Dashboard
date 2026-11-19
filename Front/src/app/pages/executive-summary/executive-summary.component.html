@@ -1,0 +1,59 @@
+<app-layout title="الملخص التنفيذي" subtitle="التقرير اليومي للتملك العقاري للمقيمين الأجانب — نظرة تنفيذية متكاملة" [breadcrumbs]="[{ label: 'تملك الأجانب' }, { label: 'الملخص التنفيذي' }]">
+  <!-- Primary KPIs -->
+  <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-5 mb-5">
+    <app-kpi-card title="إجمالي العمليات" [value]="formatCount(kpi.totalTransactions)" icon="ri-file-list-3-line" color="accent" size="large"></app-kpi-card>
+    <app-kpi-card title="إجمالي قيمة الصفقات" [value]="formatCurrencyShort(kpi.totalValue)" icon="ri-money-dollar-circle-line" color="primary" size="large"></app-kpi-card>
+  </div>
+
+  <!-- Secondary KPIs -->
+  <div class="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-3 mb-5">
+    <app-kpi-card title="إجمالي عمليات الشراء" [value]="formatCount(kpi.totalPurchases)" icon="ri-shopping-cart-line"></app-kpi-card>
+    <app-kpi-card title="إجمالي عمليات البيع" [value]="formatCount(kpi.totalSales)" icon="ri-exchange-line"></app-kpi-card>
+    <app-kpi-card title="إجمالي عمليات الهبة" [value]="formatCount(kpi.totalGifts)" icon="ri-gift-line"></app-kpi-card>
+    <app-kpi-card title="نسبة النمو" [value]="formatPercent(kpi.growthRate)" icon="ri-arrow-up-circle-line"></app-kpi-card>
+    <app-kpi-card title="متوسط قيمة الصفقة" [value]="formatCurrencyShort(kpi.avgTransactionValue)" icon="ri-funds-line"></app-kpi-card>
+  </div>
+
+  <!-- Volume Chart -->
+  <app-chart-card title="حجم العمليات — آخر 6 فترات" subtitle="عدد العمليات الشهرية مع خط الاتجاه" className="mb-5">
+    @if (hasData) { <div echarts [options]="volumeChartOptions" class="w-full h-[320px]"></div> }
+    @else { <app-chart-empty-state height="320px" /> }
+  </app-chart-card>
+
+  <!-- Value Area Chart -->
+  <app-chart-card title="قيمة العمليات — آخر 6 فترات" subtitle="إجمالي قيمة الصفقات الشهرية (مليون ر.س)" className="mb-5">
+    @if (hasData) { <div echarts [options]="valueChartOptions" class="w-full h-[280px]"></div> }
+    @else { <app-chart-empty-state height="280px" /> }
+  </app-chart-card>
+
+  <!-- Bottom Insight Cards -->
+  <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+    <div class="bg-background-50 border border-background-200 rounded-[14px] p-4 flex items-center gap-4">
+      <div class="w-10 h-10 rounded-lg bg-accent-50 flex items-center justify-center shrink-0">
+        <i class="ri-flag-line text-xl text-accent-500"></i>
+      </div>
+      <div>
+        <p class="text-xs text-foreground-500">أعلى جنسية</p>
+        <p class="text-lg font-heading font-bold text-foreground-900">{{ kpi.topNationality || '—' }}</p>
+      </div>
+    </div>
+    <div class="bg-background-50 border border-background-200 rounded-[14px] p-4 flex items-center gap-4">
+      <div class="w-10 h-10 rounded-lg bg-primary-50 flex items-center justify-center shrink-0">
+        <i class="ri-building-2-line text-xl text-primary-500"></i>
+      </div>
+      <div>
+        <p class="text-xs text-foreground-500">أكبر سوق</p>
+        <p class="text-lg font-heading font-bold text-foreground-900">{{ kpi.topMarket || '—' }}</p>
+      </div>
+    </div>
+    <div class="bg-background-50 border border-background-200 rounded-[14px] p-4 flex items-center gap-4">
+      <div class="w-10 h-10 rounded-lg bg-secondary-50 flex items-center justify-center shrink-0">
+        <i class="ri-home-4-line text-xl text-secondary-500"></i>
+      </div>
+      <div>
+        <p class="text-xs text-foreground-500">الفئة الأبرز</p>
+        <p class="text-lg font-heading font-bold text-foreground-900">{{ kpi.topPropertyCategory || '—' }}</p>
+      </div>
+    </div>
+  </div>
+</app-layout>

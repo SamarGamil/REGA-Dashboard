@@ -1,0 +1,32 @@
+<app-layout title="نظرة عامة على السوق" subtitle="وتيرة العمليات والقيم والمزج الهيكلي في المملكة" [breadcrumbs]="[{ label: 'تملك الأجانب' }, { label: 'نظرة عامة على السوق' }]">
+
+
+  <div class="grid grid-cols-1 lg:grid-cols-2 gap-5 mb-5">
+    <app-chart-card title="عدد العمليات عبر الزمن" subtitle="إجمالي المعاملات الشهرية">
+      @if (hasData) { <div echarts [options]="txOverTimeOptions" class="w-full h-[280px]"></div> }
+      @else { <app-chart-empty-state height="280px" /> }
+    </app-chart-card>
+    <app-chart-card title="قيمة العمليات عبر الزمن" subtitle="إجمالي القيمة الشهرية (مليون ر.س)">
+      @if (hasData) { <div echarts [options]="valueOverTimeOptions" class="w-full h-[280px]"></div> }
+      @else { <app-chart-empty-state height="280px" /> }
+    </app-chart-card>
+  </div>
+
+  <div class="grid grid-cols-1 lg:grid-cols-2 gap-5">
+    <app-chart-card title="التوزيع بحسب نوع العملية" subtitle="نسبة كل نوع من إجمالي العمليات">
+      @if (hasTxTypeData) {
+        <div echarts [options]="donutOptions" class="w-full h-[280px]"></div>
+        <div class="flex items-center justify-center gap-6 mt-2">
+          <div *ngFor="let item of txTypeData" class="flex items-center gap-2">
+            <div class="w-3 h-3 rounded-full" [style.backgroundColor]="item.color"></div>
+            <span class="text-xs text-foreground-600">{{ item.name }}: {{ formatCount(item.value) }}</span>
+          </div>
+        </div>
+      } @else { <app-chart-empty-state height="280px" /> }
+    </app-chart-card>
+    <app-chart-card title="معدل النمو من فترة لأخرى" subtitle="نسبة التغير في عدد العمليات">
+      @if (hasGrowthData) { <div echarts [options]="growthOptions" class="w-full h-[280px]"></div> }
+      @else { <app-chart-empty-state height="280px" message="لا تتوفر فترة سابقة كافية لحساب معدل النمو" /> }
+    </app-chart-card>
+  </div>
+</app-layout>

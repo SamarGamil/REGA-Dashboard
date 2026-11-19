@@ -1,0 +1,148 @@
+{
+  "insights": {
+    "concentrationIndex": 30,
+    "investmentConcentrationIndex": 32,
+    "nationalityDiversityIndex": 90,
+    "geographicSpreadIndex": 70,
+    "hotSpots": [
+      {
+        "id": 1,
+        "city": "الرياض",
+        "district": "العزيزية",
+        "transactions": 17.3,
+        "value": 14177680,
+        "growth": -28.1,
+        "reason": "تراجع في العزيزية بمدينة الرياض"
+      },
+      {
+        "id": 2,
+        "city": "مكة المكرمة",
+        "district": "حي ريع اذاخر",
+        "transactions": 15,
+        "value": 823744063.15,
+        "growth": 1400.0,
+        "reason": "نمو ملحوظ في حي ريع اذاخر بمدينة مكة المكرمة"
+      },
+      {
+        "id": 3,
+        "city": "الرياض",
+        "district": "النظيم",
+        "transactions": 12,
+        "value": 5729140,
+        "growth": -14.3,
+        "reason": "تراجع في النظيم بمدينة الرياض"
+      },
+      {
+        "id": 4,
+        "city": "جدة",
+        "district": "الفيحاء",
+        "transactions": 12,
+        "value": 6408000,
+        "growth": 33.3,
+        "reason": "نمو ملحوظ في الفيحاء بمدينة جدة"
+      },
+      {
+        "id": 5,
+        "city": "جدة",
+        "district": "الفيصلية",
+        "transactions": 12,
+        "value": 2912114,
+        "growth": 50.0,
+        "reason": "نمو ملحوظ في الفيصلية بمدينة جدة"
+      }
+    ],
+    "emergingAreas": [
+      {
+        "city": "الرياض",
+        "district": "الريان",
+        "transactions": 6.0,
+        "growth": 500.0,
+        "trend": "صاعد"
+      },
+      {
+        "city": "حفر الباطن",
+        "district": "الروضة",
+        "transactions": 4,
+        "growth": 300,
+        "trend": "صاعد"
+      },
+      {
+        "city": "الخبر",
+        "district": "الشفاء",
+        "transactions": 3,
+        "growth": 200,
+        "trend": "صاعد"
+      },
+      {
+        "city": "الرياض",
+        "district": "المعذر",
+        "transactions": 3,
+        "growth": 200,
+        "trend": "صاعد"
+      },
+      {
+        "city": "جدة",
+        "district": "النسيم",
+        "transactions": 3,
+        "growth": 200,
+        "trend": "صاعد"
+      },
+      {
+        "city": "الرياض",
+        "district": "المنصورية",
+        "transactions": 2.9,
+        "growth": 186.7,
+        "trend": "صاعد"
+      },
+      {
+        "city": "الدمام",
+        "district": "الزهور",
+        "transactions": 5,
+        "growth": 150.0,
+        "trend": "صاعد"
+      }
+    ],
+    "highGrowthRegions": [
+      {
+        "region": "منطقة الحدود الشمالية",
+        "growth": 200,
+        "reason": "نمو ملحوظ في النشاط الاستثماري في منطقة الحدود الشمالية"
+      },
+      {
+        "region": "منطقة القصيم",
+        "growth": -5.9,
+        "reason": "تراجع في النشاط الاستثماري في منطقة القصيم"
+      },
+      {
+        "region": "المنطقة الشرقية",
+        "growth": -34.4,
+        "reason": "تراجع في النشاط الاستثماري في المنطقة الشرقية"
+      },
+      {
+        "region": "منطقة مكة المكرمة",
+        "growth": -36.1,
+        "reason": "تراجع في النشاط الاستثماري في منطقة مكة المكرمة"
+      }
+    ],
+    "topOpportunities": [
+      {
+        "id": 1,
+        "title": "الاستثمار في الفئة الأكثر طلباً",
+        "description": "فئة مباني سكنية تمثل أعلى طلب",
+        "priority": "عالية"
+      },
+      {
+        "id": 2,
+        "title": "التوسع في المنطقة الرائدة",
+        "description": "منطقة الرياض تشهد أكبر حجم عمليات",
+        "priority": "عالية"
+      },
+      {
+        "id": 3,
+        "title": "استهداف الجنسية الأكثر نشاطاً",
+        "description": "المستثمرون من اليمن هم الأكثر نشاطاً",
+        "priority": "متوسطة"
+      }
+    ]
+  }
+}

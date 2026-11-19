@@ -1,0 +1,1296 @@
+{
+  "geography": [
+    {
+      "name": "منطقة الرياض",
+      "children": [
+        {
+          "name": "الخرج",
+          "children": [
+            {
+              "name": "الخالدية",
+              "children": []
+            },
+            {
+              "name": "السلام",
+              "children": []
+            },
+            {
+              "name": "النهضة",
+              "children": []
+            },
+            {
+              "name": "مشرف",
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "الرياض",
+          "children": [
+            {
+              "name": "المنصورة (خنشليلة)",
+              "children": []
+            },
+            {
+              "name": "ام الحمام الشرقي",
+              "children": []
+            },
+            {
+              "name": "ام الحمام الغربي",
+              "children": []
+            },
+            {
+              "name": "اشبيلية",
+              "children": []
+            },
+            {
+              "name": "الاندلس",
+              "children": []
+            },
+            {
+              "name": "الازدهار",
+              "children": []
+            },
+            {
+              "name": "البرية",
+              "children": []
+            },
+            {
+              "name": "التعاون",
+              "children": []
+            },
+            {
+              "name": "الجزيرة",
+              "children": []
+            },
+            {
+              "name": "الجنادرية",
+              "children": []
+            },
+            {
+              "name": "الحائر",
+              "children": []
+            },
+            {
+              "name": "الحزم",
+              "children": []
+            },
+            {
+              "name": "الحمراء",
+              "children": []
+            },
+            {
+              "name": "الخالدية",
+              "children": []
+            },
+            {
+              "name": "الخليج",
+              "children": []
+            },
+            {
+              "name": "الخيج",
+              "children": []
+            },
+            {
+              "name": "الخير",
+              "children": []
+            },
+            {
+              "name": "الدار البيضاء",
+              "children": []
+            },
+            {
+              "name": "الدريهمية",
+              "children": []
+            },
+            {
+              "name": "الربوة",
+              "children": []
+            },
+            {
+              "name": "الربيع",
+              "children": []
+            },
+            {
+              "name": "الرحمانية",
+              "children": []
+            },
+            {
+              "name": "الرفيعة",
+              "children": []
+            },
+            {
+              "name": "الرمال",
+              "children": []
+            },
+            {
+              "name": "الروابي",
+              "children": []
+            },
+            {
+              "name": "الروضة",
+              "children": []
+            },
+            {
+              "name": "الريان",
+              "children": []
+            },
+            {
+              "name": "الزهرة",
+              "children": []
+            },
+            {
+              "name": "السعادة",
+              "children": []
+            },
+            {
+              "name": "السلام",
+              "children": []
+            },
+            {
+              "name": "السليمانية",
+              "children": []
+            },
+            {
+              "name": "السليمانيية",
+              "children": []
+            },
+            {
+              "name": "السويدي",
+              "children": []
+            },
+            {
+              "name": "السويدي الغربي",
+              "children": []
+            },
+            {
+              "name": "الشفا",
+              "children": []
+            },
+            {
+              "name": "الصحافة",
+              "children": []
+            },
+            {
+              "name": "الصفا",
+              "children": []
+            },
+            {
+              "name": "الضباط",
+              "children": []
+            },
+            {
+              "name": "العارض",
+              "children": []
+            },
+            {
+              "name": "العريجاء",
+              "children": []
+            },
+            {
+              "name": "العريجاء الاوسط",
+              "children": []
+            },
+            {
+              "name": "العريجاء الغربي",
+              "children": []
+            },
+            {
+              "name": "العزيزية",
+              "children": []
+            },
+            {
+              "name": "العليا",
+              "children": []
+            },
+            {
+              "name": "العوالي",
+              "children": []
+            },
+            {
+              "name": "الفاخرية",
+              "children": []
+            },
+            {
+              "name": "الفاروق",
+              "children": []
+            },
+            {
+              "name": "الفيحاء",
+              "children": []
+            },
+            {
+              "name": "القادسية",
+              "children": []
+            },
+            {
+              "name": "القدس",
+              "children": []
+            },
+            {
+              "name": "القيروان",
+              "children": []
+            },
+            {
+              "name": "المحمدية",
+              "children": []
+            },
+            {
+              "name": "المدينة الصناعية الجديدة",
+              "children": []
+            },
+            {
+              "name": "المربع",
+              "children": []
+            },
+            {
+              "name": "المرجان",
+              "children": []
+            },
+            {
+              "name": "المرسلات",
+              "children": []
+            },
+            {
+              "name": "المروج",
+              "children": []
+            },
+            {
+              "name": "المصفاة",
+              "children": []
+            },
+            {
+              "name": "المصيف",
+              "children": []
+            },
+            {
+              "name": "المعذر",
+              "children": []
+            },
+            {
+              "name": "المعيزلية",
+              "children": []
+            },
+            {
+              "name": "المعيزيلة",
+              "children": []
+            },
+            {
+              "name": "المغرزات",
+              "children": []
+            },
+            {
+              "name": "الملز",
+              "children": []
+            },
+            {
+              "name": "الملقا",
+              "children": []
+            },
+            {
+              "name": "الملك سلمان",
+              "children": []
+            },
+            {
+              "name": "الملك عبدالعزيز",
+              "children": []
+            },
+            {
+              "name": "الملك عبداللة",
+              "children": []
+            },
+            {
+              "name": "الملك فهد",
+              "children": []
+            },
+            {
+              "name": "الملك فيصل",
+              "children": []
+            },
+            {
+              "name": "المنار",
+              "children": []
+            },
+            {
+              "name": "المهدية",
+              "children": []
+            },
+            {
+              "name": "المونسية",
+              "children": []
+            },
+            {
+              "name": "النخيل",
+              "children": []
+            },
+            {
+              "name": "الندوة",
+              "children": []
+            },
+            {
+              "name": "الندي",
+              "children": []
+            },
+            {
+              "name": "النرجس",
+              "children": []
+            },
+            {
+              "name": "النزهة",
+              "children": []
+            },
+            {
+              "name": "النسيم الشرقي",
+              "children": []
+            },
+            {
+              "name": "النسيم الغربي",
+              "children": []
+            },
+            {
+              "name": "النظيم",
+              "children": []
+            },
+            {
+              "name": "النفل",
+              "children": []
+            },
+            {
+              "name": "النهضة",
+              "children": []
+            },
+            {
+              "name": "الوادي",
+              "children": []
+            },
+            {
+              "name": "الورود",
+              "children": []
+            },
+            {
+              "name": "الوسام",
+              "children": []
+            },
+            {
+              "name": "الياسمين",
+              "children": []
+            },
+            {
+              "name": "اليرموك",
+              "children": []
+            },
+            {
+              "name": "اليمامة",
+              "children": []
+            },
+            {
+              "name": "بدر",
+              "children": []
+            },
+            {
+              "name": "جرير",
+              "children": []
+            },
+            {
+              "name": "حطين",
+              "children": []
+            },
+            {
+              "name": "ديراب",
+              "children": []
+            },
+            {
+              "name": "سدرة",
+              "children": []
+            },
+            {
+              "name": "سلطانة",
+              "children": []
+            },
+            {
+              "name": "شبرا",
+              "children": []
+            },
+            {
+              "name": "طويق",
+              "children": []
+            },
+            {
+              "name": "طيبة",
+              "children": []
+            },
+            {
+              "name": "طيبه",
+              "children": []
+            },
+            {
+              "name": "ظهرة البديعة",
+              "children": []
+            },
+            {
+              "name": "ظهرة لبن",
+              "children": []
+            },
+            {
+              "name": "عريض",
+              "children": []
+            },
+            {
+              "name": "عكاظ",
+              "children": []
+            },
+            {
+              "name": "عليشة",
+              "children": []
+            },
+            {
+              "name": "قرطبة",
+              "children": []
+            },
+            {
+              "name": "لبن",
+              "children": []
+            },
+            {
+              "name": "نمار",
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "الدرعية",
+          "children": [
+            {
+              "name": "حي العاصمة",
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "القويعية",
+          "children": [
+            {
+              "name": "1077 مخطط رقم",
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "المزاحمية",
+          "children": [
+            {
+              "name": "الورود",
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "حريملاء",
+          "children": [
+            {
+              "name": "ج6",
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "الزلفي",
+          "children": [
+            {
+              "name": "اليرموك",
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "المجمعة",
+          "children": [
+            {
+              "name": "حي الاندلس",
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "ثادق",
+          "children": []
+        },
+        {
+          "name": "الدلم",
+          "children": []
+        },
+        {
+          "name": "رماح",
+          "children": []
+        },
+        {
+          "name": "الدوادمي",
+          "children": []
+        },
+        {
+          "name": "ضرماء",
+          "children": []
+        },
+        {
+          "name": "حوطة سدير",
+          "children": []
+        },
+        {
+          "name": "السليل",
+          "children": []
+        },
+        { "name": "الافلاج", "children": [] },
+        { "name": "ليلي", "children": [] },
+        { "name": "وادي الدواسر", "children": [] },
+        { "name": "شقراء", "children": [] },
+        { "name": "حوطة بني تميم", "children": [] },
+        { "name": "عفيف", "children": [] },
+        { "name": "الحريق", "children": [] },
+        { "name": "الغاط", "children": [] },
+        { "name": "مرات", "children": [] },
+        { "name": "تمير", "children": [] },
+        { "name": "جلاجل", "children": [] },
+        { "name": "روضة سدير", "children": [] },
+        { "name": "رويضة العرض", "children": [] },
+        { "name": "العيينة", "children": [] },
+        { "name": "ساجر", "children": [] },
+        { "name": "نفي", "children": [] },
+        { "name": "البجادية", "children": [] },
+        { "name": "الهياثم", "children": [] }
+      ]
+    },
+    {
+      "name": "المنطقة الشرقية",
+      "children": [
+        {
+          "name": "الاحساء",
+          "children": [
+            {
+              "name": "الحمراء الثالث",
+              "children": []
+            },
+            {
+              "name": "السلمانية الثالث",
+              "children": []
+            },
+            {
+              "name": "الصقور",
+              "children": []
+            },
+            {
+              "name": "العاصمة",
+              "children": []
+            },
+            {
+              "name": "الرفيعة",
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "الدمام",
+          "children": [
+            {
+              "name": "الراكة الشمالية",
+              "children": []
+            },
+            {
+              "name": "احد",
+              "children": []
+            },
+            {
+              "name": "الامير محمد بن سعود",
+              "children": []
+            },
+            {
+              "name": "البادية",
+              "children": []
+            },
+            {
+              "name": "البديع",
+              "children": []
+            },
+            {
+              "name": "الجلوية",
+              "children": []
+            },
+            {
+              "name": "الجوهرة",
+              "children": []
+            },
+            {
+              "name": "الدانة الشمالية",
+              "children": []
+            },
+            {
+              "name": "الزهور",
+              "children": []
+            },
+            {
+              "name": "السيف",
+              "children": []
+            },
+            {
+              "name": "الشاطئ الغربي",
+              "children": []
+            },
+            {
+              "name": "الشروق",
+              "children": []
+            },
+            {
+              "name": "الشعلة",
+              "children": []
+            },
+            {
+              "name": "الصدفة",
+              "children": []
+            },
+            {
+              "name": "الفردوس",
+              "children": []
+            },
+            {
+              "name": "الفيحاء",
+              "children": []
+            },
+            {
+              "name": "الفيصلية",
+              "children": []
+            },
+            {
+              "name": "القزار",
+              "children": []
+            },
+            {
+              "name": "القصور",
+              "children": []
+            },
+            {
+              "name": "المزروعية",
+              "children": []
+            },
+            {
+              "name": "المنار",
+              "children": []
+            },
+            {
+              "name": "المنتزة",
+              "children": []
+            },
+            {
+              "name": "النهضة",
+              "children": []
+            },
+            {
+              "name": "النور",
+              "children": []
+            },
+            {
+              "name": "بدر",
+              "children": []
+            },
+            {
+              "name": "طيبة",
+              "children": []
+            },
+            {
+              "name": "عبداللة فؤاد",
+              "children": []
+            },
+            {
+              "name": "غرناطة",
+              "children": []
+            },
+            {
+              "name": "هجر",
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "الخبر",
+          "children": [
+            {
+              "name": "الحمراء",
+              "children": []
+            },
+            {
+              "name": "الراكة الجنوبية",
+              "children": []
+            },
+            {
+              "name": "الامواج",
+              "children": []
+            },
+            {
+              "name": "البحر",
+              "children": []
+            },
+            {
+              "name": "البحيرة",
+              "children": []
+            },
+            {
+              "name": "البندرية",
+              "children": []
+            },
+            {
+              "name": "البنديرة",
+              "children": []
+            },
+            {
+              "name": "الثقبة",
+              "children": []
+            },
+            {
+              "name": "الجسر",
+              "children": []
+            },
+            {
+              "name": "الجوهرة",
+              "children": []
+            },
+            {
+              "name": "الخبر الجنوبية",
+              "children": []
+            },
+            {
+              "name": "الخور",
+              "children": []
+            },
+            {
+              "name": "الروابي",
+              "children": []
+            },
+            {
+              "name": "الصواري",
+              "children": []
+            },
+            {
+              "name": "العقربية",
+              "children": []
+            },
+            {
+              "name": "العقيق",
+              "children": []
+            },
+            {
+              "name": "اللؤلؤ",
+              "children": []
+            },
+            {
+              "name": "مدينة العمال",
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "ابقيق",
+          "children": [
+            {
+              "name": "حي المطار",
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "الجبيل",
+          "children": [
+            {
+              "name": "البحر",
+              "children": []
+            },
+            {
+              "name": "الفناتير",
+              "children": []
+            },
+            {
+              "name": "المرقاب",
+              "children": []
+            },
+            {
+              "name": "حي الدفي",
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "القطيف",
+          "children": [
+            {
+              "name": "النابية",
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "حفر الباطن",
+          "children": [
+            {
+              "name": "التلال",
+              "children": []
+            },
+            {
+              "name": "الربوة",
+              "children": []
+            },
+            {
+              "name": "الفيحاء",
+              "children": []
+            },
+            {
+              "name": "الروضة",
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "الخفجي",
+          "children": []
+        },
+        {
+          "name": "القيصومة",
+          "children": []
+        },
+        {
+          "name": "النعيرية",
+          "children": []
+        },
+        { "name": "الظهران", "children": [] },
+        { "name": "الهفوف", "children": [] },
+        { "name": "المبرز", "children": [] },
+        { "name": "سيهات", "children": [] },
+        { "name": "صفوي", "children": [] },
+        { "name": "تاروت", "children": [] },
+        { "name": "عنك", "children": [] },
+        { "name": "راس تنورة", "children": [] },
+        { "name": "بقيق", "children": [] },
+        { "name": "قرية العليا", "children": [] },
+        { "name": "العديد", "children": [] },
+        { "name": "رحيمة", "children": [] }
+      ]
+    },
+    {
+      "name": "منطقة مكة المكرمة",
+      "children": [
+        {
+          "name": "مكة المكرمة",
+          "children": []
+        },
+        {
+          "name": "بحرة",
+          "children": []
+        },
+        {
+          "name": "جدة",
+          "children": [
+            {
+              "name": "الزمرد",
+              "children": []
+            },
+            {
+              "name": "الصواري",
+              "children": []
+            },
+            {
+              "name": "الفردوس",
+              "children": []
+            },
+            {
+              "name": "الياقوت",
+              "children": []
+            },
+            {
+              "name": "الشراع",
+              "children": []
+            }
+          ]
+        },
+        { "name": "مكة", "children": [] },
+        { "name": "الطائف", "children": [] },
+        { "name": "القنفذة", "children": [] },
+        { "name": "الليث", "children": [] },
+        { "name": "رابغ", "children": [] },
+        { "name": "خليص", "children": [] },
+        { "name": "الجموم", "children": [] },
+        { "name": "الكامل", "children": [] },
+        { "name": "الخرمة", "children": [] },
+        { "name": "رنية", "children": [] },
+        { "name": "تربة", "children": [] },
+        { "name": "الموية", "children": [] },
+        { "name": "ميسان", "children": [] },
+        { "name": "اضم", "children": [] },
+        { "name": "العرضيات", "children": [] },
+        { "name": "الهدا", "children": [] },
+        { "name": "الشفا", "children": [] }
+      ]
+    },
+    {
+      "name": "منطقة المدينة المنورة",
+      "children": [
+        {
+          "name": "المدينة المنورة",
+          "children": [
+            {
+              "name": "الغدير",
+              "children": []
+            },
+            {
+              "name": "شظاة",
+              "children": []
+            }
+          ]
+        },
+        { "name": "المدينة", "children": [] },
+        { "name": "ينبع", "children": [] },
+        { "name": "ينبع النخل", "children": [] },
+        { "name": "العلا", "children": [] },
+        { "name": "المهد", "children": [] },
+        { "name": "بدر", "children": [] },
+        { "name": "خيبر", "children": [] },
+        { "name": "الحناكية", "children": [] },
+        { "name": "العيص", "children": [] },
+        { "name": "وادي الفرع", "children": [] }
+      ]
+    },
+    {
+      "name": "منطقة القصيم",
+      "children": [
+        {
+          "name": "القصيم",
+          "children": [
+            {
+              "name": "العليا",
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "بريدة",
+          "children": [
+            {
+              "name": "الرحاب",
+              "children": []
+            },
+            {
+              "name": "السلام الغربي",
+              "children": []
+            },
+            {
+              "name": "الضاحي الشرقي",
+              "children": []
+            },
+            {
+              "name": "القاع البارد",
+              "children": []
+            },
+            {
+              "name": "المطار القديم",
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "عنيزة",
+          "children": [
+            {
+              "name": "الوفاء",
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "الرس",
+          "children": [
+            {
+              "name": "النهضة",
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "رياض الخبراء",
+          "children": [
+            {
+              "name": "الجزيرة",
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "البكيرية",
+          "children": []
+        },
+        {
+          "name": "البدائع",
+          "children": []
+        },
+        {
+          "name": "القوارة",
+          "children": []
+        },
+        {
+          "name": "المذنب",
+          "children": []
+        },
+        {
+          "name": "الشماسية",
+          "children": []
+        },
+        {
+          "name": "عيون الجواء",
+          "children": []
+        },
+        { "name": "الاسياح", "children": [] },
+        { "name": "النبهانية", "children": [] },
+        { "name": "عقلة الصقور", "children": [] },
+        { "name": "ضرية", "children": [] },
+        { "name": "ابانات", "children": [] }
+      ]
+    },
+    {
+      "name": "منطقة عسير",
+      "children": [
+        { "name": "ابها", "children": [] },
+        { "name": "خميس مشيط", "children": [] },
+        { "name": "بيشة", "children": [] },
+        { "name": "النماص", "children": [] },
+        { "name": "محايل عسير", "children": [] },
+        { "name": "محايل", "children": [] },
+        { "name": "ظهران الجنوب", "children": [] },
+        { "name": "تثليث", "children": [] },
+        { "name": "سراة عبيدة", "children": [] },
+        { "name": "رجال المع", "children": [] },
+        { "name": "بلقرن", "children": [] },
+        { "name": "احد رفيدة", "children": [] },
+        { "name": "المجاردة", "children": [] },
+        { "name": "البرك", "children": [] },
+        { "name": "بارق", "children": [] },
+        { "name": "تنومة", "children": [] },
+        { "name": "طريب", "children": [] },
+        { "name": "الحرجة", "children": [] },
+        { "name": "سبت العلايا", "children": [] }
+      ]
+    },
+    {
+      "name": "منطقة تبوك",
+      "children": [
+        {
+          "name": "تبوك",
+          "children": [
+            {
+              "name": "القادسية",
+              "children": []
+            }
+          ]
+        },
+        { "name": "الوجة", "children": [] },
+        { "name": "ضباء", "children": [] },
+        { "name": "تيماء", "children": [] },
+        { "name": "املج", "children": [] },
+        { "name": "حقل", "children": [] },
+        { "name": "البدع", "children": [] }
+      ]
+    },
+    {
+      "name": "منطقة حائل",
+      "children": [
+        {
+          "name": "حائل",
+          "children": [
+            {
+              "name": "الزبارة",
+              "children": []
+            },
+            {
+              "name": "الوسيطاء",
+              "children": []
+            }
+          ]
+        },
+        { "name": "بقعاء", "children": [] },
+        { "name": "الغزالة", "children": [] },
+        { "name": "الشنان", "children": [] },
+        { "name": "الحائط", "children": [] },
+        { "name": "السليمي", "children": [] },
+        { "name": "الشملي", "children": [] },
+        { "name": "موقق", "children": [] },
+        { "name": "سميراء", "children": [] }
+      ]
+    },
+    {
+      "name": "منطقة الحدود الشمالية",
+      "children": [
+        {
+          "name": "عرعر",
+          "children": []
+        },
+        {
+          "name": "رفحاء",
+          "children": [
+            {
+              "name": "الشمال",
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "طريف",
+          "children": []
+        },
+        { "name": "العويقيلة", "children": [] }
+      ]
+    },
+    {
+      "name": "منطقة الجوف",
+      "children": [
+        {
+          "name": "سكاكا",
+          "children": []
+        },
+        {
+          "name": "القريات",
+          "children": []
+        },
+        {
+          "name": "دومة الجندل",
+          "children": []
+        },
+        { "name": "طبرجل", "children": [] }
+      ]
+    },
+    {
+      "name": "منطقة جازان",
+      "children": [
+        { "name": "جازان", "children": [] },
+        { "name": "جيزان", "children": [] },
+        { "name": "صبيا", "children": [] },
+        { "name": "ابو عريش", "children": [] },
+        { "name": "صامطة", "children": [] },
+        { "name": "بيش", "children": [] },
+        { "name": "الدرب", "children": [] },
+        { "name": "الحرث", "children": [] },
+        { "name": "ضمد", "children": [] },
+        { "name": "الريث", "children": [] },
+        { "name": "العارضة", "children": [] },
+        { "name": "العيدابي", "children": [] },
+        { "name": "فرسان", "children": [] },
+        { "name": "الداير", "children": [] },
+        { "name": "احد المسارحة", "children": [] },
+        { "name": "فيفاء", "children": [] },
+        { "name": "الطوال", "children": [] },
+        { "name": "هروب", "children": [] }
+      ]
+    },
+    {
+      "name": "منطقة نجران",
+      "children": [
+        { "name": "نجران", "children": [] },
+        { "name": "شرورة", "children": [] },
+        { "name": "حبونا", "children": [] },
+        { "name": "بدر الجنوب", "children": [] },
+        { "name": "يدمة", "children": [] },
+        { "name": "ثار", "children": [] },
+        { "name": "خباش", "children": [] },
+        { "name": "الخرخير", "children": [] }
+      ]
+    },
+    {
+      "name": "منطقة الباحة",
+      "children": [
+        { "name": "الباحة", "children": [] },
+        { "name": "بلجرشي", "children": [] },
+        { "name": "المندق", "children": [] },
+        { "name": "المخواة", "children": [] },
+        { "name": "قلوة", "children": [] },
+        { "name": "العقيق", "children": [] },
+        { "name": "القري", "children": [] },
+        { "name": "غامد الزناد", "children": [] },
+        { "name": "الحجرة", "children": [] },
+        { "name": "بني حسن", "children": [] }
+      ]
+    }
+  ],
+  "nationalities": [
+    "أوكرانيا",
+    "اثيوبيا",
+    "ارتيريا",
+    "اسبانيا",
+    "استراليا",
+    "افغانستان",
+    "الأردن",
+    "الاردن",
+    "البانيا",
+    "الدانمارك",
+    "السودان",
+    "الصومال",
+    "الصين",
+    "الصين الشعبية",
+    "العراق",
+    "الكويت/قبائلنازحة",
+    "المانيا",
+    "المغرب",
+    "المملكة العربية السعودية",
+    "المملكة المتحدة",
+    "الهند",
+    "الولايات المتحدة",
+    "اليمن",
+    "اندونيسيا",
+    "ايطاليا",
+    "باكستان",
+    "بنجلاديش",
+    "بوركينافاسو",
+    "تركيا",
+    "تونس",
+    "دومينيكا",
+    "روسيا",
+    "سانت كيتس ونافيس",
+    "سوريا",
+    "صربيا",
+    "فرنسا",
+    "فلسطين",
+    "فلسطيني بوثيقة سورية",
+    "فلسطيني بوثيقة لبناني",
+    "فلسطيني بوثيقة مصرية",
+    "فلسطيني-وثيقةمصرية",
+    "قبائل نازحة",
+    "قبائل نازحة/الحليفه",
+    "قبائل نازحة/الكويت",
+    "قبائل نازحه \\الكويت",
+    "قبائل نازحه- الحليفه",
+    "قبايل نازحه الحليفه",
+    "كندا",
+    "كندي",
+    "كينيا",
+    "لا يوجد",
+    "لبنان",
+    "ليتوانيا",
+    "مالي",
+    "مصر",
+    "مصري",
+    "مقيم بلوشي",
+    "مقيم/نازح",
+    "موريتانيا",
+    "ميانمار/جواز باكستان",
+    "نيجيريا",
+    "نيوزيلندا",
+    "هنغاريا",
+    "هولندا"
+  ],
+  "propertyTypes": [
+    "مباني سكنية",
+    "أرض شاغرة",
+    "شقق سكنية",
+    "دور",
+    "مباني متعددة الأغراض",
+    "فئات أخرى"
+  ],
+  "transactionTypes": [
+    "بيع",
+    "شراء",
+    "هبة"
+  ],
+  "minDate": "2025-02-18",
+  "maxDate": "2026-11-06"
+}

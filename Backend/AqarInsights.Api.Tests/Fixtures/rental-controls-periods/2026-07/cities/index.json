@@ -1,0 +1,100 @@
+[
+  {
+    "cityId": "riyadh",
+    "cityName": "الرياض",
+    "operationalStatus": "الضوابط مفعلة",
+    "classification": "نمو مرتفع",
+    "classificationColor": "#D97706"
+  },
+  {
+    "cityId": "najran",
+    "cityName": "نجران",
+    "operationalStatus": "يتطلب دراسة تفصيلية",
+    "classification": "نمو مرتفع",
+    "classificationColor": "#D97706"
+  },
+  {
+    "cityId": "hail",
+    "cityName": "حائل",
+    "operationalStatus": "يتطلب دراسة استباقية",
+    "classification": "نمو مستدام",
+    "classificationColor": "#0F766E"
+  },
+  {
+    "cityId": "buraidah",
+    "cityName": "بريدة",
+    "operationalStatus": "لا إجراء",
+    "classification": "نمو مستدام",
+    "classificationColor": "#0F766E"
+  },
+  {
+    "cityId": "jeddah",
+    "cityName": "جدة",
+    "operationalStatus": "يتطلب دراسة استباقية",
+    "classification": "نمو مستدام",
+    "classificationColor": "#0F766E"
+  },
+  {
+    "cityId": "madinah",
+    "cityName": "المدينة المنورة",
+    "operationalStatus": "يتطلب دراسة استباقية",
+    "classification": "نمو مستدام",
+    "classificationColor": "#0F766E"
+  },
+  {
+    "cityId": "tabuk",
+    "cityName": "تبوك",
+    "operationalStatus": "يتطلب دراسة استباقية",
+    "classification": "نمو مستدام",
+    "classificationColor": "#0F766E"
+  },
+  {
+    "cityId": "makkah",
+    "cityName": "مكة المكرمة",
+    "operationalStatus": "يتطلب دراسة استباقية",
+    "classification": "نمو مستدام",
+    "classificationColor": "#0F766E"
+  },
+  {
+    "cityId": "sakaka",
+    "cityName": "سكاكا",
+    "operationalStatus": "يتطلب دراسة استباقية",
+    "classification": "نمو مستدام",
+    "classificationColor": "#0F766E"
+  },
+  {
+    "cityId": "dammam",
+    "cityName": "الدمام",
+    "operationalStatus": "يتطلب دراسة استباقية",
+    "classification": "نمو مستدام",
+    "classificationColor": "#0F766E"
+  },
+  {
+    "cityId": "bahah",
+    "cityName": "الباحة",
+    "operationalStatus": "يتطلب دراسة استباقية",
+    "classification": "نمو مستدام",
+    "classificationColor": "#0F766E"
+  },
+  {
+    "cityId": "jazan",
+    "cityName": "جازان",
+    "operationalStatus": "يتطلب دراسة استباقية",
+    "classification": "نمو مستدام",
+    "classificationColor": "#0F766E"
+  },
+  {
+    "cityId": "abha",
+    "cityName": "أبها",
+    "operationalStatus": "يتطلب دراسة استباقية",
+    "classification": "نمو مستدام",
+    "classificationColor": "#0F766E"
+  },
+  {
+    "cityId": "arar",
+    "cityName": "عرعر",
+    "operationalStatus": "يتطلب دراسة استباقية",
+    "classification": "نمو مستدام",
+    "classificationColor": "#0F766E"
+  }
+]

@@ -1,0 +1,16 @@
+[
+{"releaseId":"2026-Q2","cityId":"riyadh","seq":0,"name":"الرياض","hasDetail":true,"hasReport":true},
+{"releaseId":"2026-Q2","cityId":"najran","seq":1,"name":"نجران","hasDetail":true,"hasReport":true},
+{"releaseId":"2026-Q2","cityId":"buraidah","seq":2,"name":"بريدة","hasDetail":true,"hasReport":true},
+{"releaseId":"2026-Q2","cityId":"hail","seq":3,"name":"حائل","hasDetail":true,"hasReport":true},
+{"releaseId":"2026-Q2","cityId":"jeddah","seq":4,"name":"جدة","hasDetail":true,"hasReport":true},
+{"releaseId":"2026-Q2","cityId":"madinah","seq":5,"name":"المدينة المنورة","hasDetail":true,"hasReport":true},
+{"releaseId":"2026-Q2","cityId":"tabuk","seq":6,"name":"تبوك","hasDetail":true,"hasReport":true},
+{"releaseId":"2026-Q2","cityId":"sakaka","seq":7,"name":"سكاكا","hasDetail":true,"hasReport":true},
+{"releaseId":"2026-Q2","cityId":"makkah","seq":8,"name":"مكة المكرمة","hasDetail":true,"hasReport":true},
+{"releaseId":"2026-Q2","cityId":"bahah","seq":9,"name":"الباحة","hasDetail":true,"hasReport":true},
+{"releaseId":"2026-Q2","cityId":"dammam","seq":10,"name":"الدمام","hasDetail":true,"hasReport":true},
+{"releaseId":"2026-Q2","cityId":"abha","seq":11,"name":"أبها","hasDetail":true,"hasReport":true},
+{"releaseId":"2026-Q2","cityId":"jazan","seq":12,"name":"جازان","hasDetail":true,"hasReport":true},
+{"releaseId":"2026-Q2","cityId":"arar","seq":13,"name":"عرعر","hasDetail":true,"hasReport":true}
+]

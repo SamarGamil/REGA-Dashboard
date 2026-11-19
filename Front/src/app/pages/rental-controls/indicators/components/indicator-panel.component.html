@@ -1,0 +1,83 @@
+<div
+  [class]="'rounded-xl bg-white transition-all duration-200 cursor-pointer h-full flex flex-col ' + (isActive ? 'ring-1' : '')"
+  [style.border]="isActive ? '1px solid #00848D' : '1px solid #E5EBEF'"
+  [style.boxShadow]="isActive ? '0 2px 12px rgba(0,132,141,0.08)' : '0 1px 3px rgba(0,47,86,0.03)'"
+  (click)="handlePanelClick()"
+>
+  <div
+    class="px-4 py-3 border-b flex items-center gap-2.5 min-h-[88px] lg:min-h-[120px] 2xl:min-h-[136px]"
+    style="border-color: #E5EBEF"
+  >
+    <div
+      class="w-9 h-9 rounded-lg flex items-center justify-center flex-shrink-0"
+      style="background-color: #E8F7F6"
+    >
+      <i [class]="data.icon + ' text-[16px]'" style="color: #00848D"></i>
+    </div>
+    <div class="min-w-0 flex-1">
+      <div class="flex items-start justify-between gap-1">
+        <p class="text-sm font-bold text-[#0F2137] leading-snug">{{ data.title }}</p>
+        <app-indicator-tooltip
+          class="flex-shrink-0 mt-0.5"
+          [title]="data.title"
+          [definition]="data.definition"
+          [thresholdRule]="data.thresholdRule"
+          [orderingLabel]="orderingLabel"
+        />
+      </div>
+      @if (thresholdSummary) {
+        <p class="text-[11px] text-[#4B5563] leading-snug mt-0.5">{{ thresholdSummary }}</p>
+      }
+      <p class="text-[10px] text-[#9CA3AF] leading-snug mt-0.5 flex items-center gap-1">
+        {{ higherIsBetter ? 'القيمة الأعلى أفضل' : 'القيمة الأقل أفضل' }}
+        <i
+          [class]="(higherIsBetter ? 'ri-arrow-up-line' : 'ri-arrow-down-line') + ' text-[11px]'"
+          style="color: #00848D"
+        ></i>
+      </p>
+      @if (badge || data.periodLabel) {
+        <div class="flex flex-wrap items-center gap-x-1.5 gap-y-1 mt-1">
+          @if (badge) {
+            <span
+              class="text-[10px] font-bold leading-none px-1.5 py-1 rounded"
+              [style.backgroundColor]="badge.bg"
+              [style.color]="badge.text"
+            >{{ badge.label }}</span>
+          }
+          @if (data.periodLabel) {
+            <span class="text-[10px] text-[#9CA3AF] leading-snug">{{ data.periodLabel }}</span>
+          }
+        </div>
+      }
+    </div>
+  </div>
+
+  <div class="px-3 py-2 flex-1">
+    @for (city of sortedCities; track city.cityId) {
+      @let styles = getStatusStyles(city.status);
+      @let isHovered = hoveredCity() === city.cityName;
+      @let showBg = city.status !== '—';
+      <div
+        class="flex items-center justify-between px-2 py-1.5 rounded-md transition-colors duration-150 cursor-default"
+        [style.backgroundColor]="isHovered ? '#F7F9FB' : 'transparent'"
+        (mouseenter)="hoveredCity.set(city.cityName)"
+        (mouseleave)="hoveredCity.set(null)"
+      >
+        <div class="flex items-center gap-2 min-w-0 flex-1">
+          <span
+            class="w-2 h-2 rounded-full flex-shrink-0"
+            [style.backgroundColor]="styles.dot"
+          ></span>
+          <span class="text-sm text-[#0F2137] font-medium leading-snug whitespace-nowrap">{{ city.cityName }}</span>
+        </div>
+        <span
+          class="text-sm font-bold whitespace-nowrap ml-1 px-1.5 py-0.5 rounded tabular-nums"
+          [style.color]="styles.text"
+          [style.backgroundColor]="showBg ? styles.bg : 'transparent'"
+        >
+          {{ city.displayValue }}
+        </span>
+      </div>
+    }
+  </div>
+</div>

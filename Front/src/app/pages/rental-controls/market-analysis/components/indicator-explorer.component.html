@@ -1,0 +1,50 @@
+<div>
+  <!-- Tabs -->
+  <div
+    class="flex flex-wrap md:flex-nowrap items-center p-1.5 rounded-[26px] mb-4 md:overflow-x-auto"
+    style="background-color: #EEF2F5; min-height: 52px"
+  >
+    @for (ind of indicatorDefinitions; track ind.id) {
+      <button
+        (click)="setActiveTab(ind.id)"
+        [class]="'px-5 py-2.5 rounded-full text-[15px] transition-all duration-200 whitespace-nowrap cursor-pointer flex-shrink-0 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#00848D] focus-visible:ring-offset-1 ' + (activeTab() === ind.id ? 'font-bold text-white' : 'font-semibold text-[#465466] hover:bg-[rgba(0,132,141,0.07)] hover:text-[#00848D]')"
+        [style.backgroundColor]="activeTab() === ind.id ? '#00848D' : null"
+      >
+        {{ ind.label }}
+      </button>
+    }
+  </div>
+
+  <!-- Full-width chart -->
+  <div
+    class="bg-white rounded-xl p-4"
+    style="border: 1px solid #E5EBEF; box-shadow: 0 1px 3px rgba(0,47,86,0.03)"
+  >
+    <div class="flex items-center justify-between mb-3">
+      <h4 class="text-sm font-extrabold text-[#0F172A]">{{ activeIndicator().label }}</h4>
+    </div>
+    <div class="space-y-1">
+      @for (city of sortedCities(); track city.id; let idx = $index) {
+        <div
+          class="flex items-center gap-3 py-1.5 px-2 rounded-md transition-colors cursor-pointer hover:bg-[#F7F9FB]"
+          (click)="navigateToCity(city.id)"
+        >
+          <span class="text-sm text-[#4B5563] w-6 text-right flex-shrink-0 font-medium">{{ idx + 1 }}</span>
+          <span [class]="'text-sm w-[100px] text-right truncate flex-shrink-0 ' + (idx === 0 || idx === sortedCities().length - 1 ? 'font-extrabold text-[#0F172A]' : 'font-medium text-[#1E293B]')">
+            {{ city.name }}
+          </span>
+          <div class="flex-1 h-2.5 bg-[#E5EBEF] rounded-full overflow-hidden">
+            <div
+              class="h-full rounded-full transition-all duration-500"
+              [style.width.%]="getPct(city) < 5 ? 5 : getPct(city)"
+              [style.backgroundColor]="getBarColor(city, idx)"
+            ></div>
+          </div>
+          <span [class]="'text-sm font-extrabold w-[72px] text-left flex-shrink-0 ' + (idx === 0 ? 'text-[#0F172A]' : 'text-[#1E293B]')">
+            {{ getDisplayVal(city) }}
+          </span>
+        </div>
+      }
+    </div>
+  </div>
+</div>

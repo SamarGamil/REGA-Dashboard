@@ -1,0 +1,154 @@
+<div class="mb-8">
+  <!-- ============================
+       LEVEL 1 — BREADCRUMB
+       ============================ -->
+  <nav class="flex items-center gap-1.5 text-sm text-[#4B5563] mb-4">
+    <a
+      href="/"
+      class="hover:text-[#00848D] transition-colors cursor-pointer whitespace-nowrap"
+    >
+      الرئيسية
+    </a>
+    <span class="text-[#4B5563]">/</span>
+    <a
+      href="/"
+      class="hover:text-[#00848D] transition-colors cursor-pointer whitespace-nowrap"
+    >
+      حالة المدن
+    </a>
+    <span class="text-[#4B5563]">/</span>
+    <span class="text-[#0F172A] font-bold whitespace-nowrap">
+      تحليل المدينة
+    </span>
+  </nav>
+
+  <!-- ============================
+       LEVEL 2 — CITY + STATUS + DESC  |  RIGHT
+       REPORTING PERIOD               |  LEFT
+       ============================ -->
+  <div class="flex flex-col gap-3 md:flex-row md:items-start md:justify-between">
+
+    <!-- ── RIGHT: city identity ── -->
+    <div class="flex-1 min-w-0 mb-4">
+      <!-- City selector + badges row -->
+      <div class="flex items-center gap-3 mb-2 flex-wrap">
+        <!-- City name with dropdown trigger -->
+        <div class="relative" #dropdownRef>
+          <button
+            (click)="toggleDropdown()"
+            class="flex items-center gap-2 group cursor-pointer bg-transparent border-none p-0"
+            [attr.aria-expanded]="dropdownOpen()"
+            aria-haspopup="listbox"
+          >
+            <span class="text-[26px] md:text-[32px] font-extrabold text-[#0F172A] tracking-tight leading-none">
+              {{ data.cityName }}
+            </span>
+            <span
+              class="w-7 h-7 flex items-center justify-center rounded-md text-[#4B5563] group-hover:text-[#00848D] group-hover:bg-[#F1F5F9] transition-all"
+            >
+              <i [class]="'ri-arrow-down-s-line text-lg transition-transform ' + (dropdownOpen() ? 'rotate-180' : '')"></i>
+            </span>
+          </button>
+
+          <!-- City dropdown -->
+          @if (dropdownOpen()) {
+            <div
+              class="absolute top-full right-0 mt-2 w-[300px] bg-white rounded-xl shadow-xl border border-[#E7ECF2] z-50 overflow-hidden"
+              style="box-shadow: 0 8px 30px rgba(0,47,86,0.12)"
+              role="listbox"
+            >
+              <!-- Dropdown header -->
+              <div class="px-4 pt-4 pb-2">
+                <p class="text-sm font-bold text-[#0F172A] mb-2">اختيار المدينة</p>
+                <div class="relative">
+                  <span class="absolute right-3 top-1/2 -translate-y-1/2 w-4 h-4 flex items-center justify-center text-[#4B5563]">
+                    <i class="ri-search-line text-sm"></i>
+                  </span>
+                  <input
+                    #searchInput
+                    type="text"
+                    [value]="searchQuery()"
+                    (input)="onSearchInput($any($event.target).value)"
+                    placeholder="ابحث عن مدينة"
+                    class="w-full pr-9 pl-3 py-2 text-sm text-[#0F172A] bg-[#F7F9FB] rounded-lg border border-[#E7ECF2] focus:outline-none focus:border-[#00848D] focus:ring-1 focus:ring-[#00848D]/20 placeholder:text-[#4B5563]"
+                    dir="rtl"
+                  />
+                </div>
+              </div>
+
+              <!-- City list -->
+              <div class="max-h-[320px] overflow-y-auto py-1">
+                @if (filteredCities().length === 0) {
+                  <div class="px-4 py-3 text-sm text-[#4B5563] text-center">
+                    لا توجد نتائج
+                  </div>
+                }
+                @for (city of filteredCities(); track city.cityId) {
+                  @let isSelected = city.cityName === data.cityName;
+                  <button
+                    (click)="selectCity(city.cityId)"
+                    role="option"
+                    [attr.aria-selected]="isSelected"
+                    [class]="'w-full flex items-center justify-between px-4 py-2.5 text-right hover:bg-[#F7F9FB] transition-colors cursor-pointer border-none bg-transparent ' + (isSelected ? 'bg-[#F0FDFA]' : '')"
+                  >
+                    <div class="flex items-center gap-2">
+                      @if (isSelected) {
+                        <span class="w-4 h-4 flex items-center justify-center text-[#00848D]">
+                          <i class="ri-check-line text-sm"></i>
+                        </span>
+                      }
+                      <span
+                        [class]="'text-[14px] font-medium ' + (isSelected ? 'text-[#00848D]' : 'text-[#0F172A]')"
+                      >
+                        {{ city.cityName }}
+                      </span>
+                    </div>
+                    <div class="flex items-center gap-1.5">
+                      <span
+                        class="w-2 h-2 rounded-full"
+                        [style.backgroundColor]="statusDotMap[city.operationalStatus] || '#94A3B8'"
+                      ></span>
+                      <span class="text-sm text-[#4B5563] whitespace-nowrap">
+                        {{ city.operationalStatus }}
+                      </span>
+                    </div>
+                  </button>
+                }
+              </div>
+            </div>
+          }
+        </div>
+
+        <!-- Status badges -->
+        <div class="flex items-center gap-2">
+          <span
+            class="px-2.5 py-1 rounded-full text-sm font-bold whitespace-nowrap"
+            [style.backgroundColor]="statusBgMap[data.operationalStatus] || '#F1F5F9'"
+            [style.color]="statusTextMap[data.operationalStatus] || '#002F56'"
+          >
+            {{ data.operationalStatus }}
+          </span>
+          <span
+            class="px-2.5 py-1 rounded-full text-sm font-bold whitespace-nowrap"
+            [style.backgroundColor]="data.classificationColor + '12'"
+            [style.color]="data.classificationColor"
+            [style.border]="'1px solid ' + data.classificationColor + '20'"
+          >
+            {{ data.classification }}
+          </span>
+        </div>
+      </div>
+
+      <!-- Description -->
+      <p class="text-sm text-[#4B5563] leading-relaxed">
+        تحليل شامل لحالة السوق الإيجاري والمؤشرات الرئيسية
+      </p>
+    </div>
+
+    <!-- ── LEFT: reporting period (chosen in the period filter below) ── -->
+    <div class="flex-shrink-0 flex flex-col gap-1.5 md:pl-8 md:pt-1">
+      <app-period-label />
+    </div>
+
+  </div>
+</div>

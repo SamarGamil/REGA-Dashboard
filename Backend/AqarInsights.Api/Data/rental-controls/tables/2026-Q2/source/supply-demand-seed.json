@@ -1,0 +1,152 @@
+[
+  {
+    "cityId": "riyadh",
+    "year": 2026,
+    "totalStock": 2370255,
+    "totalDemand": 2277383,
+    "estimatedSurplus": 92873,
+    "surplusPct": 3.9,
+    "optimalSurplus": 189620,
+    "cumulativeGap": -89319
+  },
+  {
+    "cityId": "riyadh",
+    "year": 2027,
+    "totalStock": 2420529,
+    "totalDemand": 2359951,
+    "estimatedSurplus": 60578,
+    "surplusPct": 2.5,
+    "optimalSurplus": 193642,
+    "cumulativeGap": -128218
+  },
+  {
+    "cityId": "riyadh",
+    "year": 2028,
+    "totalStock": 2471729,
+    "totalDemand": 2445302,
+    "estimatedSurplus": 26427,
+    "surplusPct": 1.1,
+    "optimalSurplus": 197738,
+    "cumulativeGap": -169197
+  },
+  {
+    "cityId": "riyadh",
+    "year": 2029,
+    "totalStock": 2523792,
+    "totalDemand": 2533610,
+    "estimatedSurplus": -9818,
+    "surplusPct": -0.4,
+    "optimalSurplus": 201903,
+    "cumulativeGap": -212507
+  },
+  {
+    "cityId": "riyadh",
+    "year": 2030,
+    "totalStock": 2577538,
+    "totalDemand": 2622211,
+    "estimatedSurplus": -44673,
+    "surplusPct": -1.7,
+    "optimalSurplus": 206203,
+    "cumulativeGap": -254450
+  },
+  {
+    "cityId": "jeddah",
+    "year": 2026,
+    "totalStock": 1410173,
+    "totalDemand": 1311704,
+    "estimatedSurplus": 98469,
+    "surplusPct": 7,
+    "optimalSurplus": 112814,
+    "cumulativeGap": -14345
+  },
+  {
+    "cityId": "jeddah",
+    "year": 2027,
+    "totalStock": 1452364,
+    "totalDemand": 1368700,
+    "estimatedSurplus": 83664,
+    "surplusPct": 5.8,
+    "optimalSurplus": 116189,
+    "cumulativeGap": -32525
+  },
+  {
+    "cityId": "jeddah",
+    "year": 2028,
+    "totalStock": 1495131,
+    "totalDemand": 1428152,
+    "estimatedSurplus": 66979,
+    "surplusPct": 4.5,
+    "optimalSurplus": 119610,
+    "cumulativeGap": -52631
+  },
+  {
+    "cityId": "jeddah",
+    "year": 2029,
+    "totalStock": 1538188,
+    "totalDemand": 1490171,
+    "estimatedSurplus": 48017,
+    "surplusPct": 3.1,
+    "optimalSurplus": 123055,
+    "cumulativeGap": -75038
+  },
+  {
+    "cityId": "jeddah",
+    "year": 2030,
+    "totalStock": 1582238,
+    "totalDemand": 1554871,
+    "estimatedSurplus": 27368,
+    "surplusPct": 1.7,
+    "optimalSurplus": 126579,
+    "cumulativeGap": -99211
+  },
+  {
+    "cityId": "dammam",
+    "year": 2026,
+    "totalStock": 882431,
+    "totalDemand": 779778,
+    "estimatedSurplus": 102653,
+    "surplusPct": 11.6,
+    "optimalSurplus": 70595,
+    "cumulativeGap": 40271
+  },
+  {
+    "cityId": "dammam",
+    "year": 2027,
+    "totalStock": 903534,
+    "totalDemand": 812098,
+    "estimatedSurplus": 91436,
+    "surplusPct": 10.1,
+    "optimalSurplus": 72283,
+    "cumulativeGap": 26468
+  },
+  {
+    "cityId": "dammam",
+    "year": 2028,
+    "totalStock": 924933,
+    "totalDemand": 845636,
+    "estimatedSurplus": 79298,
+    "surplusPct": 8.6,
+    "optimalSurplus": 73995,
+    "cumulativeGap": 11647
+  },
+  {
+    "cityId": "dammam",
+    "year": 2029,
+    "totalStock": 946560,
+    "totalDemand": 880460,
+    "estimatedSurplus": 66100,
+    "surplusPct": 7,
+    "optimalSurplus": 75725,
+    "cumulativeGap": -4337
+  },
+  {
+    "cityId": "dammam",
+    "year": 2030,
+    "totalStock": 968775,
+    "totalDemand": 916669,
+    "estimatedSurplus": 52106,
+    "surplusPct": 5.4,
+    "optimalSurplus": 77502,
+    "cumulativeGap": -21228
+  }
+]

@@ -1,0 +1,42 @@
+[
+  {
+    "username": "admin",
+    "passwordHash": "$2a$11$UTvlNAeJ5x2xjMccUuIvduZk23SgnaM0wP4mr2qNYv4kgwALg9vL2"
+  },
+  {
+    "username": "oalmusa@rega.gov.sa",
+    "passwordHash": "$2a$11$vYS9qgWJH0GyOigZW1pPeeNoMo51sNtSI7bZqmbK5Use1uYKtT85u"
+  },
+  {
+    "username": "nalwohaibi@rega.gov.sa",
+    "passwordHash": "$2a$11$lyhLQ9zpeTDHxVbeqUaq9uGUWN5rJB9Qzscke4S36R7jnTcUs8yV2"
+  },
+  {
+    "username": "aalmansour@rega.gov.sa",
+    "passwordHash": "$2a$11$K/7am/d9lI5w.551FVG3EuLGbvIrKOr0XO6sFyo8mGCj/AvAFOVIa"
+  },
+  {
+    "username": "a.alhammad@rega.gov.sa",
+    "passwordHash": "$2a$11$9aM/ZYjxaDZmugqWxgdht.4dgbUVWAh39Zs4/t.dnOt7AENueWQcq"
+  },
+  {
+    "username": "aalfuntukh@rega.gov.sa",
+    "passwordHash": "$2a$11$e3neV5Od5WvCN5GuAem/9.nFb2gr5pW/Zuaqv05kS3c1b9LKuLxS."
+  },
+  {
+    "username": "oaljabri@rega.gov.sa",
+    "passwordHash": "$2a$11$Wv2qe/hOgVKuGGcFVcKzNOeWCIOzOv8tUaKsfvQgBpLyiReKFcpTC"
+  },
+  {
+    "username": "t.alharbi@rega.gov.sa",
+    "passwordHash": "$2a$11$4jB/WH2CWzeFK.wyuaGJguxRmWN2ZEpOH7LIE4/zw64yoyNscZVMu"
+  },
+  {
+    "username": "aalmubarak@rega.gov.sa",
+    "passwordHash": "$2a$11$gb/uBk4Yf.ZIBvXqwYqaV.7eOCSnAEhOj1ryZTbtrRtbmoRgz93Om"
+  },
+  {
+    "username": "talzaeem@rega.gov.sa",
+    "passwordHash": "$2a$11$6ZkX4T00xqHjAHt/UaS9BeK.cHrLsqZQ7APWKXN7EnbXpBq/Cf3t2"
+  }
+]

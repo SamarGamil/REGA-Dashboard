@@ -1,0 +1,23 @@
+<div [class]="containerClass">
+  <!-- Icon chip -->
+  <div *ngIf="icon" [class]="iconContainerClass" [style.backgroundColor]="colors.iconBg">
+    <span [class]="'flex items-center justify-center ' + (isLarge ? 'w-7 h-7' : 'w-5 h-5')">
+      <i [class]="icon + ' ' + iconSizeClass" [style.color]="colors.icon"></i>
+    </span>
+  </div>
+  
+  <!-- Content -->
+  <div>
+    <p [class]="titleClass">{{ title }}</p>
+    <p [class]="valueClass">{{ value }}</p>
+    <p *ngIf="subtitle || trendLabel || trend !== undefined" [class]="subtitleClass">
+      <span *ngIf="trend !== undefined && trend !== null" [class]="'inline-flex items-center gap-0.5 ' + trendColor">
+        <i [class]="(trend >= 0 ? 'ri-arrow-up-line' : 'ri-arrow-down-line')"></i>
+        {{ absValue(trend) }}%
+      </span>
+      <span *ngIf="trend === null" class="inline-flex items-center text-[#94A3B8]">—</span>
+      <span *ngIf="(trend !== undefined && trend !== null) && (subtitle || trendLabel)"> • </span>
+      <span>{{ subtitle || trendLabel }}</span>
+    </p>
+  </div>
+</div>

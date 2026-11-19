@@ -1,0 +1,129 @@
+{
+  "metrics": {
+    "totalValue": 1520270722.64,
+    "avgValue": 2604021,
+    "medianValue": 695000,
+    "maxValue": 245559865.47,
+    "minValue": 1
+  },
+  "valueDistribution": [
+    {
+      "range": "أقل من 500 ألف",
+      "count": 283.4,
+      "avgValue": 205293
+    },
+    {
+      "range": "500 ألف – 1 مليون",
+      "count": 179.0,
+      "avgValue": 704615
+    },
+    {
+      "range": "1 – 2 مليون",
+      "count": 118.4,
+      "avgValue": 1425090
+    },
+    {
+      "range": "2 – 3 مليون",
+      "count": 38.0,
+      "avgValue": 2604042
+    },
+    {
+      "range": "3 – 5 مليون",
+      "count": 33.0,
+      "avgValue": 3743916
+    },
+    {
+      "range": "5 – 10 مليون",
+      "count": 15,
+      "avgValue": 5954497
+    },
+    {
+      "range": "أكثر من 10 مليون",
+      "count": 16,
+      "avgValue": 53465676
+    }
+  ],
+  "monthlySummary": [
+    {
+      "month": "2026-05",
+      "label": "مايو 2026",
+      "purchases": 0,
+      "sales": 0,
+      "gifts": 0,
+      "total": 500.3,
+      "value": 579504732.443333334
+    },
+    {
+      "month": "2026-06",
+      "label": "يونيو 2026",
+      "purchases": 0,
+      "sales": 0,
+      "gifts": 0,
+      "total": 880.7,
+      "value": 1056175564.6341269860
+    },
+    {
+      "month": "2026-07",
+      "label": "يوليو 2026",
+      "purchases": 0,
+      "sales": 0,
+      "gifts": 0,
+      "total": 1061.0,
+      "value": 1242051303.44666665726
+    },
+    {
+      "month": "2026-08",
+      "label": "أغسطس 2026",
+      "purchases": 0,
+      "sales": 0,
+      "gifts": 0,
+      "total": 1029.1,
+      "value": 2098970767.4233333333
+    },
+    {
+      "month": "2026-09",
+      "label": "سبتمبر 2026",
+      "purchases": 0,
+      "sales": 0,
+      "gifts": 0,
+      "total": 1176.2,
+      "value": 1231105251.196666670
+    },
+    {
+      "month": "2026-10",
+      "label": "أكتوبر 2026",
+      "purchases": 0,
+      "sales": 0,
+      "gifts": 0,
+      "total": 682.8,
+      "value": 1520270722.64
+    }
+  ],
+  "growthRates": [
+    {
+      "month": "2026-06",
+      "label": "يونيو 2026",
+      "rate": 82.3
+    },
+    {
+      "month": "2026-07",
+      "label": "يوليو 2026",
+      "rate": 17.6
+    },
+    {
+      "month": "2026-08",
+      "label": "أغسطس 2026",
+      "rate": 69.0
+    },
+    {
+      "month": "2026-09",
+      "label": "سبتمبر 2026",
+      "rate": -41.3
+    },
+    {
+      "month": "2026-10",
+      "label": "أكتوبر 2026",
+      "rate": 23.5
+    }
+  ]
+}

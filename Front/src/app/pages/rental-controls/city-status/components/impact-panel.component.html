@@ -1,0 +1,111 @@
+<div class="bg-white rounded-[20px] border border-[#E7ECF2] p-6"
+  style="box-shadow: 0 1px 3px rgba(0,47,86,0.04), 0 8px 24px rgba(0,47,86,0.04)"
+  dir="rtl"
+>
+  <div class="flex items-center gap-3 mb-5">
+    <span class="w-8 h-8 rounded-xl flex items-center justify-center"
+      style="background: linear-gradient(135deg, #00848D10 0%, #00A48810 100%)"
+    >
+      <i class="ri-line-chart-line text-[#00848D] text-sm"></i>
+    </span>
+    <h3 class="text-sm font-extrabold text-[#0F172A]">أثر الضوابط الإيجارية المفعلة</h3>
+    <!-- <span class="text-[11px] font-bold text-[#B45309] px-2 py-0.5 rounded-full mr-auto"
+      style="background: #FFFBEB; border: 1px solid #FDE68A"
+    >بيانات تجريبية</span> -->
+  </div>
+
+  @if (available) {
+    <div>
+      <div class="flex items-center gap-2 mb-4">
+        <span class="text-sm font-bold text-[#005257] px-3 py-[5px] rounded-full"
+          style="background: #E8F6F3"
+        >{{ cityName }}</span>
+      </div>
+
+      <p class="text-sm text-[#4B5563] leading-relaxed">{{ descriptionText }}</p>
+
+      @if (hasIncrease) {
+        <div class="grid grid-cols-2 gap-3 mt-4 mb-5">
+          @for (card of [
+            { name: GROWTH_NAME, color: GROWTH_COLOR, before: beforeValue, after: afterValue, change: change },
+            { name: INCREASE_NAME, color: INCREASE_COLOR, before: increaseBefore + '%', after: increaseAfter + '%', change: increaseChange }
+          ]; track card.name) {
+            <div class="rounded-xl border border-[#E7ECF2] bg-[#F8FAFC] p-3">
+              <div class="flex items-center gap-2 mb-3">
+                <span class="w-2 h-2 rounded-full" [style.background]="card.color"></span>
+                <span class="text-sm font-bold text-[#0F172A]">{{ card.name }}</span>
+              </div>
+              <div class="flex items-center gap-2 flex-wrap mb-2">
+                <span class="text-xs font-bold text-[#4B5563] px-3 py-1.5 rounded-full"
+                  style="background: #FFFFFF; border: 1px solid #E7ECF2"
+                >
+                  قبل التفعيل: <span class="text-[#0F172A] font-extrabold">{{ card.before }}</span>
+                </span>
+                <span class="text-xs font-bold text-[#4B5563] px-3 py-1.5 rounded-full"
+                  style="background: #FFFFFF; border: 1px solid #E7ECF2"
+                >
+                  بعد التفعيل: <span class="text-[#0F172A] font-extrabold">{{ card.after }}</span>
+                </span>
+              </div>
+              <span class="inline-block text-xs font-bold text-[#B45309] px-3 py-1.5 rounded-full"
+                style="background: #FFFBEB; border: 1px solid #FDE68A"
+              >
+                التغير: <span class="font-extrabold">{{ card.change }}</span>
+              </span>
+            </div>
+          }
+        </div>
+      } @else {
+      <!-- key figures inline, no separate KPI cards -->
+      <div class="flex items-center gap-2 mt-4 mb-5 flex-wrap">
+        <span class="text-xs font-bold text-[#4B5563] px-3 py-1.5 rounded-full"
+          style="background: #F8FAFC; border: 1px solid #E7ECF2"
+        >
+          قبل التفعيل: <span class="text-[#0F172A] font-extrabold">{{ beforeValue }}</span>
+        </span>
+        <span class="text-xs font-bold text-[#005257] px-3 py-1.5 rounded-full"
+          style="background: #E8F6F3; border: 1px solid #75CEC840"
+        >
+          بعد التفعيل: <span class="font-extrabold">{{ afterValue }}</span>
+        </span>
+        <span class="text-xs font-bold text-[#B45309] px-3 py-1.5 rounded-full"
+          style="background: #FFFBEB; border: 1px solid #FDE68A"
+        >
+          التغير: <span class="font-extrabold">{{ change }}</span>
+        </span>
+      </div>
+      }
+
+      @if (hasTimeline) {
+        <div class="mb-5">
+          <app-impact-line-chart [labels]="IMPACT_LABELS" [series]="chartSeries" [activationIndex]="ACTIVATION_INDEX" />
+        </div>
+      }
+
+      <div class="space-y-3">
+        @for (item of insights; track item.text) {
+          <div class="flex items-start gap-2.5">
+            <span class="w-4 h-4 flex items-center justify-center mt-0.5" [style.color]="item.color">
+              <i [class]="item.icon + ' text-sm'"></i>
+            </span>
+            <p class="text-sm text-[#4B5563] leading-relaxed">{{ item.text }}</p>
+          </div>
+        }
+      </div>
+    </div>
+  } @else {
+    <div>
+      <div class="flex items-center justify-center py-10">
+        <div class="text-center">
+          <span class="w-12 h-12 flex items-center justify-center mx-auto mb-3 rounded-xl"
+            style="background: #F1F5F9"
+          >
+            <i class="ri-time-line text-[#4B5563] text-xl"></i>
+          </span>
+          <p class="text-sm font-semibold text-[#4B5563]">{{ description }}</p>
+          <p class="text-sm text-[#4B5563] mt-1">لا تتوفر فترة قياس كافية حتى الآن</p>
+        </div>
+      </div>
+    </div>
+  }
+</div>

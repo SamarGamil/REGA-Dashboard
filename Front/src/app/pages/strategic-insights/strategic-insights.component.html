@@ -1,0 +1,144 @@
+<app-layout title="الرؤى الاستراتيجية" subtitle="مؤشرات، نقاط ساخنة، وأولويات لاتخاذ القرار التنفيذي" [breadcrumbs]="[{ label: 'تملك الأجانب' }, { label: 'الرؤى الاستراتيجية' }]">
+
+
+  <!-- Gauge Cards -->
+  <div class="grid grid-cols-2 lg:grid-cols-4 gap-3 mb-5">
+    <div class="rounded-[14px] border p-4 flex flex-col items-center text-center bg-primary-50 border-primary-200">
+      <div class="relative w-24 h-24 mb-2">
+        <svg class="w-24 h-24 -rotate-90" viewBox="0 0 100 100">
+          <circle cx="50" cy="50" r="38" fill="none" stroke="oklch(var(--background-200))" stroke-width="8"/>
+          <circle cx="50" cy="50" r="38" fill="none" stroke="oklch(var(--primary-500))" stroke-width="8" stroke-linecap="round"
+            [attr.stroke-dasharray]="circumference" [attr.stroke-dashoffset]="getOffset(data.concentrationIndex)"/>
+        </svg>
+        <span class="absolute inset-0 flex items-center justify-center text-xl font-heading font-bold text-foreground-900">{{ data.concentrationIndex }}</span>
+      </div>
+      <h4 class="text-xs font-medium text-foreground-700 mb-0.5">مؤشر تركّز السوق</h4>
+      <p class="text-[10px] text-foreground-500">{{ getConcentrationLabel(data.concentrationIndex) }}</p>
+    </div>
+    <div class="rounded-[14px] border p-4 flex flex-col items-center text-center bg-accent-50 border-accent-200">
+      <div class="relative w-24 h-24 mb-2">
+        <svg class="w-24 h-24 -rotate-90" viewBox="0 0 100 100">
+          <circle cx="50" cy="50" r="38" fill="none" stroke="oklch(var(--background-200))" stroke-width="8"/>
+          <circle cx="50" cy="50" r="38" fill="none" stroke="oklch(var(--accent-500))" stroke-width="8" stroke-linecap="round"
+            [attr.stroke-dasharray]="circumference" [attr.stroke-dashoffset]="getOffset(data.investmentConcentrationIndex)"/>
+        </svg>
+        <span class="absolute inset-0 flex items-center justify-center text-xl font-heading font-bold text-foreground-900">{{ data.investmentConcentrationIndex }}</span>
+      </div>
+      <h4 class="text-xs font-medium text-foreground-700 mb-0.5">مؤشر تركّز الاستثمار</h4>
+      <p class="text-[10px] text-foreground-500">{{ getConcentrationLabel(data.investmentConcentrationIndex) }}</p>
+    </div>
+    <div class="rounded-[14px] border p-4 flex flex-col items-center text-center bg-secondary-50 border-secondary-200">
+      <div class="relative w-24 h-24 mb-2">
+        <svg class="w-24 h-24 -rotate-90" viewBox="0 0 100 100">
+          <circle cx="50" cy="50" r="38" fill="none" stroke="oklch(var(--background-200))" stroke-width="8"/>
+          <circle cx="50" cy="50" r="38" fill="none" stroke="oklch(var(--secondary-500))" stroke-width="8" stroke-linecap="round"
+            [attr.stroke-dasharray]="circumference" [attr.stroke-dashoffset]="getOffset(data.nationalityDiversityIndex)"/>
+        </svg>
+        <span class="absolute inset-0 flex items-center justify-center text-xl font-heading font-bold text-foreground-900">{{ data.nationalityDiversityIndex }}</span>
+      </div>
+      <h4 class="text-xs font-medium text-foreground-700 mb-0.5">مؤشر تنوع الجنسيات</h4>
+      <p class="text-[10px] text-foreground-500">{{ getDiversityLabel(data.nationalityDiversityIndex) }}</p>
+    </div>
+    <div class="rounded-[14px] border p-4 flex flex-col items-center text-center bg-background-50 border-background-200">
+      <div class="relative w-24 h-24 mb-2">
+        <svg class="w-24 h-24 -rotate-90" viewBox="0 0 100 100">
+          <circle cx="50" cy="50" r="38" fill="none" stroke="oklch(var(--background-200))" stroke-width="8"/>
+          <circle cx="50" cy="50" r="38" fill="none" stroke="oklch(var(--foreground-500))" stroke-width="8" stroke-linecap="round"
+            [attr.stroke-dasharray]="circumference" [attr.stroke-dashoffset]="getOffset(data.geographicSpreadIndex)"/>
+        </svg>
+        <span class="absolute inset-0 flex items-center justify-center text-xl font-heading font-bold text-foreground-900">{{ data.geographicSpreadIndex }}</span>
+      </div>
+      <h4 class="text-xs font-medium text-foreground-700 mb-0.5">مؤشر الانتشار الجغرافي</h4>
+      <p class="text-[10px] text-foreground-500">{{ getSpreadLabel(data.geographicSpreadIndex) }}</p>
+    </div>
+  </div>
+
+  <!-- Hot Spots -->
+  <app-chart-card title="النقاط الاستثمارية الساخنة" subtitle="أكثر المناطق نشاطاً في السوق" className="mb-5">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
+      <div *ngFor="let spot of data.hotSpots" class="border border-background-200 rounded-[14px] p-4 hover:border-primary-200 transition-colors">
+        <div class="flex items-start justify-between mb-2">
+          <div>
+            <h4 class="text-sm font-heading font-semibold text-foreground-900">{{ spot.city }}</h4>
+            <p class="text-xs text-foreground-500">{{ spot.district }}</p>
+          </div>
+          <span dir="ltr" [class]="'text-xs font-bold px-2 py-0.5 rounded-full whitespace-nowrap ' + (spot.growth > 0 ? 'text-primary-600 bg-primary-50' : spot.growth < 0 ? 'text-red-600 bg-red-50' : 'text-foreground-500 bg-background-100')">{{ spot.growth > 0 ? '↑' : spot.growth < 0 ? '↓' : '—' }} {{ spot.growth }}%</span>
+        </div>
+        <div class="flex items-center gap-4 mb-2">
+          <div class="text-center">
+            <p class="text-lg font-heading font-bold text-foreground-900">{{ formatCount(spot.transactions) }}</p>
+            <p class="text-[10px] text-foreground-500">عملية</p>
+          </div>
+          <div class="text-center">
+            <p class="text-lg font-heading font-bold text-foreground-900">{{ fmtValue(spot.value) }} ر.س</p>
+            <p class="text-[10px] text-foreground-500">ر.س</p>
+          </div>
+        </div>
+        <p class="text-[11px] text-foreground-600 leading-relaxed">{{ spot.reason }}</p>
+      </div>
+    </div>
+  </app-chart-card>
+
+  <div class="grid grid-cols-1 lg:grid-cols-2 gap-5 mb-5">
+    <!-- Emerging Areas -->
+    <app-chart-card title="المدن والأحياء الناشئة" subtitle="أعلى معدلات النمو">
+      <div class="overflow-x-auto">
+        <table class="w-full text-xs">
+          <thead>
+            <tr class="border-b border-background-200">
+              <th class="text-right py-2 px-3 text-foreground-500 font-medium">المدينة</th>
+              <th class="text-right py-2 px-3 text-foreground-500 font-medium">الحي</th>
+              <th class="text-right py-2 px-3 text-foreground-500 font-medium">العمليات</th>
+              <th class="text-right py-2 px-3 text-foreground-500 font-medium">النمو</th>
+              <th class="text-right py-2 px-3 text-foreground-500 font-medium">الاتجاه</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let area of data.emergingAreas" class="border-b border-background-100 hover:bg-background-50 transition-colors">
+              <td class="py-2.5 px-3 font-medium text-foreground-800">{{ area.city }}</td>
+              <td class="py-2.5 px-3 text-foreground-600">{{ area.district }}</td>
+              <td class="py-2.5 px-3 font-medium text-foreground-800">{{ formatCount(area.transactions) }}</td>
+              <td class="py-2.5 px-3"><span dir="ltr" [class]="'font-medium ' + (area.growth > 0 ? 'text-secondary-600' : area.growth < 0 ? 'text-red-600' : 'text-foreground-400')">{{ area.growth > 0 ? '↑' : area.growth < 0 ? '↓' : '—' }} {{ area.growth }}%</span></td>
+              <td class="py-2.5 px-3">
+                <span [class]="'text-xs px-2 py-0.5 rounded-full font-medium whitespace-nowrap ' + (area.trend === 'صاعد' ? 'bg-secondary-50 text-secondary-700' : 'bg-accent-50 text-accent-700')">
+                  {{ area.trend }}
+                </span>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </app-chart-card>
+
+    <!-- High Growth Regions -->
+    <app-chart-card title="مناطق النمو المرتفع" subtitle="تحليل أسباب النمو">
+      <div class="space-y-3">
+        <div *ngFor="let region of data.highGrowthRegions" class="border border-background-200 rounded-[14px] p-3">
+          <div class="flex items-center justify-between mb-1">
+            <h4 class="text-sm font-medium text-foreground-900">{{ region.region }}</h4>
+            <span dir="ltr" [class]="'text-sm font-heading font-bold whitespace-nowrap ' + (region.growth > 0 ? 'text-secondary-600' : region.growth < 0 ? 'text-red-600' : 'text-foreground-400')">{{ region.growth > 0 ? '↑' : region.growth < 0 ? '↓' : '—' }} {{ region.growth }}%</span>
+          </div>
+          <div class="flex-1 h-2 bg-background-100 rounded-full overflow-hidden mb-2">
+            <div [class]="'h-full rounded-full ' + (region.growth > 0 ? 'bg-secondary-500' : region.growth < 0 ? 'bg-red-400' : 'bg-background-300')" [style.width.%]="region.growth === 0 ? 0 : (region.growth > 0 ? region.growth * 2 : region.growth * -2)"></div>
+          </div>
+          <p class="text-[11px] text-foreground-500">{{ region.reason }}</p>
+        </div>
+      </div>
+    </app-chart-card>
+  </div>
+
+  <!-- Top Opportunities -->
+  <app-chart-card title="أبرز الفرص الاستثمارية" subtitle="توصيات مبنية على تحليل البيانات">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
+      <div *ngFor="let opp of data.topOpportunities" class="border border-background-200 rounded-[14px] p-4 hover:border-secondary-200 transition-colors">
+        <div class="flex items-start justify-between mb-2">
+          <h4 class="text-sm font-heading font-semibold text-foreground-900">{{ opp.title }}</h4>
+          <span [class]="'text-[10px] px-2 py-0.5 rounded-full font-bold whitespace-nowrap ' + (opp.priority === 'عالية' ? 'bg-primary-100 text-primary-700' : 'bg-secondary-50 text-secondary-700')">
+            {{ opp.priority }}
+          </span>
+        </div>
+        <p class="text-[11px] text-foreground-600 leading-relaxed">{{ opp.description }}</p>
+      </div>
+    </div>
+  </app-chart-card>
+</app-layout>

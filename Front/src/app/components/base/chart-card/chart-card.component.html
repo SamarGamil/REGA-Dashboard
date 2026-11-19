@@ -1,0 +1,12 @@
+<div class="bg-white rounded-[20px] p-5" style="box-shadow: 0 1px 3px rgba(0,47,86,0.03), 0 8px 24px rgba(0,47,86,0.04); border: 1px solid #E7ECF2" [class]="className">
+  <div class="flex items-center justify-between mb-4">
+    <div>
+      <h3 class="text-base md:text-lg font-bold text-[#0F172A]">{{ title }}</h3>
+      <p *ngIf="subtitle" class="text-xs text-[#475569] mt-0.5">{{ subtitle }}</p>
+    </div>
+    <ng-content select="[action]"></ng-content>
+  </div>
+  <div class="w-full">
+    <ng-content></ng-content>
+  </div>
+</div>

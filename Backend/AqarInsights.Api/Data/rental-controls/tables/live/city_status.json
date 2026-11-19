@@ -1,0 +1,16 @@
+[
+{"releaseId":"live","cityId":"riyadh","path":"مرتفع","status":"","assessmentLine1":"الضوابط الايجارية مفعلة","assessmentLine2":"المعدل السنوي المركب 8.9% (نمو مرتفع) بتراجع 0.8 نقطة والعبء السكني للدخل المحدود 35% يتجاوز الحد"},
+{"releaseId":"live","cityId":"najran","path":"مرتفع","status":"","assessmentLine1":"التوصية: دراسة تفصيلية ورصد إعلامي للمدينة","assessmentLine2":"الزيادة الايجارية انخفضت إلى 2% ولكن يوجد عبء ذوي الدخل المحدود مرتفع"},
+{"releaseId":"live","cityId":"hail","path":"استباقي","status":"","assessmentLine1":"التوصية: دراسة استباقية ورصد إعلامي للمدينة","assessmentLine2":"مراقبة - العبء ذوي الدخل المحدود"},
+{"releaseId":"live","cityId":"buraidah","path":"استباقي","status":"","assessmentLine1":"التوصية: لا اجراء","assessmentLine2":""},
+{"releaseId":"live","cityId":"jeddah","path":"استباقي","status":"","assessmentLine1":"التوصية: دراسة استباقية ورصد إعلامي للمدينة","assessmentLine2":"مراقبة - العائد 5.3% دون الحد ولكن يوجد عبء ذوي الدخل المحدود"},
+{"releaseId":"live","cityId":"madinah","path":"استباقي","status":"","assessmentLine1":"التوصية: دراسة استباقية ورصد إعلامي للمدينة","assessmentLine2":"مراقبة - العائد 4.1% دون الحد ولكن يوجد عبء ذوي الدخل المحدود"},
+{"releaseId":"live","cityId":"tabuk","path":"استباقي","status":"","assessmentLine1":"التوصية: دراسة استباقية ورصد إعلامي للمدينة","assessmentLine2":"مراقبة - العائد 4.3% دون الحد ولكن يوجد عبء ذوي الدخل المحدود"},
+{"releaseId":"live","cityId":"makkah","path":"استباقي","status":"","assessmentLine1":"التوصية: دراسة استباقية ورصد إعلامي للمدينة","assessmentLine2":"مراقبة - العائد 4.2% دون الحد"},
+{"releaseId":"live","cityId":"sakaka","path":"استباقي","status":"","assessmentLine1":"التوصية: دراسة استباقية ورصد إعلامي للمدينة","assessmentLine2":"مراقبة - العبء ذوي الدخل المحدود"},
+{"releaseId":"live","cityId":"dammam","path":"استباقي","status":"","assessmentLine1":"التوصية: دراسة استباقية ورصد إعلامي للمدينة","assessmentLine2":"مراقبة - العائد 5.4% دون الحد"},
+{"releaseId":"live","cityId":"bahah","path":"استباقي","status":"","assessmentLine1":"التوصية: دراسة استباقية ورصد إعلامي للمدينة","assessmentLine2":"مراقبة - العبء ذوي الدخل المحدود"},
+{"releaseId":"live","cityId":"jazan","path":"استباقي","status":"","assessmentLine1":"التوصية: دراسة استباقية","assessmentLine2":"مراقبة - العائد 5.4% دون الحد ولكن يوجد عبء ذوي الدخل المحدود"},
+{"releaseId":"live","cityId":"abha","path":"استباقي","status":"","assessmentLine1":"التوصية: دراسة استباقية","assessmentLine2":"مراقبة - العائد 4.5% دون الحد ولكن يوجد عبء ذوي الدخل المحدود"},
+{"releaseId":"live","cityId":"arar","path":"استباقي","status":"","assessmentLine1":"التوصية: دراسة استباقية ورصد إعلامي للمدينة","assessmentLine2":"مراقبة - العبء ذوي الدخل المحدود"}
+]

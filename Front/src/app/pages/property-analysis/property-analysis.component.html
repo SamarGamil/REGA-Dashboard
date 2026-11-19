@@ -1,0 +1,70 @@
+<app-layout title="تحليل العقارات" subtitle="مزيج الأصول، التقييم حسب الفئة، واتجاه كل قطاع" [breadcrumbs]="[{ label: 'تملك الأجانب' }, { label: 'تحليل العقارات' }]">
+  <div class="grid grid-cols-1 lg:grid-cols-2 gap-5 mb-5">
+    <app-chart-card title="توزيع أنواع العقارات" subtitle="نسبة كل نوع من إجمالي العمليات">
+      @if (hasData) {
+      <div echarts [options]="donutOptions" class="w-full h-[300px]"></div>
+      <div class="flex items-center justify-center gap-4 flex-wrap mt-2">
+        <div *ngFor="let pt of propertyTypes" class="flex items-center gap-1.5">
+          <div class="w-2.5 h-2.5 rounded-full" [style.backgroundColor]="colorOf(pt.name)"></div>
+          <span class="text-[11px] text-foreground-600">{{ pt.name }}: {{ pt.pct }}%</span>
+        </div>
+      </div>
+      }
+      @else { <app-chart-empty-state height="300px" /> }
+    </app-chart-card>
+    <app-chart-card title="أنواع العقارات حسب القيمة" subtitle="إجمالي قيمة الصفقات (مليون ر.س)">
+      @if (hasData) { <div echarts [options]="valueBarOptions" class="w-full h-[300px]"></div> }
+      @else { <app-chart-empty-state height="300px" /> }
+    </app-chart-card>
+  </div>
+
+  <!-- Trends -->
+  <app-chart-card title="اتجاهات أنواع العقارات عبر الزمن" subtitle="عدد العمليات الشهرية لكل نوع" className="mb-5">
+    @if (hasData) { <div echarts [options]="trendOptions" class="w-full h-[320px]"></div> }
+    @else { <app-chart-empty-state height="320px" /> }
+  </app-chart-card>
+
+  <!-- Cross-tab Tables -->
+  <div class="grid grid-cols-1 lg:grid-cols-2 gap-5">
+    <app-chart-card title="نوع العقار × الجنسية" subtitle="توزيع العمليات">
+      @if (hasData) {
+      <div class="overflow-x-auto">
+        <table class="w-full text-xs">
+          <thead>
+            <tr class="border-b border-background-200">
+              <th class="text-right py-2 px-2 text-foreground-500 font-medium">الجنسية</th>
+              <th *ngFor="let col of typeColumns" class="text-right py-2 px-2 text-foreground-500 font-medium">{{ col }}</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let row of propertyTypeByNationality" class="border-b border-background-100 hover:bg-background-50 transition-colors">
+              <td class="py-2 px-2 font-medium text-foreground-800">{{ row.nationality }}</td>
+              <td *ngFor="let col of typeColumns" class="py-2 px-2 text-foreground-600">{{ formatCount(row.types[col]) }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      } @else { <app-chart-empty-state height="200px" /> }
+    </app-chart-card>
+    <app-chart-card title="نوع العقار × المنطقة" subtitle="توزيع العمليات">
+      @if (hasData) {
+      <div class="overflow-x-auto">
+        <table class="w-full text-xs">
+          <thead>
+            <tr class="border-b border-background-200">
+              <th class="text-right py-2 px-2 text-foreground-500 font-medium">المنطقة</th>
+              <th *ngFor="let col of typeColumns" class="text-right py-2 px-2 text-foreground-500 font-medium">{{ col }}</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let row of propertyTypeByRegion" class="border-b border-background-100 hover:bg-background-50 transition-colors">
+              <td class="py-2 px-2 font-medium text-foreground-800 whitespace-nowrap">{{ row.region }}</td>
+              <td *ngFor="let col of typeColumns" class="py-2 px-2 text-foreground-600">{{ formatCount(row.types[col]) }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      } @else { <app-chart-empty-state height="200px" /> }
+    </app-chart-card>
+  </div>
+</app-layout>

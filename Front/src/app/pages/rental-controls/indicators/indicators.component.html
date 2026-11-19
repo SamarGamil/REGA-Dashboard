@@ -1,0 +1,28 @@
+<app-layout
+  title="مؤشرات الضوابط الإيجارية"
+  subtitle="مقارنة مؤشرات الضوابط الإيجارية للمدن وفق الحدود والمعايير المحددة لكل مؤشر."
+  [breadcrumbs]="[{ label: 'مؤشرات الإيجار' }, { label: 'مؤشرات الضوابط الإيجارية' }]"
+  [showGlobalFilter]="false"
+  [portalPeriod]="true"
+>
+  <div class="mb-6">
+    <app-period-filter labeled />
+  </div>
+
+  @if (indicators(); as data) {
+    <app-current-comparison
+      [indicators]="data.currentPeriodIndicators"
+      [activeIndicatorId]="activeCurrentId()"
+      (onIndicatorClick)="handleCurrentIndicatorClick($event)"
+    />
+
+    @if (data.supplyDemandGap.length) {
+      <app-supply-demand-gap [cities]="data.supplyDemandGap" />
+    }
+
+    <app-historical-comparison
+      [historicalData]="data.historicalIndicators"
+      [initialIndicatorId]="historicalInitId()"
+    />
+  }
+</app-layout>

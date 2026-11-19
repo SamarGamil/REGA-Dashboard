@@ -1,0 +1,68 @@
+<div
+  class="min-h-screen flex items-center justify-center px-4"
+  dir="rtl"
+  style="background: linear-gradient(180deg, #002F56 0%, #003A5C 40%, #005257 100%);"
+>
+  <div class="w-full max-w-md">
+    <!-- Brand header -->
+    <div class="flex flex-col items-center mb-7">
+      <app-logo variant="white" imgClass="h-14 w-auto drop-shadow-lg"></app-logo>
+      <p class="mt-3 text-[15px] font-semibold text-white/85">منصة المؤشرات <span class="text-white/60">(إطلاق تجريبي)</span></p>
+      <p class="text-[12px] text-white/45">الهيئة العامة للعقار</p>
+    </div>
+
+    <div
+      class="bg-white p-8"
+      style="border-radius: 20px; border: 1px solid rgba(255,255,255,0.1); box-shadow: 0 16px 48px rgba(0,0,0,0.28);"
+    >
+      <h1 class="text-2xl font-bold text-center mb-6" style="color: #0F172A;">تسجيل الدخول</h1>
+
+      @if (errorMessage()) {
+        <div class="bg-red-50 border border-red-200 text-red-700 px-4 py-3 rounded-lg mb-4 text-sm">
+          {{ errorMessage() }}
+        </div>
+      }
+
+      <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+        <div class="mb-4">
+          <label for="username" class="block text-sm font-medium mb-1" style="color: #475569;">اسم المستخدم</label>
+          <input
+            id="username"
+            type="text"
+            formControlName="username"
+            class="w-full px-3 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-[#00A488]/40 focus:border-[#00848D] bg-white transition-colors"
+            style="border: 1px solid #E7ECF2; color: #0F172A;"
+            placeholder="أدخل اسم المستخدم"
+          />
+          @if (loginForm.get('username')?.touched && loginForm.get('username')?.hasError('required')) {
+            <p class="text-red-500 text-sm mt-1">اسم المستخدم مطلوب</p>
+          }
+        </div>
+
+        <div class="mb-6">
+          <label for="password" class="block text-sm font-medium mb-1" style="color: #475569;">كلمة المرور</label>
+          <input
+            id="password"
+            type="password"
+            formControlName="password"
+            class="w-full px-3 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-[#00A488]/40 focus:border-[#00848D] bg-white transition-colors"
+            style="border: 1px solid #E7ECF2; color: #0F172A;"
+            placeholder="أدخل كلمة المرور"
+          />
+          @if (loginForm.get('password')?.touched && loginForm.get('password')?.hasError('required')) {
+            <p class="text-red-500 text-sm mt-1">كلمة المرور مطلوبة</p>
+          }
+        </div>
+
+        <button
+          type="submit"
+          [disabled]="isLoading()"
+          class="w-full text-white py-2.5 px-4 rounded-md disabled:opacity-50 disabled:cursor-not-allowed font-medium transition-all hover:brightness-110"
+          style="background: linear-gradient(135deg, #00848D 0%, #00A488 100%); box-shadow: 0 4px 14px rgba(0,132,141,0.3);"
+        >
+          {{ isLoading() ? 'جاري تسجيل الدخول...' : 'تسجيل الدخول' }}
+        </button>
+      </form>
+    </div>
+  </div>
+</div>

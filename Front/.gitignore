@@ -1,0 +1,52 @@
+﻿# Angular / Node
+node_modules/
+.angular/
+dist/
+tmp/
+out-tsc/
+bazel-out/
+.sass-cache/
+connect.lock
+coverage/
+libpeerconnection.log
+testem.log
+typings/
+*.js.map
+*.tgz
+.npm
+.eslintcache
+npm-debug.log
+build.log
+fe-build.log
+
+# Environment files
+.env
+.env.*
+!.env.example
+
+# IDE
+.vs/
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Project specific
+deploy.zip
+*.PublishSettings
+publish/
+publish-*/
+
+# Azure deployment helper scripts (local, not tracked)
+scripts/publish-azure.ps1
+
+.superpowers/
+aqar-dashboard-staging.zip
+publish-staging.zip

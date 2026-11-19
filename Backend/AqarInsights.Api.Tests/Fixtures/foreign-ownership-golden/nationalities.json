@@ -1,0 +1,600 @@
+{
+  "nationalities": [
+    {
+      "id": 1,
+      "name": "اليمن",
+      "transactions": 151.1,
+      "value": 166759026,
+      "avgValue": 1103512,
+      "marketShare": 22.1
+    },
+    {
+      "id": 2,
+      "name": "الكويت",
+      "transactions": 111.0,
+      "value": 99342086.0,
+      "avgValue": 894974,
+      "marketShare": 16.3
+    },
+    {
+      "id": 3,
+      "name": "سوريا",
+      "transactions": 58.0,
+      "value": 89943926,
+      "avgValue": 1550757,
+      "marketShare": 8.5
+    },
+    {
+      "id": 4,
+      "name": "شركة مختلطة",
+      "transactions": 45,
+      "value": 45977600,
+      "avgValue": 1021724,
+      "marketShare": 6.6
+    },
+    {
+      "id": 5,
+      "name": "فلسطيني بوثيقة مصرية",
+      "transactions": 41.5,
+      "value": 35673167,
+      "avgValue": 859594,
+      "marketShare": 6.1
+    },
+    {
+      "id": 6,
+      "name": "الاردن",
+      "transactions": 30,
+      "value": 33392488.72,
+      "avgValue": 1113083,
+      "marketShare": 4.4
+    },
+    {
+      "id": 7,
+      "name": "مصر",
+      "transactions": 28.2,
+      "value": 23511500.02,
+      "avgValue": 833741,
+      "marketShare": 4.1
+    },
+    {
+      "id": 8,
+      "name": "شركة اجنبية",
+      "transactions": 28,
+      "value": 836076639.90,
+      "avgValue": 29859880,
+      "marketShare": 4.1
+    },
+    {
+      "id": 9,
+      "name": "قبائل نازحة",
+      "transactions": 25,
+      "value": 2504341,
+      "avgValue": 100174,
+      "marketShare": 3.7
+    },
+    {
+      "id": 10,
+      "name": "السودان",
+      "transactions": 23,
+      "value": 19611750,
+      "avgValue": 852685,
+      "marketShare": 3.4
+    },
+    {
+      "id": 11,
+      "name": "باكستان",
+      "transactions": 21.0,
+      "value": 23715803,
+      "avgValue": 1129324,
+      "marketShare": 3.1
+    },
+    {
+      "id": 12,
+      "name": "الهند",
+      "transactions": 17.3,
+      "value": 17864933,
+      "avgValue": 1035648,
+      "marketShare": 2.5
+    },
+    {
+      "id": 13,
+      "name": "فلسطين",
+      "transactions": 14.5,
+      "value": 8828800,
+      "avgValue": 608883,
+      "marketShare": 2.1
+    },
+    {
+      "id": 14,
+      "name": "البحرين",
+      "transactions": 10,
+      "value": 6045395,
+      "avgValue": 604540,
+      "marketShare": 1.5
+    },
+    {
+      "id": 15,
+      "name": "لبنان",
+      "transactions": 9.5,
+      "value": 13317475,
+      "avgValue": 1401839,
+      "marketShare": 1.4
+    },
+    {
+      "id": 16,
+      "name": "تركيا",
+      "transactions": 8,
+      "value": 21383809,
+      "avgValue": 2672976,
+      "marketShare": 1.2
+    },
+    {
+      "id": 17,
+      "name": "الصين",
+      "transactions": 5,
+      "value": 3665000,
+      "avgValue": 733000,
+      "marketShare": 0.7
+    },
+    {
+      "id": 18,
+      "name": "قطر",
+      "transactions": 5,
+      "value": 2000000,
+      "avgValue": 400000,
+      "marketShare": 0.7
+    },
+    {
+      "id": 19,
+      "name": "كندا",
+      "transactions": 4.8,
+      "value": 6445404,
+      "avgValue": 1356927,
+      "marketShare": 0.7
+    },
+    {
+      "id": 20,
+      "name": "المملكة المتحدة",
+      "transactions": 4,
+      "value": 3557334,
+      "avgValue": 889334,
+      "marketShare": 0.6
+    },
+    {
+      "id": 21,
+      "name": "شركة خليجية",
+      "transactions": 4,
+      "value": 11471100,
+      "avgValue": 2867775,
+      "marketShare": 0.6
+    },
+    {
+      "id": 22,
+      "name": "الفلبين",
+      "transactions": 3,
+      "value": 2599000,
+      "avgValue": 866333,
+      "marketShare": 0.4
+    },
+    {
+      "id": 23,
+      "name": "المانيا",
+      "transactions": 3,
+      "value": 2420000,
+      "avgValue": 806667,
+      "marketShare": 0.4
+    },
+    {
+      "id": 24,
+      "name": "افغانستان",
+      "transactions": 2,
+      "value": 3540000,
+      "avgValue": 1770000,
+      "marketShare": 0.3
+    },
+    {
+      "id": 25,
+      "name": "فرنسا",
+      "transactions": 2,
+      "value": 11100000,
+      "avgValue": 5550000,
+      "marketShare": 0.3
+    },
+    {
+      "id": 26,
+      "name": "الامارات العربية",
+      "transactions": 2,
+      "value": 1965000,
+      "avgValue": 982500,
+      "marketShare": 0.3
+    },
+    {
+      "id": 27,
+      "name": "تونس",
+      "transactions": 2,
+      "value": 3002100,
+      "avgValue": 1501050,
+      "marketShare": 0.3
+    },
+    {
+      "id": 28,
+      "name": "المغرب",
+      "transactions": 2,
+      "value": 2450000,
+      "avgValue": 1225000,
+      "marketShare": 0.3
+    },
+    {
+      "id": 29,
+      "name": "ارتيريا",
+      "transactions": 2.0,
+      "value": 1100000,
+      "avgValue": 550000,
+      "marketShare": 0.3
+    },
+    {
+      "id": 30,
+      "name": "دومينيكا",
+      "transactions": 2,
+      "value": 2167000,
+      "avgValue": 1083500,
+      "marketShare": 0.3
+    },
+    {
+      "id": 31,
+      "name": "غير محدد",
+      "transactions": 2,
+      "value": 0,
+      "avgValue": 0,
+      "marketShare": 0.3
+    },
+    {
+      "id": 32,
+      "name": "الولايات المتحدة",
+      "transactions": 1.5,
+      "value": 2085764,
+      "avgValue": 1390509,
+      "marketShare": 0.2
+    },
+    {
+      "id": 33,
+      "name": "مقيم بلوشي",
+      "transactions": 1,
+      "value": 172000,
+      "avgValue": 172000,
+      "marketShare": 0.1
+    },
+    {
+      "id": 34,
+      "name": "لوكسمبورغ",
+      "transactions": 1,
+      "value": 3495541,
+      "avgValue": 3495541,
+      "marketShare": 0.1
+    },
+    {
+      "id": 35,
+      "name": "نيجيريا",
+      "transactions": 1,
+      "value": 150000,
+      "avgValue": 150000,
+      "marketShare": 0.1
+    },
+    {
+      "id": 36,
+      "name": "تشاد",
+      "transactions": 1,
+      "value": 300000,
+      "avgValue": 300000,
+      "marketShare": 0.1
+    },
+    {
+      "id": 37,
+      "name": "عمان",
+      "transactions": 1,
+      "value": 185040,
+      "avgValue": 185040,
+      "marketShare": 0.1
+    },
+    {
+      "id": 38,
+      "name": "حصر ج 2",
+      "transactions": 1,
+      "value": 150000,
+      "avgValue": 150000,
+      "marketShare": 0.1
+    },
+    {
+      "id": 39,
+      "name": "ايرلندا",
+      "transactions": 1,
+      "value": 1510000,
+      "avgValue": 1510000,
+      "marketShare": 0.1
+    },
+    {
+      "id": 40,
+      "name": "سانت لوسيا",
+      "transactions": 1,
+      "value": 840000,
+      "avgValue": 840000,
+      "marketShare": 0.1
+    },
+    {
+      "id": 41,
+      "name": "بنجلاديش",
+      "transactions": 1,
+      "value": 1250000,
+      "avgValue": 1250000,
+      "marketShare": 0.1
+    },
+    {
+      "id": 42,
+      "name": "اذربيجان",
+      "transactions": 1,
+      "value": 1050000,
+      "avgValue": 1050000,
+      "marketShare": 0.1
+    },
+    {
+      "id": 43,
+      "name": "ماليزيا",
+      "transactions": 1,
+      "value": 850000,
+      "avgValue": 850000,
+      "marketShare": 0.1
+    },
+    {
+      "id": 44,
+      "name": "ايطاليا",
+      "transactions": 1,
+      "value": 780000,
+      "avgValue": 780000,
+      "marketShare": 0.1
+    },
+    {
+      "id": 45,
+      "name": "الجزائر",
+      "transactions": 1,
+      "value": 446400,
+      "avgValue": 446400,
+      "marketShare": 0.1
+    },
+    {
+      "id": 46,
+      "name": "النيجر",
+      "transactions": 1,
+      "value": 3000000,
+      "avgValue": 3000000,
+      "marketShare": 0.1
+    },
+    {
+      "id": 47,
+      "name": "فلسطيني بوثيقة سورية",
+      "transactions": 1,
+      "value": 0,
+      "avgValue": 0,
+      "marketShare": 0.1
+    },
+    {
+      "id": 48,
+      "name": "سانت كيتس ونافيس",
+      "transactions": 0.5,
+      "value": 2575300,
+      "avgValue": 5150600,
+      "marketShare": 0.1
+    }
+  ],
+  "propertyTypeByNationality": [
+    {
+      "nationality": "اليمن",
+      "types": {
+        "مباني سكنية": 85.0,
+        "شقق سكنية": 27,
+        "أرض شاغرة": 27.1,
+        "مباني متعددة الأغراض": 3.0,
+        "دور": 3,
+        "فئات أخرى": 6.0
+      }
+    },
+    {
+      "nationality": "الكويت",
+      "types": {
+        "مباني سكنية": 47.0,
+        "أرض شاغرة": 50.0,
+        "فئات أخرى": 3,
+        "شقق سكنية": 7,
+        "مباني متعددة الأغراض": 3,
+        "دور": 1
+      }
+    },
+    {
+      "nationality": "سوريا",
+      "types": {
+        "مباني سكنية": 29.0,
+        "أرض شاغرة": 15.0,
+        "شقق سكنية": 7,
+        "دور": 3,
+        "مباني متعددة الأغراض": 2,
+        "فئات أخرى": 2
+      }
+    },
+    {
+      "nationality": "شركة مختلطة",
+      "types": {
+        "أرض شاغرة": 22,
+        "مباني سكنية": 10,
+        "دور": 2,
+        "شقق سكنية": 10,
+        "فئات أخرى": 1
+      }
+    },
+    {
+      "nationality": "فلسطيني بوثيقة مصرية",
+      "types": {
+        "مباني سكنية": 19.5,
+        "شقق سكنية": 9,
+        "فئات أخرى": 3,
+        "أرض شاغرة": 9,
+        "دور": 1.0
+      }
+    },
+    {
+      "nationality": "الاردن",
+      "types": {
+        "أرض شاغرة": 5,
+        "مباني سكنية": 15,
+        "شقق سكنية": 8,
+        "دور": 1,
+        "فئات أخرى": 1
+      }
+    },
+    {
+      "nationality": "مصر",
+      "types": {
+        "مباني سكنية": 11.2,
+        "أرض شاغرة": 7,
+        "مباني متعددة الأغراض": 2,
+        "شقق سكنية": 8
+      }
+    },
+    {
+      "nationality": "شركة اجنبية",
+      "types": {
+        "أرض شاغرة": 24,
+        "شقق سكنية": 3,
+        "مباني سكنية": 1
+      }
+    },
+    {
+      "nationality": "قبائل نازحة",
+      "types": {
+        "دور": 2,
+        "أرض شاغرة": 11,
+        "فئات أخرى": 1,
+        "مباني سكنية": 11
+      }
+    },
+    {
+      "nationality": "السودان",
+      "types": {
+        "أرض شاغرة": 6,
+        "شقق سكنية": 8,
+        "دور": 1,
+        "مباني سكنية": 8
+      }
+    }
+  ],
+  "areaByNationality": [
+    {
+      "nationality": "اليمن",
+      "segments": {
+        "0–500": 93.0,
+        "501–1,000": 49.7,
+        "1,001–2,000": 3.0,
+        "2,001–5,000": 4.5,
+        "5,001–10,000": 0.9,
+        "10,000+": 0
+      }
+    },
+    {
+      "nationality": "الكويت",
+      "segments": {
+        "0–500": 60.0,
+        "501–1,000": 47.0,
+        "1,001–2,000": 3.0,
+        "2,001–5,000": 1,
+        "5,001–10,000": 0,
+        "10,000+": 0
+      }
+    },
+    {
+      "nationality": "سوريا",
+      "segments": {
+        "0–500": 46.0,
+        "501–1,000": 9.0,
+        "1,001–2,000": 1,
+        "2,001–5,000": 1,
+        "5,001–10,000": 0,
+        "10,000+": 1
+      }
+    },
+    {
+      "nationality": "شركة مختلطة",
+      "segments": {
+        "0–500": 28,
+        "501–1,000": 10,
+        "1,001–2,000": 1,
+        "2,001–5,000": 3,
+        "5,001–10,000": 0,
+        "10,000+": 3
+      }
+    },
+    {
+      "nationality": "فلسطيني بوثيقة مصرية",
+      "segments": {
+        "0–500": 25.0,
+        "501–1,000": 15.5,
+        "1,001–2,000": 1,
+        "2,001–5,000": 0,
+        "5,001–10,000": 0,
+        "10,000+": 0
+      }
+    },
+    {
+      "nationality": "الاردن",
+      "segments": {
+        "0–500": 23,
+        "501–1,000": 3,
+        "1,001–2,000": 2,
+        "2,001–5,000": 1,
+        "5,001–10,000": 0,
+        "10,000+": 1
+      }
+    },
+    {
+      "nationality": "مصر",
+      "segments": {
+        "0–500": 27.2,
+        "501–1,000": 0,
+        "1,001–2,000": 1,
+        "2,001–5,000": 0,
+        "5,001–10,000": 0,
+        "10,000+": 0
+      }
+    },
+    {
+      "nationality": "شركة اجنبية",
+      "segments": {
+        "0–500": 8,
+        "501–1,000": 5,
+        "1,001–2,000": 0,
+        "2,001–5,000": 0,
+        "5,001–10,000": 0,
+        "10,000+": 15
+      }
+    },
+    {
+      "nationality": "قبائل نازحة",
+      "segments": {
+        "0–500": 9,
+        "501–1,000": 16,
+        "1,001–2,000": 0,
+        "2,001–5,000": 0,
+        "5,001–10,000": 0,
+        "10,000+": 0
+      }
+    },
+    {
+      "nationality": "السودان",
+      "segments": {
+        "0–500": 21,
+        "501–1,000": 2,
+        "1,001–2,000": 0,
+        "2,001–5,000": 0,
+        "5,001–10,000": 0,
+        "10,000+": 0
+      }
+    }
+  ]
+}

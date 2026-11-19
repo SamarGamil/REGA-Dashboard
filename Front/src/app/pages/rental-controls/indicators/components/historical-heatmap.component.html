@@ -1,0 +1,77 @@
+<div class="overflow-x-auto" dir="rtl">
+  <table class="w-full border-collapse text-sm">
+    <thead>
+      <tr>
+        <th
+          class="text-right py-2.5 px-3 text-sm font-bold text-[#4B5563] border-b border-[#E5EBEF] cursor-pointer hover:text-[#00848D] transition-colors whitespace-nowrap sticky right-0 bg-white z-10"
+          (click)="handleSort('city')"
+        >
+          <div class="flex items-center gap-1 justify-start">
+            المدينة
+            @if (sortBy() === 'city') {
+              <i [class]="(sortDir() === 'asc' ? 'ri-sort-asc' : 'ri-sort-desc') + ' text-sm'"></i>
+            }
+          </div>
+        </th>
+        @for (yr of years; track yr) {
+          <th
+            [class]="'text-center py-2.5 px-3 text-sm font-bold border-b border-[#E5EBEF] whitespace-nowrap ' + (yr === lastYear ? 'text-[#002F56] font-extrabold' : 'text-[#4B5563]')"
+            [style.backgroundColor]="yr === lastYear ? '#F0F9FA' : null"
+            [style.borderBottom]="yr === lastYear ? '2px solid #00848D' : null"
+          >
+            {{ yr }}
+          </th>
+        }
+        <th
+          class="text-center py-2.5 px-3 text-sm font-bold text-[#4B5563] border-b border-[#E5EBEF] cursor-pointer hover:text-[#00848D] transition-colors whitespace-nowrap"
+          (click)="handleSort('change')"
+        >
+          <div class="flex items-center gap-1 justify-center">
+            التغير
+            @if (sortBy() === 'change') {
+              <i [class]="(sortDir() === 'asc' ? 'ri-sort-asc' : 'ri-sort-desc') + ' text-sm'"></i>
+            }
+          </div>
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      @for (city of sortedCities; track city.cityName) {
+        @let isSelected = selectedCity() === city.cityName;
+        @let change = computeChange(city);
+        <tr
+          [class]="'transition-colors duration-150 cursor-pointer ' + (isSelected ? '' : 'hover:bg-[#F7F9FB]')"
+          [style.backgroundColor]="isSelected ? '#ECF9F9' : null"
+          (click)="toggleCity(city.cityName)"
+        >
+          <td class="py-2 px-3 font-bold text-[#0F2137] whitespace-nowrap border-b border-[#EEF2F6] sticky right-0 bg-inherit z-10">
+            {{ city.cityName }}
+          </td>
+          @for (yr of years; track yr) {
+            @let val = city.values[yr];
+            <td
+              [class]="'text-center py-2 px-3 font-medium border-b border-[#EEF2F6] whitespace-nowrap ' + getHeatCellClass(val) + ' ' + getCellTextClass(val) + ' ' + (yr === lastYear ? 'font-extrabold' : '')"
+              [style.backgroundColor]="yr === lastYear ? '#F0F9FA' : null"
+            >
+              {{ city.displayValues[yr] }}
+            </td>
+          }
+          <td class="text-center py-2 px-3 font-medium border-b border-[#EEF2F6] whitespace-nowrap">
+            <span class="flex items-center justify-center gap-1">
+              @if (change.direction === 'up') {
+                <i class="ri-arrow-up-line text-[#E05555] text-sm"></i>
+              }
+              @if (change.direction === 'down') {
+                <i class="ri-arrow-down-line text-[#00A488] text-sm"></i>
+              }
+              @if (change.direction === 'stable') {
+                <i class="ri-arrow-right-line text-[#4B5563] text-sm"></i>
+              }
+              <span class="text-[#0F2137] text-sm">{{ change.text }}</span>
+            </span>
+          </td>
+        </tr>
+      }
+    </tbody>
+  </table>
+</div>

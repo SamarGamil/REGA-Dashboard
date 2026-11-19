@@ -1,0 +1,330 @@
+{
+  "corrections": [
+    {
+      "id": "2026-Q2-yield-riyadh-executive-2",
+      "table": "city_narrative",
+      "match": {
+        "cityId": "riyadh",
+        "section": "executive",
+        "seq": 2
+      },
+      "field": "text",
+      "from": "العائد الإيجاري (5%) دون الحد، ما يشير إلى ضغط في أسعار البيع يفوق نمو الإيجارات.",
+      "to": "العائد الإيجاري (4.9%) دون الحد المرجعي للمراقبة (6%).",
+      "reason": "Yield shown with the city workbook's decimal (4.9%); narrative quoted the whole-percent overview figure. 2026-11-09 client review (Riyadh notes 8–9): the monitoring reference named with its threshold; the interpretive clause on sales prices is not on the platform, removed",
+      "date": "2026-11-09"
+    },
+    {
+      "id": "2026-Q2-yield-riyadh-market-2",
+      "table": "city_narrative",
+      "match": {
+        "cityId": "riyadh",
+        "section": "market",
+        "seq": 2
+      },
+      "field": "text",
+      "from": "الشواغر الإيجارية عند مستوى متوسط (7%) مع طلب إيجاري نشط، غير أن العائد الإيجاري (5%) دون الحد المرجعي (6%).",
+      "to": "الشواغر الإيجارية عند مستوى متوسط (7%) مع طلب إيجاري نشط، غير أن العائد الإيجاري (4.9%) دون الحد المرجعي (6%).",
+      "reason": "Yield shown with the city workbook's decimal (4.9%); narrative quoted the whole-percent overview figure",
+      "date": "2026-11-02"
+    },
+    {
+      "id": "2026-Q2-yield-riyadh-conclusion-0",
+      "table": "city_narrative",
+      "match": {
+        "cityId": "riyadh",
+        "section": "conclusion",
+        "seq": 0
+      },
+      "field": "text",
+      "from": "العائد الإيجاري المنخفض (5%) دون الحد المرجعي (6%) يستدعي متابعة أسعار البيع.",
+      "to": "العائد الإيجاري المنخفض (4.9%) دون الحد المرجعي (6%) يستدعي متابعة أسعار البيع.",
+      "reason": "Yield shown with the city workbook's decimal (4.9%); narrative quoted the whole-percent overview figure",
+      "date": "2026-11-02"
+    },
+    {
+      "id": "2026-Q2-yield-najran-executive-2",
+      "table": "city_narrative",
+      "match": {
+        "cityId": "najran",
+        "section": "executive",
+        "seq": 2
+      },
+      "field": "text",
+      "from": "العائد الإيجاري (7%) فوق الحد وفي صعود متواصل — بيئة جاذبة لتوسيع المعروض.",
+      "to": "العائد الإيجاري (7.3%) فوق الحد وفي صعود متواصل — بيئة جاذبة لتوسيع المعروض.",
+      "reason": "Yield shown with the city workbook's decimal (7.3%); narrative quoted the whole-percent overview figure",
+      "date": "2026-11-02"
+    },
+    {
+      "id": "2026-Q2-yield-najran-market-2",
+      "table": "city_narrative",
+      "match": {
+        "cityId": "najran",
+        "section": "market",
+        "seq": 2
+      },
+      "field": "text",
+      "from": "الشواغر الإيجارية عند مستوى متوسط (7%) والعائد الإيجاري (7%) فوق حده — بيئة مواتية لاستثمار يوسع المعروض.",
+      "to": "الشواغر الإيجارية عند مستوى متوسط (7%) والعائد الإيجاري (7.3%) فوق حده — بيئة مواتية لاستثمار يوسع المعروض.",
+      "reason": "Yield shown with the city workbook's decimal (7.3%); narrative quoted the whole-percent overview figure",
+      "date": "2026-11-02"
+    },
+    {
+      "id": "2026-Q2-yield-najran-recommendation-1",
+      "table": "city_narrative",
+      "match": {
+        "cityId": "najran",
+        "section": "recommendation",
+        "seq": 1
+      },
+      "field": "text",
+      "from": "توظيف العائد الإيجاري المرتفع (7%) لجذب استثمار يوسع المعروض الميسر.",
+      "to": "توظيف العائد الإيجاري المرتفع (7.3%) لجذب استثمار يوسع المعروض الميسر.",
+      "reason": "Yield shown with the city workbook's decimal (7.3%); narrative quoted the whole-percent overview figure",
+      "date": "2026-11-02"
+    },
+    {
+      "id": "2026-Q2-yield-buraidah-executive-2",
+      "table": "city_narrative",
+      "match": {
+        "cityId": "buraidah",
+        "section": "executive",
+        "seq": 2
+      },
+      "field": "text",
+      "from": "نسبة الإيجار إلى الدخل (11%) من الأدنى وطنيًا، والعائد الإيجاري (4.7%) أقل من الحد المرجعي 6%.",
+      "to": "نسبة الإيجار إلى الدخل (11%) من الأدنى وطنيًا، والعائد الإيجاري (5.2%) أقل من الحد المرجعي 6%.",
+      "reason": "Yield shown with the city workbook's decimal (5.2%); narrative quoted Hail's 4.7% copied into Buraidah's overview line",
+      "date": "2026-11-02"
+    },
+    {
+      "id": "2026-Q2-yield-buraidah-watchList-3",
+      "table": "city_narrative",
+      "match": {
+        "cityId": "buraidah",
+        "section": "watchList",
+        "seq": 3
+      },
+      "field": "text",
+      "from": "العائد الإيجاري (4.7%) مقابل الحد المرجعي (أقل من 6%).",
+      "to": "العائد الإيجاري (5.2%) مقابل الحد المرجعي (أقل من 6%).",
+      "reason": "Yield shown with the city workbook's decimal (5.2%); narrative quoted Hail's 4.7% copied into Buraidah's overview line",
+      "date": "2026-11-02"
+    },
+    {
+      "id": "2026-Q2-yield-bahah-executive-2",
+      "table": "city_narrative",
+      "match": {
+        "cityId": "bahah",
+        "section": "executive",
+        "seq": 2
+      },
+      "field": "text",
+      "from": "العائد الإيجاري (6%) ضمن الحد المرجعي وفي صعود متدرج منذ 2023.",
+      "to": "العائد الإيجاري (5.6%) دون الحد المرجعي وفي صعود متدرج منذ 2023.",
+      "reason": "Yield shown with the city workbook's decimal (5.6%); narrative quoted the whole-percent overview figure",
+      "date": "2026-11-02"
+    },
+    {
+      "id": "2026-Q2-yield-bahah-market-2",
+      "table": "city_narrative",
+      "match": {
+        "cityId": "bahah",
+        "section": "market",
+        "seq": 2
+      },
+      "field": "text",
+      "from": "الشواغر الإيجارية مرتفعة (10%) توفر وفرة معروض، والعائد الإيجاري الصاعد (6%) يدعم استمرار إضافته.",
+      "to": "الشواغر الإيجارية مرتفعة (10%) توفر وفرة معروض، والعائد الإيجاري (5.6%) دون الحد المرجعي رغم صعوده المتدرج.",
+      "reason": "Yield shown with the city workbook's decimal (5.6%); narrative quoted the whole-percent overview figure; reworded: a below-reference yield no longer 'supports adding supply'",
+      "date": "2026-11-02"
+    },
+    {
+      "id": "2026-Q2-yield-bahah-watchList-4",
+      "table": "city_narrative",
+      "match": {
+        "cityId": "bahah",
+        "section": "watchList",
+        "seq": 4
+      },
+      "field": "text",
+      "from": "توظيف العائد الإيجاري الصاعد (6%) في إضافة معروض.",
+      "to": "متابعة صعود العائد الإيجاري (5.6%) نحو الحد المرجعي (6%).",
+      "reason": "Yield shown with the city workbook's decimal (5.6%); narrative quoted the whole-percent overview figure; reworded: a below-reference yield no longer 'supports adding supply'",
+      "date": "2026-11-02"
+    },
+    {
+      "id": "2026-Q2-yield-dammam-executive-1",
+      "table": "city_narrative",
+      "match": {
+        "cityId": "dammam",
+        "section": "executive",
+        "seq": 1
+      },
+      "field": "text",
+      "from": "العائد الإيجاري 5% دون الحد المرجعي (6%)، وهو سبب تصنيف المدينة: يتطلب دراسة استباقية.",
+      "to": "العائد الإيجاري 5.4% دون الحد المرجعي (6%)، وهو سبب تصنيف المدينة: يتطلب دراسة استباقية.",
+      "reason": "Yield shown with the city workbook's decimal (5.4%); narrative quoted the whole-percent overview figure",
+      "date": "2026-11-02"
+    },
+    {
+      "id": "2026-Q2-yield-dammam-market-2",
+      "table": "city_narrative",
+      "match": {
+        "cityId": "dammam",
+        "section": "market",
+        "seq": 2
+      },
+      "field": "text",
+      "from": "الشواغر الإيجارية 7% (ضمن الحد) والعائد الإيجاري 5% (دون الحد).",
+      "to": "الشواغر الإيجارية 7% (ضمن الحد) والعائد الإيجاري 5.4% (دون الحد).",
+      "reason": "Yield shown with the city workbook's decimal (5.4%); narrative quoted the whole-percent overview figure",
+      "date": "2026-11-02"
+    },
+    {
+      "id": "2026-Q2-yield-dammam-watchList-3",
+      "table": "city_narrative",
+      "match": {
+        "cityId": "dammam",
+        "section": "watchList",
+        "seq": 3
+      },
+      "field": "text",
+      "from": "العائد الإيجاري (5%) مقابل الحد المرجعي (أقل من 6%).",
+      "to": "العائد الإيجاري (5.4%) مقابل الحد المرجعي (أقل من 6%).",
+      "reason": "Yield shown with the city workbook's decimal (5.4%); narrative quoted the whole-percent overview figure",
+      "date": "2026-11-02"
+    },
+    {
+      "id": "2026-Q2-yield-jazan-market-2",
+      "table": "city_narrative",
+      "match": {
+        "cityId": "jazan",
+        "section": "market",
+        "seq": 2
+      },
+      "field": "text",
+      "from": "الشواغر الإيجارية مرتفعة (10%) والعائد الإيجاري (5%) دون الحد المرجعي ومستقر منذ عام — وفرة معروض مع أسعار ساكنة.",
+      "to": "الشواغر الإيجارية مرتفعة (10%) والعائد الإيجاري (5.0%) دون الحد المرجعي ومستقر منذ عام — وفرة معروض مع أسعار ساكنة.",
+      "reason": "Yield shown with the city workbook's decimal (5.0%); narrative quoted the whole-percent overview figure",
+      "date": "2026-11-02"
+    },
+    {
+      "id": "2026-Q2-yield-arar-executive-2",
+      "table": "city_narrative",
+      "match": {
+        "cityId": "arar",
+        "section": "executive",
+        "seq": 2
+      },
+      "field": "text",
+      "from": "العائد الإيجاري (7%) فوق الحد المرجعي في أصغر الأسواق البيعية المرصودة.",
+      "to": "العائد الإيجاري (7.1%) فوق الحد المرجعي في أصغر الأسواق البيعية المرصودة.",
+      "reason": "Yield shown with the city workbook's decimal (7.1%); narrative quoted the whole-percent overview figure",
+      "date": "2026-11-02"
+    },
+    {
+      "id": "2026-Q2-yield-arar-market-2",
+      "table": "city_narrative",
+      "match": {
+        "cityId": "arar",
+        "section": "market",
+        "seq": 2
+      },
+      "field": "text",
+      "from": "الشواغر الإيجارية عند مستوى متوسط (8%) والعائد الإيجاري فوق الحد (7%) — بيئة استثمارية جيدة في سوق صغيرة.",
+      "to": "الشواغر الإيجارية عند مستوى متوسط (8%) والعائد الإيجاري فوق الحد (7.1%) — بيئة استثمارية جيدة في سوق صغيرة.",
+      "reason": "Yield shown with the city workbook's decimal (7.1%); narrative quoted the whole-percent overview figure",
+      "date": "2026-11-02"
+    },
+    {
+      "id": "2026-Q2-yield-arar-watchList-4",
+      "table": "city_narrative",
+      "match": {
+        "cityId": "arar",
+        "section": "watchList",
+        "seq": 4
+      },
+      "field": "text",
+      "from": "استقرار العائد الإيجاري فوق الحد (7%).",
+      "to": "استقرار العائد الإيجاري فوق الحد (7.1%).",
+      "reason": "Yield shown with the city workbook's decimal (7.1%); narrative quoted the whole-percent overview figure",
+      "date": "2026-11-02"
+    },
+    {
+      "id": "2026-Q2-yield-bahah-axis-4",
+      "table": "report_axes",
+      "match": {
+        "cityId": "bahah",
+        "seq": 4
+      },
+      "field": "status",
+      "from": "صاعد وضمن الحد (6%)",
+      "to": "صاعد ودون الحد (5.6%)",
+      "reason": "Bahah's yield is 5.6% (its workbook's latest point), below the 6% reference",
+      "date": "2026-11-02"
+    },
+    {
+      "id": "2026-Q2-review-riyadh-market-0",
+      "table": "city_narrative",
+      "match": {
+        "cityId": "riyadh",
+        "section": "market",
+        "seq": 0
+      },
+      "field": "text",
+      "from": "يواصل عدد الصفقات الإيجارية ارتفاعه في كل المنتجات (الشقة +39%، الدور +35%، الفيلا +38%)، بما يعكس تزايد حيوية السوق وتحوله نحو الإيجار.",
+      "to": "يواصل عدد الصفقات الإيجارية ارتفاعه في كل المنتجات (الشقة +39%، الدور +35%، الفيلا +38%).",
+      "reason": "2026-11-09 client review (Riyadh note 12): the interpretive clause on market vitality is not on the platform, removed",
+      "date": "2026-11-09"
+    },
+    {
+      "id": "2026-Q2-review-riyadh-conclusion-1",
+      "table": "city_narrative",
+      "match": {
+        "cityId": "riyadh",
+        "section": "conclusion",
+        "seq": 1
+      },
+      "field": "text",
+      "from": "العبء السكني لذوي الدخل المحدود مرتفع (35%). نسبة الإيجار إلى الدخل ضمن الحد (15%). وهذا يعني أن الضغط يقع على الشريحة الدنيا من الدخل.",
+      "to": "العبء السكني لذوي الدخل المحدود مرتفع (35%). نسبة الإيجار إلى الدخل (15%) ضمن الحد المرجعي للمراقبة (30%). وهذا يعني أن الضغط يقع على الشريحة الدنيا من الدخل.",
+      "reason": "2026-11-09 client review (Riyadh note 13): the monitoring reference named with its threshold in the parentheses; the indicator's value moved next to its name",
+      "date": "2026-11-09"
+    },
+    {
+      "id": "2026-Q2-review-riyadh-recommendation-0",
+      "table": "city_narrative",
+      "match": {
+        "cityId": "riyadh",
+        "section": "recommendation",
+        "seq": 0
+      },
+      "field": "text",
+      "from": "الإبقاء على الضوابط مفعّلة، ورصد دوري، وتوجيه الإسكان التنموي لتخفيف العبء السكني للدخل المحدود.",
+      "to": "الإبقاء على الضوابط مفعّلة، ورصد دوري.",
+      "reason": "2026-11-09 client review (Riyadh note 16): the developmental-housing recommendation is not on the platform, removed",
+      "date": "2026-11-09"
+    },
+    {
+      "id": "2026-Q2-review-riyadh-watchList-0",
+      "table": "city_narrative",
+      "match": {
+        "cityId": "riyadh",
+        "section": "watchList",
+        "seq": 0
+      },
+      "field": "text",
+      "from": "مسار نمو الإيجارات (حد 7-9%).",
+      "to": "مسار معدل النمو الإيجاري المركب (الحد المرجعي للمراقبة 10% فأكثر).",
+      "reason": "2026-11-09 client review (Riyadh note 17): the indicator's platform name and the monitoring reference (Riyadh's Q2 band, as the report's CAGR card shows it)",
+      "date": "2026-11-09"
+    }
+  ],
+  "notes": [
+    "2026-10-21: wording standards of the Q3 client review applied (no figures changed): full terms \"الشواغر الإيجارية\"/\"العائد الإيجاري\"; canonical \"العبء السكني للدخل المحدود\" (typo \"لدخل\" fixed); policy statuses instead of \"(محايد)\"/\"(مستقر)\" (Dammam, Riyadh); Riyadh \"تم تفعيل\" -> \"مفعلة\" and \"ضغط رأسمالي\" removed; \"عند الحد\" -> ضمن/دون الحد per the period data (Jazan, Makkah)",
+    "2026-10-21: quarterly reports now cut monthly series (CPI, media) at the quarter's last month, so the Q2 report shows June CPI and June media (this release had been refreshed with July–August data after the quarter). Inflation figures realigned to June (Hail +2.2% -> +2.1%, Sakaka +4.6% -> +4.1%). Also the overall media impression is now derived from the shares (largest share wins; positive = negative -> متباين), replacing the workbook label that contradicted them; media bullets aligned with the June impression: Riyadh and Makkah محايد (workbook: سلبي), Jeddah محايد (workbook: متوازن)",
+    "2026-11-01: supply/demand gap — 5 monthly expected-demand values were rounded down from formula results Excel shows as exactly .5 (reader rounded the raw double; fixed in SupplyDemandGapReader): Jeddah 2026-03 1411910 -> 1411911, Jeddah 2026-09 1442269 -> 1442270, Makkah 2026-06 824181 -> 824182, Madinah 2026-03 474780 -> 474781, Madinah 2026-09 486317 -> 486318"
+  ]
+}

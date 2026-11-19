@@ -1,0 +1,143 @@
+<div>
+  <!-- Axis selectors -->
+  <div class="flex items-center gap-3 flex-wrap mb-4">
+    <div class="flex items-center gap-1.5">
+      <span class="text-sm font-bold text-[#4B5563] whitespace-nowrap">الأفقي:</span>
+      <div class="relative">
+        <select
+          [value]="hId()"
+          (change)="setHId($any($event.target).value)"
+          class="appearance-none bg-white hover:bg-[#F8FAFC] text-sm text-[#0F172A] font-medium pr-2.5 pl-8 py-1.5 rounded-lg cursor-pointer focus:outline-none focus:ring-2 focus:ring-[#00848D]/30 transition-colors"
+          style="border: 1px solid #CBD5E1"
+        >
+          @for (ind of availableForH(); track ind.id) {
+            <option [value]="ind.id">{{ ind.label }}</option>
+          }
+        </select>
+        <i class="ri-arrow-down-s-line absolute left-2 top-1/2 -translate-y-1/2 text-[#00848D] text-base pointer-events-none"></i>
+      </div>
+    </div>
+    <div class="flex items-center gap-1.5">
+      <span class="text-sm font-bold text-[#4B5563] whitespace-nowrap">العمودي:</span>
+      <div class="relative">
+        <select
+          [value]="vId()"
+          (change)="setVId($any($event.target).value)"
+          class="appearance-none bg-white hover:bg-[#F8FAFC] text-sm text-[#0F172A] font-medium pr-2.5 pl-8 py-1.5 rounded-lg cursor-pointer focus:outline-none focus:ring-2 focus:ring-[#00848D]/30 transition-colors"
+          style="border: 1px solid #CBD5E1"
+        >
+          @for (ind of availableForV(); track ind.id) {
+            <option [value]="ind.id">{{ ind.label }}</option>
+          }
+        </select>
+        <i class="ri-arrow-down-s-line absolute left-2 top-1/2 -translate-y-1/2 text-[#00848D] text-base pointer-events-none"></i>
+      </div>
+    </div>
+  </div>
+
+  <div class="grid grid-cols-1 lg:grid-cols-4 gap-5">
+    <!-- Quadrant matrix — 75% -->
+    <div class="lg:col-span-3">
+      <div
+        class="bg-white rounded-xl p-5"
+        style="border: 1px solid #E5EBEF; box-shadow: 0 1px 3px rgba(0,47,86,0.03)"
+      >
+        <div class="flex items-center justify-between mb-4">
+          <h4 class="text-[14px] font-extrabold text-[#0F172A]">
+            {{ hLabel() }} &times; {{ vLabel() }}
+          </h4>
+          <span class="text-sm font-medium text-[#6B7280]">
+            الحدود: {{ hThreshold() }}{{ hUnit() }} / {{ vThreshold() }}{{ vUnit() }}
+          </span>
+        </div>
+
+        <div class="relative w-full mx-auto" style="max-width: 620px; aspect-ratio: 1 / 1">
+          <div class="absolute inset-0 grid grid-cols-2 grid-rows-2 rounded-lg overflow-hidden">
+            <div [style.backgroundColor]="quadrantColors().tl.bg"></div>
+            <div [style.backgroundColor]="quadrantColors().tr.bg"></div>
+            <div [style.backgroundColor]="quadrantColors().bl.bg"></div>
+            <div [style.backgroundColor]="quadrantColors().br.bg"></div>
+          </div>
+
+          <div class="absolute top-[6%] right-[55%] text-sm font-extrabold whitespace-nowrap" [style.color]="quadrantColors().tr.text">{{ zoneLabels().topRight }}</div>
+          <div class="absolute top-[6%] left-[55%] text-sm font-extrabold whitespace-nowrap" [style.color]="quadrantColors().tl.text">{{ zoneLabels().topLeft }}</div>
+          <div class="absolute bottom-[6%] right-[55%] text-sm font-extrabold whitespace-nowrap" [style.color]="quadrantColors().br.text">{{ zoneLabels().bottomRight }}</div>
+          <div class="absolute bottom-[6%] left-[55%] text-sm font-extrabold whitespace-nowrap" [style.color]="quadrantColors().bl.text">{{ zoneLabels().bottomLeft }}</div>
+
+          <div class="absolute left-0 right-0 border-t-2 border-dashed" style="top: 50%; border-color: rgba(100,116,139,0.5)"></div>
+          <div class="absolute top-0 bottom-0 border-r-2 border-dashed" style="right: 50%; border-color: rgba(100,116,139,0.5)"></div>
+
+          <!-- Axis direction arrows are icons, not text glyphs: bidi and the rotated label would turn "→"/"↑". -->
+          <div class="absolute left-1/2 -translate-x-1/2 -bottom-6 flex items-center gap-1 text-sm text-[#64748B] font-bold whitespace-nowrap">
+            {{ hLabel() }}
+            <i class="ri-arrow-left-line" role="img" aria-label="القيم تزداد نحو اليسار"></i>
+          </div>
+          <div class="absolute -left-6 top-1/2 -translate-y-1/2 flex flex-col items-center gap-1 text-sm text-[#64748B] font-bold">
+            <i class="ri-arrow-up-line" role="img" aria-label="القيم تزداد نحو الأعلى"></i>
+            <span class="whitespace-nowrap" style="writing-mode: vertical-rl; transform: rotate(180deg)">{{ vLabel() }}</span>
+          </div>
+
+          <div class="absolute top-1/2 right-1/2 w-px h-3 bg-[#94A3B8] -translate-x-1/2" style="margin-top: -1.5px"></div>
+          <div class="absolute top-1/2 -right-1 text-[9px] text-[#64748B] font-medium whitespace-nowrap" style="margin-top: -7px">{{ hThreshold() }}{{ hUnit() }}</div>
+          <div class="absolute left-1/2 top-1/2 h-px w-3 bg-[#94A3B8] -translate-y-1/2" style="margin-left: -1.5px"></div>
+          <div class="absolute -top-1 left-1/2 text-[9px] text-[#64748B] font-medium whitespace-nowrap" style="margin-left: 3px">{{ vThreshold() }}{{ vUnit() }}</div>
+
+          @for (city of citiesWithPositions(); track city.id) {
+            <div
+              class="absolute cursor-pointer group z-10"
+              [style.right.%]="city.x"
+              [style.top.%]="city.y"
+              [attr.title]="tooltip(city)"
+              (click)="navigateToCity(city.id)"
+            >
+              <div
+                class="rounded-full transition-all duration-200 hover:scale-150"
+                [ngStyle]="{
+                  width: isHighlighted(city.id) ? '11px' : '7px',
+                  height: isHighlighted(city.id) ? '11px' : '7px',
+                  backgroundColor: isHighlighted(city.id) ? '#00848D' : '#64748B',
+                  transform: 'translate(50%, -50%)',
+                  border: isHighlighted(city.id) ? '2px solid #FFFFFF' : '1px solid #FFFFFF',
+                  boxShadow: isHighlighted(city.id) ? '0 0 0 1px #00848D' : '0 0 0 1px #94A3B8'
+                }"
+              ></div>
+              @if (isHighlighted(city.id)) {
+                <span
+                  class="absolute text-sm font-extrabold text-[#0F172A] whitespace-nowrap pointer-events-none"
+                  [ngStyle]="{
+                    left: city.x > 50 ? '14px' : null,
+                    right: city.x <= 50 ? '14px' : null,
+                    top: '-7px'
+                  }"
+                >
+                  {{ city.name }}
+                </span>
+              }
+            </div>
+          }
+        </div>
+
+        <div class="flex items-center gap-4 mt-10 text-sm font-bold justify-center">
+          <span [style.color]="quadrantColors().tl.text">{{ quadrantCities().tl.length }} مدن</span>
+          <span class="w-px h-3 bg-[#E5EBEF]"></span>
+          <span [style.color]="quadrantColors().tr.text">{{ quadrantCities().tr.length }} مدن</span>
+          <span class="w-px h-3 bg-[#E5EBEF]"></span>
+          <span [style.color]="quadrantColors().bl.text">{{ quadrantCities().bl.length }} مدن</span>
+          <span class="w-px h-3 bg-[#E5EBEF]"></span>
+          <span [style.color]="quadrantColors().br.text">{{ quadrantCities().br.length }} مدن</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Insights — 25% -->
+    <div class="lg:col-span-1 space-y-2.5">
+      @for (insight of insights(); track $index; let idx = $index) {
+        <div class="bg-white rounded-lg p-3" style="border: 1px solid #E5EBEF; box-shadow: 0 1px 2px rgba(0,47,86,0.02)">
+          <p class="text-sm font-extrabold text-[#64748B] mb-1">{{ padIndex(idx) }}</p>
+          <p class="text-sm font-extrabold text-[#0F172A] mb-0.5">{{ insight.city }}</p>
+          <p class="text-sm text-[#4B5563] leading-relaxed">{{ insight.text }}</p>
+        </div>
+      }
+    </div>
+  </div>
+</div>

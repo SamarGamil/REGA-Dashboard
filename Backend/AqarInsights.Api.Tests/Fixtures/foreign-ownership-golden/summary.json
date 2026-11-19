@@ -1,0 +1,97 @@
+{
+  "kpi": {
+    "totalTransactions": 682.8,
+    "totalValue": 1520270722.64,
+    "totalPurchases": 500.2,
+    "totalSales": 83.7,
+    "totalGifts": 99.0,
+    "growthRate": -41.9,
+    "avgTransactionValue": 2226470,
+    "topNationality": "اليمن",
+    "topMarket": "الرياض",
+    "topPropertyCategory": "مباني سكنية"
+  },
+  "monthlySummary": [
+    {
+      "month": "2026-05",
+      "label": "مايو 2026",
+      "purchases": 395.2,
+      "sales": 39.9,
+      "gifts": 65.3,
+      "total": 500.3,
+      "value": 579504732.443333334
+    },
+    {
+      "month": "2026-06",
+      "label": "يونيو 2026",
+      "purchases": 672.2,
+      "sales": 72.0,
+      "gifts": 136.5,
+      "total": 880.7,
+      "value": 1056175564.6341269860
+    },
+    {
+      "month": "2026-07",
+      "label": "يوليو 2026",
+      "purchases": 741.0,
+      "sales": 101.0,
+      "gifts": 219.0,
+      "total": 1061.0,
+      "value": 1242051303.44666665726
+    },
+    {
+      "month": "2026-08",
+      "label": "أغسطس 2026",
+      "purchases": 729.8,
+      "sales": 120.4,
+      "gifts": 178.8,
+      "total": 1029.1,
+      "value": 2098970767.4233333333
+    },
+    {
+      "month": "2026-09",
+      "label": "سبتمبر 2026",
+      "purchases": 804.2,
+      "sales": 168.5,
+      "gifts": 203.5,
+      "total": 1176.2,
+      "value": 1231105251.196666670
+    },
+    {
+      "month": "2026-10",
+      "label": "أكتوبر 2026",
+      "purchases": 500.2,
+      "sales": 83.7,
+      "gifts": 99.0,
+      "total": 682.8,
+      "value": 1520270722.64
+    }
+  ],
+  "growthRates": [
+    {
+      "month": "2026-06",
+      "label": "يونيو 2026",
+      "rate": 76.0
+    },
+    {
+      "month": "2026-07",
+      "label": "يوليو 2026",
+      "rate": 20.5
+    },
+    {
+      "month": "2026-08",
+      "label": "أغسطس 2026",
+      "rate": -3.0
+    },
+    {
+      "month": "2026-09",
+      "label": "سبتمبر 2026",
+      "rate": 14.3
+    },
+    {
+      "month": "2026-10",
+      "label": "أكتوبر 2026",
+      "rate": -41.9
+    }
+  ]
+}

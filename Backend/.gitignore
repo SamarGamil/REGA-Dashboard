@@ -1,0 +1,102 @@
+# .NET
+bin/
+obj/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+*.userprefs
+.vs/
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+bld/
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+[Ll]ogs/
+*.nupkg
+*.snupkg
+*.dll
+*.exe
+*.pdb
+*.mdf
+*.ldf
+*.cache
+project.lock.json
+artifacts/
+**/Properties/serviceDependencies.json
+**/Properties/launchSettings.json
+*.pubxml
+*.publishproj
+PublishScripts/
+backend/publish/
+publish/
+publish-*/
+publish*.zip
+
+# Azure deployment helper scripts (local, not tracked)
+scripts/publish-azure.ps1
+scripts/set-azure-appsettings.ps1
+
+# NuGet
+*.nupkg
+**/[Pp]ackages/*
+!**/[Pp]ackages/build/
+*.nuget.props
+*.nuget.targets
+project.assets.json
+
+# Angular / Node
+node_modules/
+.angular/
+dist/
+tmp/
+out-tsc/
+.sass-cache/
+connect.lock
+coverage/
+libpeerconnection.log
+testem.log
+typings/
+*.js.map
+*.tgz
+.npm
+.eslintcache
+
+# Environment files
+.env
+.env.*
+!.env.example
+
+# IDE
+.vs/
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Project specific
+.superpowers/
+.specify/
+*.PublishSettings
+
+# Copilot skills / agent customization
+.github/
+*.PublishSettings
+
+# Copilot skills / agent customization
+.github/
+# Microsoft Office owner-lock temp files
+~$*
+
+# Runtime data (generated at runtime, not source)
+AqarInsights.Api/Data/reports/report-history.json

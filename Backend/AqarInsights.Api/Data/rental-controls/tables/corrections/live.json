@@ -1,0 +1,6 @@
+{
+  "corrections": [],
+  "notes": [
+    "2026-11-01: supply/demand gap — 5 monthly expected-demand values were rounded down from formula results Excel shows as exactly .5 (reader rounded the raw double; fixed in SupplyDemandGapReader): Jeddah 2026-03 1411910 -> 1411911, Jeddah 2026-09 1442269 -> 1442270, Makkah 2026-06 824181 -> 824182, Madinah 2026-03 474780 -> 474781, Madinah 2026-09 486317 -> 486318"
+  ]
+}

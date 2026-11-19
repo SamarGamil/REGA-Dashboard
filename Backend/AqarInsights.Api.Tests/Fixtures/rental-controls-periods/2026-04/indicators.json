@@ -1,0 +1,2672 @@
+{
+  "currentPeriodIndicators": [
+    {
+      "id": "rental-increase",
+      "title": "الزيادة الإيجارية",
+      "icon": "ri-arrow-up-circle-line",
+      "definition": "معدل النمو السنوي في أسعار الإيجارات السكنية خلال فترة القياس.",
+      "thresholdRule": "6% أو أقل: ضمن الحد — من 7% إلى 9%: متابعة — 10% فأكثر: متجاوز",
+      "thresholdSummary": "الحد المرجعي: أكبر من 6%",
+      "frequency": "quarterly",
+      "periodLabel": "الربع الثاني 2026",
+      "periodId": "2026-Q2",
+      "cities": [
+        {
+          "cityName": "الرياض",
+          "cityId": "riyadh",
+          "value": 9,
+          "displayValue": "+9%",
+          "status": "متابعة",
+          "sortOrder": 1
+        },
+        {
+          "cityName": "المدينة المنورة",
+          "cityId": "madinah",
+          "value": 7,
+          "displayValue": "+7%",
+          "status": "متابعة",
+          "sortOrder": 2
+        },
+        {
+          "cityName": "حائل",
+          "cityId": "hail",
+          "value": 6,
+          "displayValue": "+6%",
+          "status": "ضمن الحد",
+          "sortOrder": 3
+        },
+        {
+          "cityName": "تبوك",
+          "cityId": "tabuk",
+          "value": 6,
+          "displayValue": "+6%",
+          "status": "ضمن الحد",
+          "sortOrder": 4
+        },
+        {
+          "cityName": "مكة المكرمة",
+          "cityId": "makkah",
+          "value": 5,
+          "displayValue": "+5%",
+          "status": "ضمن الحد",
+          "sortOrder": 5
+        },
+        {
+          "cityName": "أبها",
+          "cityId": "abha",
+          "value": 5,
+          "displayValue": "+5%",
+          "status": "ضمن الحد",
+          "sortOrder": 6
+        },
+        {
+          "cityName": "نجران",
+          "cityId": "najran",
+          "value": 4,
+          "displayValue": "+4%",
+          "status": "ضمن الحد",
+          "sortOrder": 7
+        },
+        {
+          "cityName": "بريدة",
+          "cityId": "buraidah",
+          "value": 4,
+          "displayValue": "+4%",
+          "status": "ضمن الحد",
+          "sortOrder": 8
+        },
+        {
+          "cityName": "جدة",
+          "cityId": "jeddah",
+          "value": 4,
+          "displayValue": "+4%",
+          "status": "ضمن الحد",
+          "sortOrder": 9
+        },
+        {
+          "cityName": "الباحة",
+          "cityId": "bahah",
+          "value": 4,
+          "displayValue": "+4%",
+          "status": "ضمن الحد",
+          "sortOrder": 10
+        },
+        {
+          "cityName": "جازان",
+          "cityId": "jazan",
+          "value": 4,
+          "displayValue": "+4%",
+          "status": "ضمن الحد",
+          "sortOrder": 11
+        },
+        {
+          "cityName": "سكاكا",
+          "cityId": "sakaka",
+          "value": 3,
+          "displayValue": "+3%",
+          "status": "ضمن الحد",
+          "sortOrder": 12
+        },
+        {
+          "cityName": "الدمام",
+          "cityId": "dammam",
+          "value": 3,
+          "displayValue": "+3%",
+          "status": "ضمن الحد",
+          "sortOrder": 13
+        },
+        {
+          "cityName": "عرعر",
+          "cityId": "arar",
+          "value": 3,
+          "displayValue": "+3%",
+          "status": "ضمن الحد",
+          "sortOrder": 14
+        }
+      ]
+    },
+    {
+      "id": "vacancy",
+      "title": "الشواغر الإيجارية",
+      "icon": "ri-building-4-line",
+      "definition": "نسبة الوحدات السكنية المؤجرة غير المشغولة من إجمالي الوحدات المؤجرة في المدينة.",
+      "thresholdRule": "5% فأكثر: ضمن الحد — أقل من 5%: دون الحد",
+      "thresholdSummary": "الحد المرجعي: أقل من 5%",
+      "frequency": "monthly",
+      "periodLabel": "أبريل 2026",
+      "periodId": "2026-04",
+      "cities": [
+        {
+          "cityName": "جازان",
+          "cityId": "jazan",
+          "value": 10,
+          "displayValue": "10%",
+          "status": "ضمن الحد",
+          "sortOrder": 1
+        },
+        {
+          "cityName": "سكاكا",
+          "cityId": "sakaka",
+          "value": 9,
+          "displayValue": "9%",
+          "status": "ضمن الحد",
+          "sortOrder": 2
+        },
+        {
+          "cityName": "أبها",
+          "cityId": "abha",
+          "value": 8,
+          "displayValue": "8%",
+          "status": "ضمن الحد",
+          "sortOrder": 3
+        },
+        {
+          "cityName": "عرعر",
+          "cityId": "arar",
+          "value": 8,
+          "displayValue": "8%",
+          "status": "ضمن الحد",
+          "sortOrder": 4
+        },
+        {
+          "cityName": "حائل",
+          "cityId": "hail",
+          "value": 7,
+          "displayValue": "7%",
+          "status": "ضمن الحد",
+          "sortOrder": 5
+        },
+        {
+          "cityName": "الرياض",
+          "cityId": "riyadh",
+          "value": 7,
+          "displayValue": "7%",
+          "status": "ضمن الحد",
+          "sortOrder": 6
+        },
+        {
+          "cityName": "نجران",
+          "cityId": "najran",
+          "value": 6,
+          "displayValue": "6%",
+          "status": "ضمن الحد",
+          "sortOrder": 7
+        },
+        {
+          "cityName": "المدينة المنورة",
+          "cityId": "madinah",
+          "value": 6,
+          "displayValue": "6%",
+          "status": "ضمن الحد",
+          "sortOrder": 8
+        },
+        {
+          "cityName": "الدمام",
+          "cityId": "dammam",
+          "value": 6,
+          "displayValue": "6%",
+          "status": "ضمن الحد",
+          "sortOrder": 9
+        },
+        {
+          "cityName": "بريدة",
+          "cityId": "buraidah",
+          "value": 5,
+          "displayValue": "5%",
+          "status": "ضمن الحد",
+          "sortOrder": 10
+        },
+        {
+          "cityName": "الباحة",
+          "cityId": "bahah",
+          "value": 0,
+          "displayValue": "—",
+          "status": "—",
+          "sortOrder": 11
+        },
+        {
+          "cityName": "تبوك",
+          "cityId": "tabuk",
+          "value": 0,
+          "displayValue": "—",
+          "status": "—",
+          "sortOrder": 12
+        },
+        {
+          "cityName": "جدة",
+          "cityId": "jeddah",
+          "value": 0,
+          "displayValue": "—",
+          "status": "—",
+          "sortOrder": 13
+        },
+        {
+          "cityName": "مكة المكرمة",
+          "cityId": "makkah",
+          "value": 0,
+          "displayValue": "—",
+          "status": "—",
+          "sortOrder": 14
+        }
+      ]
+    },
+    {
+      "id": "investment-return",
+      "title": "العائد الإيجاري",
+      "icon": "ri-funds-line",
+      "definition": "صافي العائد السنوي على الاستثمار العقاري الإيجاري.",
+      "thresholdRule": "6% فأكثر: ضمن الحد — أقل من 6%: دون الحد",
+      "thresholdSummary": "الحد المرجعي: أقل من 6%",
+      "frequency": "quarterly",
+      "periodLabel": "الربع الأول 2026",
+      "periodId": "2026-Q1",
+      "cities": [
+        {
+          "cityName": "نجران",
+          "cityId": "najran",
+          "value": 7.3,
+          "displayValue": "7.3%",
+          "status": "ضمن الحد",
+          "sortOrder": 1
+        },
+        {
+          "cityName": "عرعر",
+          "cityId": "arar",
+          "value": 7.1,
+          "displayValue": "7.1%",
+          "status": "ضمن الحد",
+          "sortOrder": 2
+        },
+        {
+          "cityName": "جدة",
+          "cityId": "jeddah",
+          "value": 6,
+          "displayValue": "6%",
+          "status": "ضمن الحد",
+          "sortOrder": 3
+        },
+        {
+          "cityName": "الباحة",
+          "cityId": "bahah",
+          "value": 5.6,
+          "displayValue": "5.6%",
+          "status": "دون الحد",
+          "sortOrder": 4
+        },
+        {
+          "cityName": "الدمام",
+          "cityId": "dammam",
+          "value": 5.4,
+          "displayValue": "5.4%",
+          "status": "دون الحد",
+          "sortOrder": 5
+        },
+        {
+          "cityName": "سكاكا",
+          "cityId": "sakaka",
+          "value": 5.3,
+          "displayValue": "5.3%",
+          "status": "دون الحد",
+          "sortOrder": 6
+        },
+        {
+          "cityName": "بريدة",
+          "cityId": "buraidah",
+          "value": 5.2,
+          "displayValue": "5.2%",
+          "status": "دون الحد",
+          "sortOrder": 7
+        },
+        {
+          "cityName": "جازان",
+          "cityId": "jazan",
+          "value": 5,
+          "displayValue": "5.0%",
+          "status": "دون الحد",
+          "sortOrder": 8
+        },
+        {
+          "cityName": "الرياض",
+          "cityId": "riyadh",
+          "value": 4.9,
+          "displayValue": "4.9%",
+          "status": "دون الحد",
+          "sortOrder": 9
+        },
+        {
+          "cityName": "حائل",
+          "cityId": "hail",
+          "value": 4.7,
+          "displayValue": "4.7%",
+          "status": "دون الحد",
+          "sortOrder": 10
+        },
+        {
+          "cityName": "المدينة المنورة",
+          "cityId": "madinah",
+          "value": 4.3,
+          "displayValue": "4.3%",
+          "status": "دون الحد",
+          "sortOrder": 11
+        },
+        {
+          "cityName": "مكة المكرمة",
+          "cityId": "makkah",
+          "value": 4,
+          "displayValue": "4.0%",
+          "status": "دون الحد",
+          "sortOrder": 12
+        },
+        {
+          "cityName": "تبوك",
+          "cityId": "tabuk",
+          "value": 3.9,
+          "displayValue": "3.9%",
+          "status": "دون الحد",
+          "sortOrder": 13
+        },
+        {
+          "cityName": "أبها",
+          "cityId": "abha",
+          "value": 0,
+          "displayValue": "—",
+          "status": "—",
+          "sortOrder": 14
+        }
+      ]
+    },
+    {
+      "id": "rent-to-income",
+      "title": "نسبة الإيجار إلى الدخل",
+      "icon": "ri-scales-line",
+      "definition": "متوسط نسبة ما تنفقه الأسرة من دخلها الشهري على الإيجار السكني.",
+      "thresholdRule": "30% أو أقل: ضمن الحد — أكثر من 30%: متجاوز",
+      "thresholdSummary": "الحد المرجعي: أكبر من 30%",
+      "frequency": "quarterly",
+      "periodLabel": "الربع الثاني 2026",
+      "periodId": "2026-Q2",
+      "cities": [
+        {
+          "cityName": "جدة",
+          "cityId": "jeddah",
+          "value": 18,
+          "displayValue": "18%",
+          "status": "ضمن الحد",
+          "sortOrder": 1
+        },
+        {
+          "cityName": "نجران",
+          "cityId": "najran",
+          "value": 16,
+          "displayValue": "16%",
+          "status": "ضمن الحد",
+          "sortOrder": 2
+        },
+        {
+          "cityName": "الرياض",
+          "cityId": "riyadh",
+          "value": 15,
+          "displayValue": "15%",
+          "status": "ضمن الحد",
+          "sortOrder": 3
+        },
+        {
+          "cityName": "المدينة المنورة",
+          "cityId": "madinah",
+          "value": 15,
+          "displayValue": "15%",
+          "status": "ضمن الحد",
+          "sortOrder": 4
+        },
+        {
+          "cityName": "مكة المكرمة",
+          "cityId": "makkah",
+          "value": 15,
+          "displayValue": "15%",
+          "status": "ضمن الحد",
+          "sortOrder": 5
+        },
+        {
+          "cityName": "حائل",
+          "cityId": "hail",
+          "value": 14,
+          "displayValue": "14%",
+          "status": "ضمن الحد",
+          "sortOrder": 6
+        },
+        {
+          "cityName": "جازان",
+          "cityId": "jazan",
+          "value": 14,
+          "displayValue": "14%",
+          "status": "ضمن الحد",
+          "sortOrder": 7
+        },
+        {
+          "cityName": "أبها",
+          "cityId": "abha",
+          "value": 13,
+          "displayValue": "13%",
+          "status": "ضمن الحد",
+          "sortOrder": 8
+        },
+        {
+          "cityName": "الدمام",
+          "cityId": "dammam",
+          "value": 12,
+          "displayValue": "12%",
+          "status": "ضمن الحد",
+          "sortOrder": 9
+        },
+        {
+          "cityName": "بريدة",
+          "cityId": "buraidah",
+          "value": 11,
+          "displayValue": "11%",
+          "status": "ضمن الحد",
+          "sortOrder": 10
+        },
+        {
+          "cityName": "تبوك",
+          "cityId": "tabuk",
+          "value": 11,
+          "displayValue": "11%",
+          "status": "ضمن الحد",
+          "sortOrder": 11
+        },
+        {
+          "cityName": "الباحة",
+          "cityId": "bahah",
+          "value": 11,
+          "displayValue": "11%",
+          "status": "ضمن الحد",
+          "sortOrder": 12
+        },
+        {
+          "cityName": "سكاكا",
+          "cityId": "sakaka",
+          "value": 10,
+          "displayValue": "10%",
+          "status": "ضمن الحد",
+          "sortOrder": 13
+        },
+        {
+          "cityName": "عرعر",
+          "cityId": "arar",
+          "value": 9,
+          "displayValue": "9%",
+          "status": "ضمن الحد",
+          "sortOrder": 14
+        }
+      ]
+    },
+    {
+      "id": "housing-burden",
+      "title": "العبء السكني للدخل المحدود",
+      "icon": "ri-home-smile-line",
+      "definition": "نسبة دخل الأسرة محدودة الدخل الذي يُنفق على الإيجار السكني.",
+      "thresholdRule": "30% أو أقل: ضمن الحد — أكثر من 30%: متجاوز",
+      "thresholdSummary": "الحد المرجعي: أكبر من 30%",
+      "frequency": "quarterly",
+      "periodLabel": "الربع الثاني 2026",
+      "periodId": "2026-Q2",
+      "cities": [
+        {
+          "cityName": "نجران",
+          "cityId": "najran",
+          "value": 46,
+          "displayValue": "46%",
+          "status": "متجاوز",
+          "sortOrder": 1
+        },
+        {
+          "cityName": "حائل",
+          "cityId": "hail",
+          "value": 40,
+          "displayValue": "40%",
+          "status": "متجاوز",
+          "sortOrder": 2
+        },
+        {
+          "cityName": "جازان",
+          "cityId": "jazan",
+          "value": 38,
+          "displayValue": "38%",
+          "status": "متجاوز",
+          "sortOrder": 3
+        },
+        {
+          "cityName": "عرعر",
+          "cityId": "arar",
+          "value": 37,
+          "displayValue": "37%",
+          "status": "متجاوز",
+          "sortOrder": 4
+        },
+        {
+          "cityName": "تبوك",
+          "cityId": "tabuk",
+          "value": 36,
+          "displayValue": "36%",
+          "status": "متجاوز",
+          "sortOrder": 5
+        },
+        {
+          "cityName": "سكاكا",
+          "cityId": "sakaka",
+          "value": 36,
+          "displayValue": "36%",
+          "status": "متجاوز",
+          "sortOrder": 6
+        },
+        {
+          "cityName": "الرياض",
+          "cityId": "riyadh",
+          "value": 35,
+          "displayValue": "35%",
+          "status": "متجاوز",
+          "sortOrder": 7
+        },
+        {
+          "cityName": "جدة",
+          "cityId": "jeddah",
+          "value": 35,
+          "displayValue": "35%",
+          "status": "متجاوز",
+          "sortOrder": 8
+        },
+        {
+          "cityName": "أبها",
+          "cityId": "abha",
+          "value": 34,
+          "displayValue": "34%",
+          "status": "متجاوز",
+          "sortOrder": 9
+        },
+        {
+          "cityName": "المدينة المنورة",
+          "cityId": "madinah",
+          "value": 31,
+          "displayValue": "31%",
+          "status": "متجاوز",
+          "sortOrder": 10
+        },
+        {
+          "cityName": "الباحة",
+          "cityId": "bahah",
+          "value": 31,
+          "displayValue": "31%",
+          "status": "متجاوز",
+          "sortOrder": 11
+        },
+        {
+          "cityName": "مكة المكرمة",
+          "cityId": "makkah",
+          "value": 30,
+          "displayValue": "30%",
+          "status": "ضمن الحد",
+          "sortOrder": 12
+        },
+        {
+          "cityName": "بريدة",
+          "cityId": "buraidah",
+          "value": 29,
+          "displayValue": "29%",
+          "status": "ضمن الحد",
+          "sortOrder": 13
+        },
+        {
+          "cityName": "الدمام",
+          "cityId": "dammam",
+          "value": 24,
+          "displayValue": "24%",
+          "status": "ضمن الحد",
+          "sortOrder": 14
+        }
+      ]
+    },
+    {
+      "id": "public-vacancy",
+      "title": "الشواغر العامة",
+      "icon": "ri-door-open-line",
+      "definition": "نسبة الوحدات السكنية العامة غير المشغولة من إجمالي الوحدات السكنية في المدينة.",
+      "thresholdRule": "الحدود المرجعية قيد الاعتماد",
+      "thresholdSummary": "",
+      "frequency": "monthly",
+      "periodLabel": "أبريل 2026",
+      "periodId": "2026-04",
+      "cities": [
+        {
+          "cityName": "أبها",
+          "cityId": "abha",
+          "value": 11.3,
+          "displayValue": "11.3%",
+          "status": "—",
+          "sortOrder": 1
+        },
+        {
+          "cityName": "مكة المكرمة",
+          "cityId": "makkah",
+          "value": 8.8,
+          "displayValue": "8.8%",
+          "status": "—",
+          "sortOrder": 2
+        },
+        {
+          "cityName": "المدينة المنورة",
+          "cityId": "madinah",
+          "value": 7.6,
+          "displayValue": "7.6%",
+          "status": "—",
+          "sortOrder": 3
+        },
+        {
+          "cityName": "الدمام",
+          "cityId": "dammam",
+          "value": 4.3,
+          "displayValue": "4.3%",
+          "status": "—",
+          "sortOrder": 4
+        },
+        {
+          "cityName": "جدة",
+          "cityId": "jeddah",
+          "value": 2.8,
+          "displayValue": "2.8%",
+          "status": "—",
+          "sortOrder": 5
+        },
+        {
+          "cityName": "الرياض",
+          "cityId": "riyadh",
+          "value": 1.4,
+          "displayValue": "1.4%",
+          "status": "—",
+          "sortOrder": 6
+        }
+      ]
+    }
+  ],
+  "historicalIndicators": [
+    {
+      "id": "rental-increase-hist",
+      "title": "الزيادة الإيجارية",
+      "years": [
+        "2023",
+        "2024",
+        "2025",
+        "2026"
+      ],
+      "cities": [
+        {
+          "cityName": "أبها",
+          "values": {
+            "2023": -11,
+            "2024": 12,
+            "2025": 7,
+            "2026": 5
+          },
+          "displayValues": {
+            "2023": "-11%",
+            "2024": "12%",
+            "2025": "7%",
+            "2026": "5%"
+          }
+        },
+        {
+          "cityName": "الباحة",
+          "values": {
+            "2023": -9,
+            "2024": 16,
+            "2025": 6,
+            "2026": 4
+          },
+          "displayValues": {
+            "2023": "-9%",
+            "2024": "16%",
+            "2025": "6%",
+            "2026": "4%"
+          }
+        },
+        {
+          "cityName": "الدمام",
+          "values": {
+            "2023": 0,
+            "2024": 6,
+            "2025": 4,
+            "2026": 3
+          },
+          "displayValues": {
+            "2023": "0%",
+            "2024": "6%",
+            "2025": "4%",
+            "2026": "3%"
+          }
+        },
+        {
+          "cityName": "الرياض",
+          "values": {
+            "2023": 13,
+            "2024": 16,
+            "2025": 17,
+            "2026": 9
+          },
+          "displayValues": {
+            "2023": "13%",
+            "2024": "16%",
+            "2025": "17%",
+            "2026": "9%"
+          }
+        },
+        {
+          "cityName": "المدينة المنورة",
+          "values": {
+            "2023": -2,
+            "2024": 12,
+            "2025": 9,
+            "2026": 7
+          },
+          "displayValues": {
+            "2023": "-2%",
+            "2024": "12%",
+            "2025": "9%",
+            "2026": "7%"
+          }
+        },
+        {
+          "cityName": "بريدة",
+          "values": {
+            "2023": -1,
+            "2024": 15,
+            "2025": 5,
+            "2026": 4
+          },
+          "displayValues": {
+            "2023": "-1%",
+            "2024": "15%",
+            "2025": "5%",
+            "2026": "4%"
+          }
+        },
+        {
+          "cityName": "تبوك",
+          "values": {
+            "2023": -6,
+            "2024": 22,
+            "2025": 9,
+            "2026": 6
+          },
+          "displayValues": {
+            "2023": "-6%",
+            "2024": "22%",
+            "2025": "9%",
+            "2026": "6%"
+          }
+        },
+        {
+          "cityName": "جازان",
+          "values": {
+            "2023": -11,
+            "2024": 14,
+            "2025": 7,
+            "2026": 4
+          },
+          "displayValues": {
+            "2023": "-11%",
+            "2024": "14%",
+            "2025": "7%",
+            "2026": "4%"
+          }
+        },
+        {
+          "cityName": "جدة",
+          "values": {
+            "2023": 4,
+            "2024": 1,
+            "2025": 4,
+            "2026": 4
+          },
+          "displayValues": {
+            "2023": "4%",
+            "2024": "1%",
+            "2025": "4%",
+            "2026": "4%"
+          }
+        },
+        {
+          "cityName": "حائل",
+          "values": {
+            "2023": -5,
+            "2024": 24,
+            "2025": 9,
+            "2026": 7
+          },
+          "displayValues": {
+            "2023": "-5%",
+            "2024": "24%",
+            "2025": "9%",
+            "2026": "7%"
+          }
+        },
+        {
+          "cityName": "سكاكا",
+          "values": {
+            "2023": -5,
+            "2024": 17,
+            "2025": 3,
+            "2026": 3
+          },
+          "displayValues": {
+            "2023": "-5%",
+            "2024": "17%",
+            "2025": "3%",
+            "2026": "3%"
+          }
+        },
+        {
+          "cityName": "عرعر",
+          "values": {
+            "2023": -8,
+            "2024": 15,
+            "2025": 4,
+            "2026": 3
+          },
+          "displayValues": {
+            "2023": "-8%",
+            "2024": "15%",
+            "2025": "4%",
+            "2026": "3%"
+          }
+        },
+        {
+          "cityName": "مكة المكرمة",
+          "values": {
+            "2023": -2,
+            "2024": 7,
+            "2025": 7,
+            "2026": 5
+          },
+          "displayValues": {
+            "2023": "-2%",
+            "2024": "7%",
+            "2025": "7%",
+            "2026": "5%"
+          }
+        },
+        {
+          "cityName": "نجران",
+          "values": {
+            "2023": -5,
+            "2024": 44,
+            "2025": 8,
+            "2026": 3
+          },
+          "displayValues": {
+            "2023": "-5%",
+            "2024": "44%",
+            "2025": "8%",
+            "2026": "3%"
+          }
+        }
+      ],
+      "thresholdType": "higher_is_pressure",
+      "thresholds": [
+        {
+          "label": "ضمن الحد",
+          "min": 0,
+          "max": 6,
+          "cssClass": "bg-green-50 text-green-700"
+        },
+        {
+          "label": "متابعة",
+          "min": 6,
+          "max": 10,
+          "cssClass": "bg-amber-50 text-amber-700"
+        },
+        {
+          "label": "تجاوز مرتفع",
+          "min": 10,
+          "max": 999,
+          "cssClass": "bg-red-50 text-red-700"
+        }
+      ]
+    },
+    {
+      "id": "vacancy-hist",
+      "title": "الشواغر الإيجارية",
+      "years": [
+        "2023",
+        "2024",
+        "2025",
+        "2026"
+      ],
+      "cities": [
+        {
+          "cityName": "أبها",
+          "values": {
+            "2023": null,
+            "2024": null,
+            "2025": 8,
+            "2026": 8
+          },
+          "displayValues": {
+            "2023": "—",
+            "2024": "—",
+            "2025": "8%",
+            "2026": "8%"
+          }
+        },
+        {
+          "cityName": "الباحة",
+          "values": {
+            "2023": null,
+            "2024": null,
+            "2025": 7,
+            "2026": 7
+          },
+          "displayValues": {
+            "2023": "—",
+            "2024": "—",
+            "2025": "7%",
+            "2026": "7%"
+          }
+        },
+        {
+          "cityName": "الدمام",
+          "values": {
+            "2023": null,
+            "2024": null,
+            "2025": 6,
+            "2026": 6
+          },
+          "displayValues": {
+            "2023": "—",
+            "2024": "—",
+            "2025": "6%",
+            "2026": "6%"
+          }
+        },
+        {
+          "cityName": "الرياض",
+          "values": {
+            "2023": null,
+            "2024": null,
+            "2025": 7,
+            "2026": 7
+          },
+          "displayValues": {
+            "2023": "—",
+            "2024": "—",
+            "2025": "7%",
+            "2026": "7%"
+          }
+        },
+        {
+          "cityName": "المدينة المنورة",
+          "values": {
+            "2023": null,
+            "2024": null,
+            "2025": 7,
+            "2026": 6
+          },
+          "displayValues": {
+            "2023": "—",
+            "2024": "—",
+            "2025": "7%",
+            "2026": "6%"
+          }
+        },
+        {
+          "cityName": "بريدة",
+          "values": {
+            "2023": null,
+            "2024": null,
+            "2025": 5,
+            "2026": 5
+          },
+          "displayValues": {
+            "2023": "—",
+            "2024": "—",
+            "2025": "5%",
+            "2026": "5%"
+          }
+        },
+        {
+          "cityName": "تبوك",
+          "values": {
+            "2023": null,
+            "2024": null,
+            "2025": 8,
+            "2026": 7
+          },
+          "displayValues": {
+            "2023": "—",
+            "2024": "—",
+            "2025": "8%",
+            "2026": "7%"
+          }
+        },
+        {
+          "cityName": "جازان",
+          "values": {
+            "2023": null,
+            "2024": null,
+            "2025": 8,
+            "2026": 10
+          },
+          "displayValues": {
+            "2023": "—",
+            "2024": "—",
+            "2025": "8%",
+            "2026": "10%"
+          }
+        },
+        {
+          "cityName": "جدة",
+          "values": {
+            "2023": null,
+            "2024": null,
+            "2025": 7,
+            "2026": 5
+          },
+          "displayValues": {
+            "2023": "—",
+            "2024": "—",
+            "2025": "7%",
+            "2026": "5%"
+          }
+        },
+        {
+          "cityName": "حائل",
+          "values": {
+            "2023": null,
+            "2024": null,
+            "2025": 5,
+            "2026": 7
+          },
+          "displayValues": {
+            "2023": "—",
+            "2024": "—",
+            "2025": "5%",
+            "2026": "7%"
+          }
+        },
+        {
+          "cityName": "سكاكا",
+          "values": {
+            "2023": null,
+            "2024": null,
+            "2025": 8,
+            "2026": 9
+          },
+          "displayValues": {
+            "2023": "—",
+            "2024": "—",
+            "2025": "8%",
+            "2026": "9%"
+          }
+        },
+        {
+          "cityName": "عرعر",
+          "values": {
+            "2023": null,
+            "2024": null,
+            "2025": 6,
+            "2026": 8
+          },
+          "displayValues": {
+            "2023": "—",
+            "2024": "—",
+            "2025": "6%",
+            "2026": "8%"
+          }
+        },
+        {
+          "cityName": "مكة المكرمة",
+          "values": {
+            "2023": null,
+            "2024": null,
+            "2025": 7,
+            "2026": 5
+          },
+          "displayValues": {
+            "2023": "—",
+            "2024": "—",
+            "2025": "7%",
+            "2026": "5%"
+          }
+        },
+        {
+          "cityName": "نجران",
+          "values": {
+            "2023": null,
+            "2024": null,
+            "2025": 5,
+            "2026": 6
+          },
+          "displayValues": {
+            "2023": "—",
+            "2024": "—",
+            "2025": "5%",
+            "2026": "6%"
+          }
+        }
+      ],
+      "thresholdType": "lower_is_pressure",
+      "thresholds": [
+        {
+          "label": "ضمن الحد",
+          "min": 5,
+          "max": 999,
+          "cssClass": "bg-green-50 text-green-700"
+        },
+        {
+          "label": "دون الحد",
+          "min": 0,
+          "max": 5,
+          "cssClass": "bg-red-50 text-red-700"
+        }
+      ]
+    },
+    {
+      "id": "investment-return-hist",
+      "title": "العائد الإيجاري",
+      "years": [
+        "2023",
+        "2024",
+        "2025",
+        "2026"
+      ],
+      "cities": [
+        {
+          "cityName": "أبها",
+          "values": {
+            "2023": null,
+            "2024": null,
+            "2025": null,
+            "2026": null
+          },
+          "displayValues": {
+            "2023": "—",
+            "2024": "—",
+            "2025": "—",
+            "2026": "—"
+          }
+        },
+        {
+          "cityName": "الباحة",
+          "values": {
+            "2023": 4.33,
+            "2024": 5.22,
+            "2025": 5.64,
+            "2026": null
+          },
+          "displayValues": {
+            "2023": "4.33%",
+            "2024": "5.22%",
+            "2025": "5.64%",
+            "2026": "—"
+          }
+        },
+        {
+          "cityName": "الدمام",
+          "values": {
+            "2023": 4.68,
+            "2024": 5.22,
+            "2025": 5.41,
+            "2026": 5.43
+          },
+          "displayValues": {
+            "2023": "4.68%",
+            "2024": "5.22%",
+            "2025": "5.41%",
+            "2026": "5.43%"
+          }
+        },
+        {
+          "cityName": "الرياض",
+          "values": {
+            "2023": 3.62,
+            "2024": 4.42,
+            "2025": 4.91,
+            "2026": 4.9
+          },
+          "displayValues": {
+            "2023": "3.62%",
+            "2024": "4.42%",
+            "2025": "4.91%",
+            "2026": "4.9%"
+          }
+        },
+        {
+          "cityName": "المدينة المنورة",
+          "values": {
+            "2023": 3.43,
+            "2024": 3.91,
+            "2025": 4.48,
+            "2026": 4.34
+          },
+          "displayValues": {
+            "2023": "3.43%",
+            "2024": "3.91%",
+            "2025": "4.48%",
+            "2026": "4.34%"
+          }
+        },
+        {
+          "cityName": "بريدة",
+          "values": {
+            "2023": 4.76,
+            "2024": 5.48,
+            "2025": 5.27,
+            "2026": 5.23
+          },
+          "displayValues": {
+            "2023": "4.76%",
+            "2024": "5.48%",
+            "2025": "5.27%",
+            "2026": "5.23%"
+          }
+        },
+        {
+          "cityName": "تبوك",
+          "values": {
+            "2023": 3.34,
+            "2024": 3.98,
+            "2025": 4.13,
+            "2026": 3.88
+          },
+          "displayValues": {
+            "2023": "3.34%",
+            "2024": "3.98%",
+            "2025": "4.13%",
+            "2026": "3.88%"
+          }
+        },
+        {
+          "cityName": "جازان",
+          "values": {
+            "2023": 4.6,
+            "2024": 4.96,
+            "2025": 5.1,
+            "2026": 5.01
+          },
+          "displayValues": {
+            "2023": "4.6%",
+            "2024": "4.96%",
+            "2025": "5.1%",
+            "2026": "5.01%"
+          }
+        },
+        {
+          "cityName": "جدة",
+          "values": {
+            "2023": 4.76,
+            "2024": 5.19,
+            "2025": 5.51,
+            "2026": 5.48
+          },
+          "displayValues": {
+            "2023": "4.76%",
+            "2024": "5.19%",
+            "2025": "5.51%",
+            "2026": "5.48%"
+          }
+        },
+        {
+          "cityName": "حائل",
+          "values": {
+            "2023": 3.54,
+            "2024": 4.4,
+            "2025": 4.3,
+            "2026": 4.67
+          },
+          "displayValues": {
+            "2023": "3.54%",
+            "2024": "4.4%",
+            "2025": "4.3%",
+            "2026": "4.67%"
+          }
+        },
+        {
+          "cityName": "سكاكا",
+          "values": {
+            "2023": 4.79,
+            "2024": null,
+            "2025": 5.29,
+            "2026": null
+          },
+          "displayValues": {
+            "2023": "4.79%",
+            "2024": "—",
+            "2025": "5.29%",
+            "2026": "—"
+          }
+        },
+        {
+          "cityName": "عرعر",
+          "values": {
+            "2023": 6.62,
+            "2024": null,
+            "2025": 8.92,
+            "2026": 7.07
+          },
+          "displayValues": {
+            "2023": "6.62%",
+            "2024": "—",
+            "2025": "8.92%",
+            "2026": "7.07%"
+          }
+        },
+        {
+          "cityName": "مكة المكرمة",
+          "values": {
+            "2023": 3.61,
+            "2024": 3.72,
+            "2025": 4.03,
+            "2026": 3.95
+          },
+          "displayValues": {
+            "2023": "3.61%",
+            "2024": "3.72%",
+            "2025": "4.03%",
+            "2026": "3.95%"
+          }
+        },
+        {
+          "cityName": "نجران",
+          "values": {
+            "2023": 4.64,
+            "2024": 5.64,
+            "2025": 6.77,
+            "2026": 7.34
+          },
+          "displayValues": {
+            "2023": "4.64%",
+            "2024": "5.64%",
+            "2025": "6.77%",
+            "2026": "7.34%"
+          }
+        }
+      ],
+      "thresholdType": "lower_is_pressure",
+      "thresholds": [
+        {
+          "label": "ضمن الحد",
+          "min": 6,
+          "max": 999,
+          "cssClass": "bg-green-50 text-green-700"
+        },
+        {
+          "label": "دون الحد",
+          "min": 0,
+          "max": 6,
+          "cssClass": "bg-red-50 text-red-700"
+        }
+      ]
+    },
+    {
+      "id": "rent-to-income-hist",
+      "title": "نسبة الإيجار إلى الدخل",
+      "years": [
+        "2023",
+        "2024",
+        "2025",
+        "2026"
+      ],
+      "cities": [
+        {
+          "cityName": "أبها",
+          "values": {
+            "2023": 11.66,
+            "2024": 12.56,
+            "2025": 12.9,
+            "2026": 12.56
+          },
+          "displayValues": {
+            "2023": "11.66%",
+            "2024": "12.56%",
+            "2025": "12.9%",
+            "2026": "12.56%"
+          }
+        },
+        {
+          "cityName": "الباحة",
+          "values": {
+            "2023": 10.35,
+            "2024": 11.47,
+            "2025": 11.44,
+            "2026": 11.35
+          },
+          "displayValues": {
+            "2023": "10.35%",
+            "2024": "11.47%",
+            "2025": "11.44%",
+            "2026": "11.35%"
+          }
+        },
+        {
+          "cityName": "الدمام",
+          "values": {
+            "2023": 12.77,
+            "2024": 13.42,
+            "2025": 13.12,
+            "2026": 12.35
+          },
+          "displayValues": {
+            "2023": "12.77%",
+            "2024": "13.42%",
+            "2025": "13.12%",
+            "2026": "12.35%"
+          }
+        },
+        {
+          "cityName": "الرياض",
+          "values": {
+            "2023": 13.69,
+            "2024": 15.93,
+            "2025": 16.81,
+            "2026": 15.38
+          },
+          "displayValues": {
+            "2023": "13.69%",
+            "2024": "15.93%",
+            "2025": "16.81%",
+            "2026": "15.38%"
+          }
+        },
+        {
+          "cityName": "المدينة المنورة",
+          "values": {
+            "2023": 13.43,
+            "2024": 14.87,
+            "2025": 15.84,
+            "2026": 15.39
+          },
+          "displayValues": {
+            "2023": "13.43%",
+            "2024": "14.87%",
+            "2025": "15.84%",
+            "2026": "15.39%"
+          }
+        },
+        {
+          "cityName": "بريدة",
+          "values": {
+            "2023": 10.44,
+            "2024": 11.33,
+            "2025": 11.49,
+            "2026": 11.09
+          },
+          "displayValues": {
+            "2023": "10.44%",
+            "2024": "11.33%",
+            "2025": "11.49%",
+            "2026": "11.09%"
+          }
+        },
+        {
+          "cityName": "تبوك",
+          "values": {
+            "2023": 10.09,
+            "2024": 11.64,
+            "2025": 12.18,
+            "2026": 11.29
+          },
+          "displayValues": {
+            "2023": "10.09%",
+            "2024": "11.64%",
+            "2025": "12.18%",
+            "2026": "11.29%"
+          }
+        },
+        {
+          "cityName": "جازان",
+          "values": {
+            "2023": 12.8,
+            "2024": 13.94,
+            "2025": 14.13,
+            "2026": 13.62
+          },
+          "displayValues": {
+            "2023": "12.8%",
+            "2024": "13.94%",
+            "2025": "14.13%",
+            "2026": "13.62%"
+          }
+        },
+        {
+          "cityName": "جدة",
+          "values": {
+            "2023": 18.1,
+            "2024": 18.63,
+            "2025": 18.51,
+            "2026": 17.84
+          },
+          "displayValues": {
+            "2023": "18.1%",
+            "2024": "18.63%",
+            "2025": "18.51%",
+            "2026": "17.84%"
+          }
+        },
+        {
+          "cityName": "حائل",
+          "values": {
+            "2023": 12.14,
+            "2024": 13.73,
+            "2025": 14.26,
+            "2026": 13.68
+          },
+          "displayValues": {
+            "2023": "12.14%",
+            "2024": "13.73%",
+            "2025": "14.26%",
+            "2026": "13.68%"
+          }
+        },
+        {
+          "cityName": "سكاكا",
+          "values": {
+            "2023": 9.23,
+            "2024": 9.98,
+            "2025": 10.19,
+            "2026": 9.88
+          },
+          "displayValues": {
+            "2023": "9.23%",
+            "2024": "9.98%",
+            "2025": "10.19%",
+            "2026": "9.88%"
+          }
+        },
+        {
+          "cityName": "عرعر",
+          "values": {
+            "2023": 8.69,
+            "2024": 9.35,
+            "2025": 9.37,
+            "2026": 8.79
+          },
+          "displayValues": {
+            "2023": "8.69%",
+            "2024": "9.35%",
+            "2025": "9.37%",
+            "2026": "8.79%"
+          }
+        },
+        {
+          "cityName": "مكة المكرمة",
+          "values": {
+            "2023": 14.69,
+            "2024": 15.56,
+            "2025": 16.4,
+            "2026": 15.29
+          },
+          "displayValues": {
+            "2023": "14.69%",
+            "2024": "15.56%",
+            "2025": "16.4%",
+            "2026": "15.29%"
+          }
+        },
+        {
+          "cityName": "نجران",
+          "values": {
+            "2023": 13.25,
+            "2024": 16.12,
+            "2025": 16.3,
+            "2026": 15.64
+          },
+          "displayValues": {
+            "2023": "13.25%",
+            "2024": "16.12%",
+            "2025": "16.3%",
+            "2026": "15.64%"
+          }
+        }
+      ],
+      "thresholdType": "higher_is_pressure",
+      "thresholds": [
+        {
+          "label": "ضمن الحد",
+          "min": 0,
+          "max": 30,
+          "cssClass": "bg-green-50 text-green-700"
+        },
+        {
+          "label": "متجاوز",
+          "min": 30,
+          "max": 999,
+          "cssClass": "bg-red-50 text-red-700"
+        }
+      ]
+    },
+    {
+      "id": "housing-burden-hist",
+      "title": "العبء السكني",
+      "years": [
+        "2023",
+        "2024",
+        "2025",
+        "2026"
+      ],
+      "cities": [
+        {
+          "cityName": "أبها",
+          "values": {
+            "2023": null,
+            "2024": null,
+            "2025": 38,
+            "2026": 34
+          },
+          "displayValues": {
+            "2023": "—",
+            "2024": "—",
+            "2025": "38%",
+            "2026": "34%"
+          }
+        },
+        {
+          "cityName": "الباحة",
+          "values": {
+            "2023": null,
+            "2024": null,
+            "2025": 32,
+            "2026": 31
+          },
+          "displayValues": {
+            "2023": "—",
+            "2024": "—",
+            "2025": "32%",
+            "2026": "31%"
+          }
+        },
+        {
+          "cityName": "الدمام",
+          "values": {
+            "2023": null,
+            "2024": null,
+            "2025": 25,
+            "2026": 24
+          },
+          "displayValues": {
+            "2023": "—",
+            "2024": "—",
+            "2025": "25%",
+            "2026": "24%"
+          }
+        },
+        {
+          "cityName": "الرياض",
+          "values": {
+            "2023": null,
+            "2024": null,
+            "2025": 36,
+            "2026": 35
+          },
+          "displayValues": {
+            "2023": "—",
+            "2024": "—",
+            "2025": "36%",
+            "2026": "35%"
+          }
+        },
+        {
+          "cityName": "المدينة المنورة",
+          "values": {
+            "2023": null,
+            "2024": null,
+            "2025": 32,
+            "2026": 31
+          },
+          "displayValues": {
+            "2023": "—",
+            "2024": "—",
+            "2025": "32%",
+            "2026": "31%"
+          }
+        },
+        {
+          "cityName": "بريدة",
+          "values": {
+            "2023": null,
+            "2024": null,
+            "2025": 31,
+            "2026": 29
+          },
+          "displayValues": {
+            "2023": "—",
+            "2024": "—",
+            "2025": "31%",
+            "2026": "29%"
+          }
+        },
+        {
+          "cityName": "تبوك",
+          "values": {
+            "2023": null,
+            "2024": null,
+            "2025": 36,
+            "2026": 36
+          },
+          "displayValues": {
+            "2023": "—",
+            "2024": "—",
+            "2025": "36%",
+            "2026": "36%"
+          }
+        },
+        {
+          "cityName": "جازان",
+          "values": {
+            "2023": null,
+            "2024": null,
+            "2025": 40,
+            "2026": 38
+          },
+          "displayValues": {
+            "2023": "—",
+            "2024": "—",
+            "2025": "40%",
+            "2026": "38%"
+          }
+        },
+        {
+          "cityName": "جدة",
+          "values": {
+            "2023": null,
+            "2024": null,
+            "2025": 37,
+            "2026": 35
+          },
+          "displayValues": {
+            "2023": "—",
+            "2024": "—",
+            "2025": "37%",
+            "2026": "35%"
+          }
+        },
+        {
+          "cityName": "حائل",
+          "values": {
+            "2023": null,
+            "2024": null,
+            "2025": 47,
+            "2026": 40
+          },
+          "displayValues": {
+            "2023": "—",
+            "2024": "—",
+            "2025": "47%",
+            "2026": "40%"
+          }
+        },
+        {
+          "cityName": "سكاكا",
+          "values": {
+            "2023": null,
+            "2024": null,
+            "2025": 37,
+            "2026": 36
+          },
+          "displayValues": {
+            "2023": "—",
+            "2024": "—",
+            "2025": "37%",
+            "2026": "36%"
+          }
+        },
+        {
+          "cityName": "عرعر",
+          "values": {
+            "2023": null,
+            "2024": null,
+            "2025": 38,
+            "2026": 37
+          },
+          "displayValues": {
+            "2023": "—",
+            "2024": "—",
+            "2025": "38%",
+            "2026": "37%"
+          }
+        },
+        {
+          "cityName": "مكة المكرمة",
+          "values": {
+            "2023": null,
+            "2024": null,
+            "2025": 32,
+            "2026": 30
+          },
+          "displayValues": {
+            "2023": "—",
+            "2024": "—",
+            "2025": "32%",
+            "2026": "30%"
+          }
+        },
+        {
+          "cityName": "نجران",
+          "values": {
+            "2023": null,
+            "2024": null,
+            "2025": 51,
+            "2026": 46
+          },
+          "displayValues": {
+            "2023": "—",
+            "2024": "—",
+            "2025": "51%",
+            "2026": "46%"
+          }
+        }
+      ],
+      "thresholdType": "higher_is_pressure",
+      "thresholds": [
+        {
+          "label": "ضمن الحد",
+          "min": 0,
+          "max": 30,
+          "cssClass": "bg-green-50 text-green-700"
+        },
+        {
+          "label": "متجاوز",
+          "min": 30,
+          "max": 999,
+          "cssClass": "bg-red-50 text-red-700"
+        }
+      ]
+    }
+  ],
+  "supplyDemandGap": [
+    {
+      "cityId": "riyadh",
+      "cityName": "الرياض",
+      "vacancyAssumptionPct": 10,
+      "kpis": {
+        "firstYear": {
+          "year": 2025,
+          "gap": -150328,
+          "actualGap": -139654
+        },
+        "secondYear": {
+          "year": 2026,
+          "gap": -189554,
+          "actualGap": null
+        },
+        "monthExpected": {
+          "period": "2026-10",
+          "label": "أكتوبر 2026",
+          "gap": -183017
+        },
+        "monthActual": {
+          "period": "2026-10",
+          "label": "أكتوبر 2026",
+          "gap": 127600
+        }
+      },
+      "annual": [
+        {
+          "year": 2025,
+          "supply": 2301878,
+          "demand": 2441532,
+          "gap": -139654,
+          "expectedGap": -150328,
+          "isActual": true
+        },
+        {
+          "year": 2026,
+          "supply": 2340870,
+          "demand": 2530424,
+          "gap": -189554,
+          "expectedGap": -189554,
+          "isActual": false
+        }
+      ],
+      "monthly": [
+        {
+          "period": "2026-01",
+          "label": "يناير 2026",
+          "supply": 2308512,
+          "demand": 2448940,
+          "gap": -140428,
+          "expectedGap": -153597,
+          "isActual": true
+        },
+        {
+          "period": "2026-02",
+          "label": "فبراير 2026",
+          "supply": 2318581,
+          "demand": 2456348,
+          "gap": -137767,
+          "expectedGap": -156866,
+          "isActual": true
+        },
+        {
+          "period": "2026-03",
+          "label": "مارس 2026",
+          "supply": 2326183,
+          "demand": 2463755,
+          "gap": -137572,
+          "expectedGap": -160135,
+          "isActual": true
+        },
+        {
+          "period": "2026-04",
+          "label": "أبريل 2026",
+          "supply": 2334007,
+          "demand": 2471163,
+          "gap": -137156,
+          "expectedGap": -163404,
+          "isActual": true
+        },
+        {
+          "period": "2026-05",
+          "label": "مايو 2026",
+          "supply": 2343644,
+          "demand": 2478571,
+          "gap": -134927,
+          "expectedGap": -166672,
+          "isActual": true
+        },
+        {
+          "period": "2026-06",
+          "label": "يونيو 2026",
+          "supply": 2351803,
+          "demand": 2485978,
+          "gap": -134175,
+          "expectedGap": -169941,
+          "isActual": true
+        },
+        {
+          "period": "2026-07",
+          "label": "يوليو 2026",
+          "supply": 2360234,
+          "demand": 2493386,
+          "gap": -133152,
+          "expectedGap": -173210,
+          "isActual": true
+        },
+        {
+          "period": "2026-08",
+          "label": "أغسطس 2026",
+          "supply": 2369796,
+          "demand": 2500794,
+          "gap": -130998,
+          "expectedGap": -176479,
+          "isActual": true
+        },
+        {
+          "period": "2026-09",
+          "label": "سبتمبر 2026",
+          "supply": 2637501,
+          "demand": 2508201,
+          "gap": 129300,
+          "expectedGap": -179748,
+          "isActual": true
+        },
+        {
+          "period": "2026-10",
+          "label": "أكتوبر 2026",
+          "supply": 2643209,
+          "demand": 2515609,
+          "gap": 127600,
+          "expectedGap": -183017,
+          "isActual": true
+        },
+        {
+          "period": "2026-11",
+          "label": "نوفمبر 2026",
+          "supply": 2336731,
+          "demand": 2523017,
+          "gap": -186286,
+          "expectedGap": -186286,
+          "isActual": false
+        },
+        {
+          "period": "2026-12",
+          "label": "ديسمبر 2026",
+          "supply": 2340870,
+          "demand": 2530424,
+          "gap": -189554,
+          "expectedGap": -189554,
+          "isActual": false
+        }
+      ],
+      "lastActualPeriod": "2026-10"
+    },
+    {
+      "cityId": "jeddah",
+      "cityName": "جدة",
+      "vacancyAssumptionPct": 10,
+      "kpis": {
+        "firstYear": {
+          "year": 2025,
+          "gap": -11228,
+          "actualGap": -21561
+        },
+        "secondYear": {
+          "year": 2026,
+          "gap": -29845,
+          "actualGap": null
+        },
+        "monthExpected": {
+          "period": "2026-10",
+          "label": "أكتوبر 2026",
+          "gap": -26742
+        },
+        "monthActual": {
+          "period": "2026-10",
+          "label": "أكتوبر 2026",
+          "gap": 3900
+        }
+      },
+      "annual": [
+        {
+          "year": 2025,
+          "supply": 1375170,
+          "demand": 1396731,
+          "gap": -21561,
+          "expectedGap": -11228,
+          "isActual": true
+        },
+        {
+          "year": 2026,
+          "supply": 1427604,
+          "demand": 1457449,
+          "gap": -29845,
+          "expectedGap": -29845,
+          "isActual": false
+        }
+      ],
+      "monthly": [
+        {
+          "period": "2026-01",
+          "label": "يناير 2026",
+          "supply": 1377103,
+          "demand": 1401791,
+          "gap": -24688,
+          "expectedGap": -12779,
+          "isActual": true
+        },
+        {
+          "period": "2026-02",
+          "label": "فبراير 2026",
+          "supply": 1380918,
+          "demand": 1406851,
+          "gap": -25933,
+          "expectedGap": -14331,
+          "isActual": true
+        },
+        {
+          "period": "2026-03",
+          "label": "مارس 2026",
+          "supply": 1384976,
+          "demand": 1411911,
+          "gap": -26934,
+          "expectedGap": -15882,
+          "isActual": true
+        },
+        {
+          "period": "2026-04",
+          "label": "أبريل 2026",
+          "supply": 1388746,
+          "demand": 1416970,
+          "gap": -28224,
+          "expectedGap": -17434,
+          "isActual": true
+        },
+        {
+          "period": "2026-05",
+          "label": "مايو 2026",
+          "supply": 1413515,
+          "demand": 1422030,
+          "gap": -8515,
+          "expectedGap": -18985,
+          "isActual": true
+        },
+        {
+          "period": "2026-06",
+          "label": "يونيو 2026",
+          "supply": 1418041,
+          "demand": 1427090,
+          "gap": -9049,
+          "expectedGap": -20536,
+          "isActual": true
+        },
+        {
+          "period": "2026-07",
+          "label": "يوليو 2026",
+          "supply": 1426152,
+          "demand": 1432150,
+          "gap": -5998,
+          "expectedGap": -22088,
+          "isActual": true
+        },
+        {
+          "period": "2026-08",
+          "label": "أغسطس 2026",
+          "supply": 1430090,
+          "demand": 1437210,
+          "gap": -7120,
+          "expectedGap": -23639,
+          "isActual": true
+        },
+        {
+          "period": "2026-09",
+          "label": "سبتمبر 2026",
+          "supply": 1447070,
+          "demand": 1442270,
+          "gap": 4800,
+          "expectedGap": -25191,
+          "isActual": true
+        },
+        {
+          "period": "2026-10",
+          "label": "أكتوبر 2026",
+          "supply": 1451229,
+          "demand": 1447329,
+          "gap": 3900,
+          "expectedGap": -26742,
+          "isActual": true
+        },
+        {
+          "period": "2026-11",
+          "label": "نوفمبر 2026",
+          "supply": 1424096,
+          "demand": 1452389,
+          "gap": -28294,
+          "expectedGap": -28294,
+          "isActual": false
+        },
+        {
+          "period": "2026-12",
+          "label": "ديسمبر 2026",
+          "supply": 1427604,
+          "demand": 1457449,
+          "gap": -29845,
+          "expectedGap": -29845,
+          "isActual": false
+        }
+      ],
+      "lastActualPeriod": "2026-10"
+    },
+    {
+      "cityId": "dammam",
+      "cityName": "الدمام",
+      "vacancyAssumptionPct": 10,
+      "kpis": {
+        "firstYear": {
+          "year": 2025,
+          "gap": 13359,
+          "actualGap": 13838
+        },
+        "secondYear": {
+          "year": 2026,
+          "gap": -316,
+          "actualGap": null
+        },
+        "monthExpected": {
+          "period": "2026-10",
+          "label": "أكتوبر 2026",
+          "gap": 1963
+        },
+        "monthActual": {
+          "period": "2026-10",
+          "label": "أكتوبر 2026",
+          "gap": 16200
+        }
+      },
+      "annual": [
+        {
+          "year": 2025,
+          "supply": 845601,
+          "demand": 831763,
+          "gap": 13838,
+          "expectedGap": 13359,
+          "isActual": true
+        },
+        {
+          "year": 2026,
+          "supply": 866104,
+          "demand": 866420,
+          "gap": -316,
+          "expectedGap": -316,
+          "isActual": false
+        }
+      ],
+      "monthly": [
+        {
+          "period": "2026-01",
+          "label": "يناير 2026",
+          "supply": 848159,
+          "demand": 834651,
+          "gap": 13508,
+          "expectedGap": 12219,
+          "isActual": true
+        },
+        {
+          "period": "2026-02",
+          "label": "فبراير 2026",
+          "supply": 850939,
+          "demand": 837539,
+          "gap": 13400,
+          "expectedGap": 11080,
+          "isActual": true
+        },
+        {
+          "period": "2026-03",
+          "label": "مارس 2026",
+          "supply": 854573,
+          "demand": 840427,
+          "gap": 14146,
+          "expectedGap": 9940,
+          "isActual": true
+        },
+        {
+          "period": "2026-04",
+          "label": "أبريل 2026",
+          "supply": 857760,
+          "demand": 843315,
+          "gap": 14445,
+          "expectedGap": 8801,
+          "isActual": true
+        },
+        {
+          "period": "2026-05",
+          "label": "مايو 2026",
+          "supply": 860566,
+          "demand": 846203,
+          "gap": 14363,
+          "expectedGap": 7661,
+          "isActual": true
+        },
+        {
+          "period": "2026-06",
+          "label": "يونيو 2026",
+          "supply": 863587,
+          "demand": 849092,
+          "gap": 14495,
+          "expectedGap": 6521,
+          "isActual": true
+        },
+        {
+          "period": "2026-07",
+          "label": "يوليو 2026",
+          "supply": 866825,
+          "demand": 851980,
+          "gap": 14845,
+          "expectedGap": 5382,
+          "isActual": true
+        },
+        {
+          "period": "2026-08",
+          "label": "أغسطس 2026",
+          "supply": 870067,
+          "demand": 854868,
+          "gap": 15199,
+          "expectedGap": 4242,
+          "isActual": true
+        },
+        {
+          "period": "2026-09",
+          "label": "سبتمبر 2026",
+          "supply": 873656,
+          "demand": 857756,
+          "gap": 15900,
+          "expectedGap": 3103,
+          "isActual": true
+        },
+        {
+          "period": "2026-10",
+          "label": "أكتوبر 2026",
+          "supply": 876844,
+          "demand": 860644,
+          "gap": 16200,
+          "expectedGap": 1963,
+          "isActual": true
+        },
+        {
+          "period": "2026-11",
+          "label": "نوفمبر 2026",
+          "supply": 864356,
+          "demand": 863532,
+          "gap": 824,
+          "expectedGap": 824,
+          "isActual": false
+        },
+        {
+          "period": "2026-12",
+          "label": "ديسمبر 2026",
+          "supply": 866104,
+          "demand": 866420,
+          "gap": -316,
+          "expectedGap": -316,
+          "isActual": false
+        }
+      ],
+      "lastActualPeriod": "2026-10"
+    },
+    {
+      "cityId": "makkah",
+      "cityName": "مكة المكرمة",
+      "vacancyAssumptionPct": 10,
+      "kpis": {
+        "firstYear": {
+          "year": 2025,
+          "gap": 12210,
+          "actualGap": 220
+        },
+        "secondYear": {
+          "year": 2026,
+          "gap": -11817,
+          "actualGap": null
+        },
+        "monthExpected": {
+          "period": "2026-10",
+          "label": "أكتوبر 2026",
+          "gap": -7813
+        },
+        "monthActual": {
+          "period": "2026-10",
+          "label": "أكتوبر 2026",
+          "gap": 19800
+        }
+      },
+      "annual": [
+        {
+          "year": 2025,
+          "supply": 802214,
+          "demand": 801994,
+          "gap": 220,
+          "expectedGap": 12210,
+          "isActual": true
+        },
+        {
+          "year": 2026,
+          "supply": 834552,
+          "demand": 846369,
+          "gap": -11817,
+          "expectedGap": -11817,
+          "isActual": false
+        }
+      ],
+      "monthly": [
+        {
+          "period": "2026-01",
+          "label": "يناير 2026",
+          "supply": 802916,
+          "demand": 805692,
+          "gap": -2776,
+          "expectedGap": 10208,
+          "isActual": true
+        },
+        {
+          "period": "2026-02",
+          "label": "فبراير 2026",
+          "supply": 804520,
+          "demand": 809390,
+          "gap": -4870,
+          "expectedGap": 8206,
+          "isActual": true
+        },
+        {
+          "period": "2026-03",
+          "label": "مارس 2026",
+          "supply": 806340,
+          "demand": 813088,
+          "gap": -6748,
+          "expectedGap": 6203,
+          "isActual": true
+        },
+        {
+          "period": "2026-04",
+          "label": "أبريل 2026",
+          "supply": 807889,
+          "demand": 816786,
+          "gap": -8897,
+          "expectedGap": 4201,
+          "isActual": true
+        },
+        {
+          "period": "2026-05",
+          "label": "مايو 2026",
+          "supply": 809741,
+          "demand": 820484,
+          "gap": -10743,
+          "expectedGap": 2199,
+          "isActual": true
+        },
+        {
+          "period": "2026-06",
+          "label": "يونيو 2026",
+          "supply": 811534,
+          "demand": 824182,
+          "gap": -12647,
+          "expectedGap": 197,
+          "isActual": true
+        },
+        {
+          "period": "2026-07",
+          "label": "يوليو 2026",
+          "supply": 813043,
+          "demand": 827879,
+          "gap": -14836,
+          "expectedGap": -1806,
+          "isActual": true
+        },
+        {
+          "period": "2026-08",
+          "label": "أغسطس 2026",
+          "supply": 814759,
+          "demand": 831577,
+          "gap": -16818,
+          "expectedGap": -3808,
+          "isActual": true
+        },
+        {
+          "period": "2026-09",
+          "label": "سبتمبر 2026",
+          "supply": 853275,
+          "demand": 835275,
+          "gap": 18000,
+          "expectedGap": -5810,
+          "isActual": true
+        },
+        {
+          "period": "2026-10",
+          "label": "أكتوبر 2026",
+          "supply": 858773,
+          "demand": 838973,
+          "gap": 19800,
+          "expectedGap": -7813,
+          "isActual": true
+        },
+        {
+          "period": "2026-11",
+          "label": "نوفمبر 2026",
+          "supply": 832856,
+          "demand": 842671,
+          "gap": -9815,
+          "expectedGap": -9815,
+          "isActual": false
+        },
+        {
+          "period": "2026-12",
+          "label": "ديسمبر 2026",
+          "supply": 834552,
+          "demand": 846369,
+          "gap": -11817,
+          "expectedGap": -11817,
+          "isActual": false
+        }
+      ],
+      "lastActualPeriod": "2026-10"
+    },
+    {
+      "cityId": "madinah",
+      "cityName": "المدينة المنورة",
+      "vacancyAssumptionPct": 10,
+      "kpis": {
+        "firstYear": {
+          "year": 2025,
+          "gap": 53691,
+          "actualGap": 47284
+        },
+        "secondYear": {
+          "year": 2026,
+          "gap": 43749,
+          "actualGap": null
+        },
+        "monthExpected": {
+          "period": "2026-10",
+          "label": "أكتوبر 2026",
+          "gap": 45406
+        },
+        "monthActual": {
+          "period": "2026-10",
+          "label": "أكتوبر 2026",
+          "gap": 40100
+        }
+      },
+      "annual": [
+        {
+          "year": 2025,
+          "supply": 516296,
+          "demand": 469012,
+          "gap": 47284,
+          "expectedGap": 53691,
+          "isActual": true
+        },
+        {
+          "year": 2026,
+          "supply": 535835,
+          "demand": 492086,
+          "gap": 43749,
+          "expectedGap": 43749,
+          "isActual": false
+        }
+      ],
+      "monthly": [
+        {
+          "period": "2026-01",
+          "label": "يناير 2026",
+          "supply": 516887,
+          "demand": 470935,
+          "gap": 45952,
+          "expectedGap": 52863,
+          "isActual": true
+        },
+        {
+          "period": "2026-02",
+          "label": "فبراير 2026",
+          "supply": 517808,
+          "demand": 472858,
+          "gap": 44950,
+          "expectedGap": 52034,
+          "isActual": true
+        },
+        {
+          "period": "2026-03",
+          "label": "مارس 2026",
+          "supply": 519021,
+          "demand": 474781,
+          "gap": 44241,
+          "expectedGap": 51206,
+          "isActual": true
+        },
+        {
+          "period": "2026-04",
+          "label": "أبريل 2026",
+          "supply": 520643,
+          "demand": 476703,
+          "gap": 43940,
+          "expectedGap": 50377,
+          "isActual": true
+        },
+        {
+          "period": "2026-05",
+          "label": "مايو 2026",
+          "supply": 521946,
+          "demand": 478626,
+          "gap": 43320,
+          "expectedGap": 49549,
+          "isActual": true
+        },
+        {
+          "period": "2026-06",
+          "label": "يونيو 2026",
+          "supply": 523580,
+          "demand": 480549,
+          "gap": 43031,
+          "expectedGap": 48720,
+          "isActual": true
+        },
+        {
+          "period": "2026-07",
+          "label": "يوليو 2026",
+          "supply": 524734,
+          "demand": 482472,
+          "gap": 42262,
+          "expectedGap": 47892,
+          "isActual": true
+        },
+        {
+          "period": "2026-08",
+          "label": "أغسطس 2026",
+          "supply": 525873,
+          "demand": 484395,
+          "gap": 41478,
+          "expectedGap": 47063,
+          "isActual": true
+        },
+        {
+          "period": "2026-09",
+          "label": "سبتمبر 2026",
+          "supply": 527218,
+          "demand": 486318,
+          "gap": 40900,
+          "expectedGap": 46235,
+          "isActual": true
+        },
+        {
+          "period": "2026-10",
+          "label": "أكتوبر 2026",
+          "supply": 528340,
+          "demand": 488240,
+          "gap": 40100,
+          "expectedGap": 45406,
+          "isActual": true
+        },
+        {
+          "period": "2026-11",
+          "label": "نوفمبر 2026",
+          "supply": 534741,
+          "demand": 490163,
+          "gap": 44578,
+          "expectedGap": 44578,
+          "isActual": false
+        },
+        {
+          "period": "2026-12",
+          "label": "ديسمبر 2026",
+          "supply": 535835,
+          "demand": 492086,
+          "gap": 43749,
+          "expectedGap": 43749,
+          "isActual": false
+        }
+      ],
+      "lastActualPeriod": "2026-10"
+    }
+  ],
+  "currentToHistoricalMap": {
+    "rental-increase": "rental-increase-hist",
+    "vacancy": "vacancy-hist",
+    "investment-return": "investment-return-hist",
+    "rent-to-income": "rent-to-income-hist",
+    "housing-burden": "housing-burden-hist"
+  }
+}
